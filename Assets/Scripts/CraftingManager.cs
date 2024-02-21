@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class CraftingManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Recipe recipe;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void Start() {
+        Debug.Log(recipe);
     }
 }

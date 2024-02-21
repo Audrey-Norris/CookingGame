@@ -14,4 +14,13 @@ public class Recipe : ScriptableObject
 {
     public List<ItemList> Material;
     public List<ItemList> Result;
+
+    public List<ItemList> getMaterials() {
+        return Material;
+    }
+
+    public List<ItemList> getResult() {
+        return Result;
+    }
 }
+
