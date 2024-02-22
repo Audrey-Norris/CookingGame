@@ -6,14 +6,22 @@ public class CraftingManager : MonoBehaviour
 {
     public Recipe recipe;
 
-    public List<ItemList> inputMats;
+    public List<ItemList> inputMats = new List<ItemList>();
 
     public void Start() {
 
     }
 
-    public void addToList(Material mat) { 
-        
+    public void addToList(Material inputMat) {
+        if(inputMats.Exists(obj => obj.mat == inputMat)) {
+            int index = inputMats.FindIndex(obj => obj.mat == inputMat);
+            ItemList itemAdd = inputMats[index];
+            itemAdd.amount += 1;
+            inputMats[index] = itemAdd;
+        } else {
+            ItemList itemAdd = new ItemList();
+            //itemAdd.mat = inputMat;
+        }
     }
 
     public void createRecipe() {
