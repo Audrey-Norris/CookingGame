@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class CraftingManager : MonoBehaviour
 {
-    public Recipe recipe;
+    [SerializeField] Recipe recipe;
+    [SerializeField] List<ItemList> inputMats = new List<ItemList>();
 
-    public List<ItemList> inputMats = new List<ItemList>();
 
-    public void Start() {
-
+    public void selectRecipe(Recipe newRecipe) {
+        recipe = newRecipe;
     }
 
-    public void addToList(Material inputMat) {
+    //Adds a singular mat to the list
+    public void addToList(Item inputMat) {
         if(inputMats.Exists(obj => obj.mat == inputMat)) {
             int index = inputMats.FindIndex(obj => obj.mat == inputMat);
             ItemList itemAdd = inputMats[index];
@@ -20,11 +21,34 @@ public class CraftingManager : MonoBehaviour
             inputMats[index] = itemAdd;
         } else {
             ItemList itemAdd = new ItemList();
-            //itemAdd.mat = inputMat;
+            itemAdd.mat = inputMat;
+            itemAdd.amount = 1;
+            inputMats.Add(itemAdd);
         }
     }
 
-    public void createRecipe() {
+    public void addToList(ItemList inputMat) {
+        if (inputMats.Exists(obj => obj.mat == inputMat.mat)) {
+            int index = inputMats.FindIndex(obj => obj.mat == inputMat.mat);
+            ItemList itemAdd = inputMats[index];
+            itemAdd.amount += inputMat.amount;
+            inputMats[index] = itemAdd;
+        } else {
+            inputMats.Add(inputMat);
+        }
+    }
+
+
+    //Takes an array of mats and adds them to the list.
+    public void addToList(Item[] inputMats) {
+        for (int i = 0; i < inputMats.Length; i++) {
+            addToList(inputMats[i]);
+        }
+    }
+
+
+    //Takes the input mats and checks if they match the recipe mats list.
+    public ItemList checkRecipe() {
         bool goodRecipe = true;
         List<ItemList> mats = recipe.getMaterials();
         foreach(var mat in mats) {
@@ -37,17 +61,15 @@ public class CraftingManager : MonoBehaviour
                 } else {
                     goodRecipe = false;
                 }
-                Debug.Log("Ingredient Correct!");
             }
            if (!goodRecipe) {
-                break;     
+                break;  
+                 
            }
         }
 
-        if(!goodRecipe) {
-            Debug.Log("Recipe BAD!");
-        } else {
-            Debug.Log("Recipe Complete!" + recipe);
-        }
+        return recipe.getResult();
     }
+
+
 }
