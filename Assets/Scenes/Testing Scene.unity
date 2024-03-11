@@ -1079,6 +1079,15 @@ MonoBehaviour:
   recipeSection: {fileID: 0}
   slotPrefab: {fileID: 6196744980309648752, guid: c9811471d713ed04fba06b25b2dbcf21, type: 3}
   inventory: {fileID: 1242610058}
+  recipeName: {fileID: 1574254402}
+  currentRecipe: {fileID: 11400000, guid: 5f979ea0d1b5d3245b2c0cb1649eae32, type: 2}
+  currentItem:
+    mat: {fileID: 0}
+    amount: 0
+  craftingManager: {fileID: 0}
+  createdItem:
+    mat: {fileID: 0}
+    amount: 0
 --- !u!1 &1323424896
 GameObject:
   m_ObjectHideFlags: 0
