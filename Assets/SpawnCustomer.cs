@@ -9,13 +9,13 @@ public class SpawnCustomer : MonoBehaviour
     [SerializeField] GameObject prefab;
     //CAMERA
     [SerializeField] Camera cam;
-    // Start is called before the first frame update
+    [SerializeField] GameObject customerTarget;
+
 
     public void spawnCustomer(Transform location) {
-        Debug.Log("RUNNING");
         GameObject newSpawn = Instantiate(prefab, location.position, location.rotation);
-        newSpawn.GetComponent<Billboard>().m_Camera = cam;
-
+        newSpawn.GetComponent<MoveForward>().target = customerTarget.transform;
+        GetComponent<GameManager>().customer = newSpawn;
     }
 
 }
