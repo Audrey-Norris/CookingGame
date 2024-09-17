@@ -6,9 +6,13 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private PlayerActions playerActions;
+    [SerializeField] private InputActionReference sprint;
+
     [SerializeField] private Rigidbody rb;
 
     [SerializeField] private int walkSpeed = 5;
+    [SerializeField] private int sprintMultiplier = 2;
+    [SerializeField] private int rotationSpeed = 5;
 
     
     // Start is called before the first frame update
@@ -25,7 +29,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void playerMove() {
         Vector3 moveInput = playerActions.Actions.Walking.ReadValue<Vector2>();
-        rb.transform.Translate(moveInput * (walkSpeed*Time.deltaTime));
+        int speed = walkSpeed;
+        if(playerActions.Actions.Sprint.action.ReadValue<float>() > 0) {
+            speed *= sprintMultiplier;
+        }
+        rb.transform.Translate(Vector3.forward * moveInput.y * (speed*Time.deltaTime));
+        rb.transform.Rotate(Vector3.up * moveInput.x * (rotationSpeed * Time.deltaTime));
+
     }
 
     private void OnEnable() {

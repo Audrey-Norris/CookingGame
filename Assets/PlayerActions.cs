@@ -35,6 +35,33 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MousePosition"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""0b784836-bbca-463f-9551-b5436bbef0bf"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MouseScroll"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""31363dec-a4cb-4e20-b1ca-a99bc410641b"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Sprint"",
+                    ""type"": ""Button"",
+                    ""id"": ""74c90534-6f25-4187-829d-198296c5fefd"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -92,6 +119,39 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""action"": ""Walking"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""416fa86a-8274-45e7-b79c-e1df5ca7fd85"",
+                    ""path"": ""<Mouse>/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MousePosition"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""17f64bcc-aaa9-424e-8c1c-211f6831b77e"",
+                    ""path"": ""<Mouse>/scroll"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MouseScroll"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""596ecc84-5987-4e81-b7a7-4ab07e0a222b"",
+                    ""path"": ""<Keyboard>/leftShift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Sprint"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -101,6 +161,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         // Actions
         m_Actions = asset.FindActionMap("Actions", throwIfNotFound: true);
         m_Actions_Walking = m_Actions.FindAction("Walking", throwIfNotFound: true);
+        m_Actions_MousePosition = m_Actions.FindAction("MousePosition", throwIfNotFound: true);
+        m_Actions_MouseScroll = m_Actions.FindAction("MouseScroll", throwIfNotFound: true);
+        m_Actions_Sprint = m_Actions.FindAction("Sprint", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -163,11 +226,17 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Actions;
     private List<IActionsActions> m_ActionsActionsCallbackInterfaces = new List<IActionsActions>();
     private readonly InputAction m_Actions_Walking;
+    private readonly InputAction m_Actions_MousePosition;
+    private readonly InputAction m_Actions_MouseScroll;
+    private readonly InputAction m_Actions_Sprint;
     public struct ActionsActions
     {
         private @PlayerActions m_Wrapper;
         public ActionsActions(@PlayerActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Walking => m_Wrapper.m_Actions_Walking;
+        public InputAction @MousePosition => m_Wrapper.m_Actions_MousePosition;
+        public InputAction @MouseScroll => m_Wrapper.m_Actions_MouseScroll;
+        public InputAction @Sprint => m_Wrapper.m_Actions_Sprint;
         public InputActionMap Get() { return m_Wrapper.m_Actions; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -180,6 +249,15 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @Walking.started += instance.OnWalking;
             @Walking.performed += instance.OnWalking;
             @Walking.canceled += instance.OnWalking;
+            @MousePosition.started += instance.OnMousePosition;
+            @MousePosition.performed += instance.OnMousePosition;
+            @MousePosition.canceled += instance.OnMousePosition;
+            @MouseScroll.started += instance.OnMouseScroll;
+            @MouseScroll.performed += instance.OnMouseScroll;
+            @MouseScroll.canceled += instance.OnMouseScroll;
+            @Sprint.started += instance.OnSprint;
+            @Sprint.performed += instance.OnSprint;
+            @Sprint.canceled += instance.OnSprint;
         }
 
         private void UnregisterCallbacks(IActionsActions instance)
@@ -187,6 +265,15 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @Walking.started -= instance.OnWalking;
             @Walking.performed -= instance.OnWalking;
             @Walking.canceled -= instance.OnWalking;
+            @MousePosition.started -= instance.OnMousePosition;
+            @MousePosition.performed -= instance.OnMousePosition;
+            @MousePosition.canceled -= instance.OnMousePosition;
+            @MouseScroll.started -= instance.OnMouseScroll;
+            @MouseScroll.performed -= instance.OnMouseScroll;
+            @MouseScroll.canceled -= instance.OnMouseScroll;
+            @Sprint.started -= instance.OnSprint;
+            @Sprint.performed -= instance.OnSprint;
+            @Sprint.canceled -= instance.OnSprint;
         }
 
         public void RemoveCallbacks(IActionsActions instance)
@@ -207,5 +294,8 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
     public interface IActionsActions
     {
         void OnWalking(InputAction.CallbackContext context);
+        void OnMousePosition(InputAction.CallbackContext context);
+        void OnMouseScroll(InputAction.CallbackContext context);
+        void OnSprint(InputAction.CallbackContext context);
     }
 }
