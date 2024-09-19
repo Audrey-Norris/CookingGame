@@ -15,13 +15,22 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "MousePosition",
-                    "type": "PassThrough",
-                    "id": "0b784836-bbca-463f-9551-b5436bbef0bf",
-                    "expectedControlType": "Vector2",
+                    "name": "Jump",
+                    "type": "Value",
+                    "id": "11053fee-7d60-442f-86fc-b5c06080b4c2",
+                    "expectedControlType": "Analog",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Sprint",
+                    "type": "Value",
+                    "id": "74c90534-6f25-4187-829d-198296c5fefd",
+                    "expectedControlType": "Analog",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "MouseScroll",
@@ -33,13 +42,13 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Sprint",
-                    "type": "Value",
-                    "id": "74c90534-6f25-4187-829d-198296c5fefd",
-                    "expectedControlType": "Analog",
+                    "name": "MousePosition",
+                    "type": "PassThrough",
+                    "id": "0b784836-bbca-463f-9551-b5436bbef0bf",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -100,6 +109,28 @@
                 },
                 {
                     "name": "",
+                    "id": "596ecc84-5987-4e81-b7a7-4ab07e0a222b",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Sprint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f9e9ceac-6bfb-4194-96ec-1bbbb77a8b62",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "416fa86a-8274-45e7-b79c-e1df5ca7fd85",
                     "path": "<Mouse>/position",
                     "interactions": "",
@@ -117,17 +148,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "MouseScroll",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "596ecc84-5987-4e81-b7a7-4ab07e0a222b",
-                    "path": "<Keyboard>/leftShift",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Sprint",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

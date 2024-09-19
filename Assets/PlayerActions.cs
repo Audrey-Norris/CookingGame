@@ -37,13 +37,22 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""MousePosition"",
-                    ""type"": ""PassThrough"",
-                    ""id"": ""0b784836-bbca-463f-9551-b5436bbef0bf"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""name"": ""Jump"",
+                    ""type"": ""Value"",
+                    ""id"": ""11053fee-7d60-442f-86fc-b5c06080b4c2"",
+                    ""expectedControlType"": ""Analog"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Sprint"",
+                    ""type"": ""Value"",
+                    ""id"": ""74c90534-6f25-4187-829d-198296c5fefd"",
+                    ""expectedControlType"": ""Analog"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 },
                 {
                     ""name"": ""MouseScroll"",
@@ -55,13 +64,13 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Sprint"",
-                    ""type"": ""Value"",
-                    ""id"": ""74c90534-6f25-4187-829d-198296c5fefd"",
-                    ""expectedControlType"": ""Analog"",
+                    ""name"": ""MousePosition"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""0b784836-bbca-463f-9551-b5436bbef0bf"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": true
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -122,6 +131,28 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""596ecc84-5987-4e81-b7a7-4ab07e0a222b"",
+                    ""path"": ""<Keyboard>/leftShift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Sprint"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f9e9ceac-6bfb-4194-96ec-1bbbb77a8b62"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""416fa86a-8274-45e7-b79c-e1df5ca7fd85"",
                     ""path"": ""<Mouse>/position"",
                     ""interactions"": """",
@@ -141,17 +172,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""action"": ""MouseScroll"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""596ecc84-5987-4e81-b7a7-4ab07e0a222b"",
-                    ""path"": ""<Keyboard>/leftShift"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Sprint"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -161,9 +181,10 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         // Actions
         m_Actions = asset.FindActionMap("Actions", throwIfNotFound: true);
         m_Actions_Walking = m_Actions.FindAction("Walking", throwIfNotFound: true);
-        m_Actions_MousePosition = m_Actions.FindAction("MousePosition", throwIfNotFound: true);
-        m_Actions_MouseScroll = m_Actions.FindAction("MouseScroll", throwIfNotFound: true);
+        m_Actions_Jump = m_Actions.FindAction("Jump", throwIfNotFound: true);
         m_Actions_Sprint = m_Actions.FindAction("Sprint", throwIfNotFound: true);
+        m_Actions_MouseScroll = m_Actions.FindAction("MouseScroll", throwIfNotFound: true);
+        m_Actions_MousePosition = m_Actions.FindAction("MousePosition", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -226,17 +247,19 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Actions;
     private List<IActionsActions> m_ActionsActionsCallbackInterfaces = new List<IActionsActions>();
     private readonly InputAction m_Actions_Walking;
-    private readonly InputAction m_Actions_MousePosition;
-    private readonly InputAction m_Actions_MouseScroll;
+    private readonly InputAction m_Actions_Jump;
     private readonly InputAction m_Actions_Sprint;
+    private readonly InputAction m_Actions_MouseScroll;
+    private readonly InputAction m_Actions_MousePosition;
     public struct ActionsActions
     {
         private @PlayerActions m_Wrapper;
         public ActionsActions(@PlayerActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Walking => m_Wrapper.m_Actions_Walking;
-        public InputAction @MousePosition => m_Wrapper.m_Actions_MousePosition;
-        public InputAction @MouseScroll => m_Wrapper.m_Actions_MouseScroll;
+        public InputAction @Jump => m_Wrapper.m_Actions_Jump;
         public InputAction @Sprint => m_Wrapper.m_Actions_Sprint;
+        public InputAction @MouseScroll => m_Wrapper.m_Actions_MouseScroll;
+        public InputAction @MousePosition => m_Wrapper.m_Actions_MousePosition;
         public InputActionMap Get() { return m_Wrapper.m_Actions; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -249,15 +272,18 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @Walking.started += instance.OnWalking;
             @Walking.performed += instance.OnWalking;
             @Walking.canceled += instance.OnWalking;
-            @MousePosition.started += instance.OnMousePosition;
-            @MousePosition.performed += instance.OnMousePosition;
-            @MousePosition.canceled += instance.OnMousePosition;
-            @MouseScroll.started += instance.OnMouseScroll;
-            @MouseScroll.performed += instance.OnMouseScroll;
-            @MouseScroll.canceled += instance.OnMouseScroll;
+            @Jump.started += instance.OnJump;
+            @Jump.performed += instance.OnJump;
+            @Jump.canceled += instance.OnJump;
             @Sprint.started += instance.OnSprint;
             @Sprint.performed += instance.OnSprint;
             @Sprint.canceled += instance.OnSprint;
+            @MouseScroll.started += instance.OnMouseScroll;
+            @MouseScroll.performed += instance.OnMouseScroll;
+            @MouseScroll.canceled += instance.OnMouseScroll;
+            @MousePosition.started += instance.OnMousePosition;
+            @MousePosition.performed += instance.OnMousePosition;
+            @MousePosition.canceled += instance.OnMousePosition;
         }
 
         private void UnregisterCallbacks(IActionsActions instance)
@@ -265,15 +291,18 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @Walking.started -= instance.OnWalking;
             @Walking.performed -= instance.OnWalking;
             @Walking.canceled -= instance.OnWalking;
-            @MousePosition.started -= instance.OnMousePosition;
-            @MousePosition.performed -= instance.OnMousePosition;
-            @MousePosition.canceled -= instance.OnMousePosition;
-            @MouseScroll.started -= instance.OnMouseScroll;
-            @MouseScroll.performed -= instance.OnMouseScroll;
-            @MouseScroll.canceled -= instance.OnMouseScroll;
+            @Jump.started -= instance.OnJump;
+            @Jump.performed -= instance.OnJump;
+            @Jump.canceled -= instance.OnJump;
             @Sprint.started -= instance.OnSprint;
             @Sprint.performed -= instance.OnSprint;
             @Sprint.canceled -= instance.OnSprint;
+            @MouseScroll.started -= instance.OnMouseScroll;
+            @MouseScroll.performed -= instance.OnMouseScroll;
+            @MouseScroll.canceled -= instance.OnMouseScroll;
+            @MousePosition.started -= instance.OnMousePosition;
+            @MousePosition.performed -= instance.OnMousePosition;
+            @MousePosition.canceled -= instance.OnMousePosition;
         }
 
         public void RemoveCallbacks(IActionsActions instance)
@@ -294,8 +323,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
     public interface IActionsActions
     {
         void OnWalking(InputAction.CallbackContext context);
-        void OnMousePosition(InputAction.CallbackContext context);
-        void OnMouseScroll(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
         void OnSprint(InputAction.CallbackContext context);
+        void OnMouseScroll(InputAction.CallbackContext context);
+        void OnMousePosition(InputAction.CallbackContext context);
     }
 }

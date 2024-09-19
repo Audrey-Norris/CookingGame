@@ -6,13 +6,15 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private PlayerActions playerActions;
-    [SerializeField] private InputActionReference sprint;
 
     [SerializeField] private Rigidbody rb;
 
     [SerializeField] private int walkSpeed = 5;
     [SerializeField] private int sprintMultiplier = 2;
     [SerializeField] private int rotationSpeed = 5;
+    
+    [SerializeField] private int jumpForce = 5;
+    [SerializeField] private bool isGrounded = true;
 
     
     // Start is called before the first frame update
@@ -25,6 +27,9 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         playerMove();
+        if(isGrounded) {
+            playerJump();
+        }
     }
 
     private void playerMove() {
@@ -37,6 +42,17 @@ public class PlayerMovement : MonoBehaviour
         rb.transform.Translate(Vector3.forward * moveInput.y * (speed*Time.deltaTime));
         rb.transform.Rotate(Vector3.up * moveInput.x * (rotationSpeed * Time.deltaTime));
 
+    }
+
+    private void playerJump() { 
+        if(playerActions.Actions.Jump.ReadValue<float>() > 0) {
+            rb.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
+            isGrounded = false;
+        }
+    }
+
+    public void setGrounded(bool status) {
+        isGrounded = status;
     }
 
     private void OnEnable() {
