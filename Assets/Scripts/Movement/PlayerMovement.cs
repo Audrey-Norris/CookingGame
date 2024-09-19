@@ -30,9 +30,10 @@ public class PlayerMovement : MonoBehaviour
     private void playerMove() {
         Vector3 moveInput = playerActions.Actions.Walking.ReadValue<Vector2>();
         int speed = walkSpeed;
-        if(playerActions.Actions.Sprint.action.ReadValue<float>() > 0) {
+        
+        if(playerActions.Actions.Sprint.ReadValue<float>() > 0) {
             speed *= sprintMultiplier;
-        }
+        } 
         rb.transform.Translate(Vector3.forward * moveInput.y * (speed*Time.deltaTime));
         rb.transform.Rotate(Vector3.up * moveInput.x * (rotationSpeed * Time.deltaTime));
 
