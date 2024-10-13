@@ -21,6 +21,7 @@ public class PlayerInteract : MonoBehaviour {
     private void OnTriggerExit(Collider other) {
         if (other.gameObject.tag == "Interact") {
             isInteracting = false;
+            interactObject.GetComponent<InteractionManager>().EndInteraction();
             interactObject = null;
         }
     }

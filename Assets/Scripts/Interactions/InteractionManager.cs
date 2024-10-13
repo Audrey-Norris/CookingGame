@@ -8,7 +8,7 @@ public class InteractionManager : MonoBehaviour
     [SerializeField] private IInteractable interactAction;
 
     public void Awake() {
-        //interactAction = this.gameObject.GetComponent(typeof(IInteractable)) as IInteractable;
+        interactAction = this.gameObject.GetComponent<IInteractable>();
     }
 
     public void StartInteraction() {
