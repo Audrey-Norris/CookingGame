@@ -55,6 +55,15 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
+                    ""name"": ""Interact"",
+                    ""type"": ""Value"",
+                    ""id"": ""d9416425-98eb-4e30-b45b-90ebcceeb7e0"",
+                    ""expectedControlType"": ""Analog"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
                     ""name"": ""MouseScroll"",
                     ""type"": ""PassThrough"",
                     ""id"": ""31363dec-a4cb-4e20-b1ca-a99bc410641b"",
@@ -172,6 +181,17 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""action"": ""MouseScroll"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c08dc0ec-8621-4534-93a3-5e4839813293"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -183,6 +203,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         m_Actions_Walking = m_Actions.FindAction("Walking", throwIfNotFound: true);
         m_Actions_Jump = m_Actions.FindAction("Jump", throwIfNotFound: true);
         m_Actions_Sprint = m_Actions.FindAction("Sprint", throwIfNotFound: true);
+        m_Actions_Interact = m_Actions.FindAction("Interact", throwIfNotFound: true);
         m_Actions_MouseScroll = m_Actions.FindAction("MouseScroll", throwIfNotFound: true);
         m_Actions_MousePosition = m_Actions.FindAction("MousePosition", throwIfNotFound: true);
     }
@@ -249,6 +270,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Actions_Walking;
     private readonly InputAction m_Actions_Jump;
     private readonly InputAction m_Actions_Sprint;
+    private readonly InputAction m_Actions_Interact;
     private readonly InputAction m_Actions_MouseScroll;
     private readonly InputAction m_Actions_MousePosition;
     public struct ActionsActions
@@ -258,6 +280,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         public InputAction @Walking => m_Wrapper.m_Actions_Walking;
         public InputAction @Jump => m_Wrapper.m_Actions_Jump;
         public InputAction @Sprint => m_Wrapper.m_Actions_Sprint;
+        public InputAction @Interact => m_Wrapper.m_Actions_Interact;
         public InputAction @MouseScroll => m_Wrapper.m_Actions_MouseScroll;
         public InputAction @MousePosition => m_Wrapper.m_Actions_MousePosition;
         public InputActionMap Get() { return m_Wrapper.m_Actions; }
@@ -278,6 +301,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @Sprint.started += instance.OnSprint;
             @Sprint.performed += instance.OnSprint;
             @Sprint.canceled += instance.OnSprint;
+            @Interact.started += instance.OnInteract;
+            @Interact.performed += instance.OnInteract;
+            @Interact.canceled += instance.OnInteract;
             @MouseScroll.started += instance.OnMouseScroll;
             @MouseScroll.performed += instance.OnMouseScroll;
             @MouseScroll.canceled += instance.OnMouseScroll;
@@ -297,6 +323,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @Sprint.started -= instance.OnSprint;
             @Sprint.performed -= instance.OnSprint;
             @Sprint.canceled -= instance.OnSprint;
+            @Interact.started -= instance.OnInteract;
+            @Interact.performed -= instance.OnInteract;
+            @Interact.canceled -= instance.OnInteract;
             @MouseScroll.started -= instance.OnMouseScroll;
             @MouseScroll.performed -= instance.OnMouseScroll;
             @MouseScroll.canceled -= instance.OnMouseScroll;
@@ -325,6 +354,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         void OnWalking(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnSprint(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
         void OnMouseScroll(InputAction.CallbackContext context);
         void OnMousePosition(InputAction.CallbackContext context);
     }
