@@ -18,4 +18,6 @@ public class Recipe : ScriptableObject
 
     public ItemList[] craftedItems;
 
+    public int timeToCraft;
+
 }

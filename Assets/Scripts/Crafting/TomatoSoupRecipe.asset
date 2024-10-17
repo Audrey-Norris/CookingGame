@@ -24,3 +24,4 @@ MonoBehaviour:
   craftedItems:
   - item: {fileID: 11400000, guid: 18e88f27830e73146b7ee0401e92b9bc, type: 2}
     total: 1
+  timeToCraft: 2
