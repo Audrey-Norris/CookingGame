@@ -12,6 +12,16 @@ public class ItemInfo : MonoBehaviour
     [SerializeField] GameObject itemImage;
     [SerializeField] GameObject totalText;
 
+    [SerializeField] ItemList itemInfo;
+
+    //WILL NEED MORE IN THE FUTURE
+    public void LoadItemInfo(ItemList itemInfo) {
+        this.itemInfo = itemInfo;
+        total = itemInfo.GetTotal();
+        totalText.GetComponent<TMP_Text>().text = total.ToString();
+
+    }
+
     public void LoadItemInfo(Sprite itemSprite, int itemTotal) {
         sprite = itemSprite;
         total = itemTotal;
@@ -20,4 +30,5 @@ public class ItemInfo : MonoBehaviour
         totalText.GetComponent<TMP_Text>().text = itemTotal.ToString();
 
     }
+
 }

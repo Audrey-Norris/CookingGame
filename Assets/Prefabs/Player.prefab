@@ -80,6 +80,8 @@ GameObject:
   - component: {fileID: 1688912156091570576}
   - component: {fileID: 443034811998457835}
   - component: {fileID: 7417160522011031718}
+  - component: {fileID: 8978909965477290633}
+  - component: {fileID: 7386729024323733479}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -203,6 +205,33 @@ MonoBehaviour:
   rotationSpeed: 200
   jumpForce: 6
   isGrounded: 1
+--- !u!114 &8978909965477290633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3893552024862354835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c42a47451b00d344287e04ec1aab7583, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactObject: {fileID: 0}
+  isInteracting: 0
+--- !u!114 &7386729024323733479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3893552024862354835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c73d887e4a112241a473557fc99543e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalItems: []
 --- !u!1 &5027749601413929819
 GameObject:
   m_ObjectHideFlags: 0

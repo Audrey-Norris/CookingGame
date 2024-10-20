@@ -219,6 +219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5478453319670526865}
   - component: {fileID: 7763287058601694607}
+  - component: {fileID: 8475694939313180548}
   m_Layer: 5
   m_Name: ItemPrefab
   m_TagString: Untagged
@@ -235,7 +236,7 @@ RectTransform:
   m_GameObject: {fileID: 3802462678458002789}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8083335973132974930}
@@ -263,7 +264,22 @@ MonoBehaviour:
   sprite: {fileID: 0}
   total: 0
   itemImage: {fileID: 1109589888461037300}
-  itemTotal: {fileID: 3344979570725117315}
+  totalText: {fileID: 3344979570725117315}
+  itemInfo:
+    item: {fileID: 0}
+    total: 1
+--- !u!114 &8475694939313180548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3802462678458002789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6620a231a30295a4eab4f7f51a3873af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4152759513761419986
 GameObject:
   m_ObjectHideFlags: 0
