@@ -21,8 +21,13 @@ public class ItemList {
         public Item GetItem() {
             return item;
         }
+
         public int GetTotal() {
             return total;
+        }
+
+        public void SetTotal(int total) {
+            this.total = total;
         }
 
 }

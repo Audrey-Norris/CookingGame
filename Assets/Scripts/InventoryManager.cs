@@ -10,6 +10,10 @@ public class InventoryManager : MonoBehaviour
         return totalItems.ToArray();
     }
 
+    public void AddItem(ItemList newItem) {
+        totalItems.Add(newItem);
+    }
+
     public void AddItem(Item newItem) {
         
     }

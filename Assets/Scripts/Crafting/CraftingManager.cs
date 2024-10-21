@@ -16,6 +16,10 @@ public class CraftingManager : MonoBehaviour
         currentRecipe = recipe;
     }
 
+    public bool GetRecipe() {
+        return currentRecipe != null;
+    }
+
     public void clearMaterials() {
         materials = new List<ItemList>();
     }

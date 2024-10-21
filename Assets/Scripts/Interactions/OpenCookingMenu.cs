@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class OpenCookingMenu : MonoBehaviour, IInteractable {
+public class OpenCookingMenu : MonoBehaviour, IInteractable 
+{
 
     [SerializeField] Canvas cookingCanvas;
 
