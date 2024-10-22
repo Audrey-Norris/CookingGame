@@ -31,12 +31,30 @@ public class CraftingManager : MonoBehaviour
         }
     }
 
+    public void removeMaterial(Item material) {
+        if (materials.Exists(obj => obj.item == material)) {
+            int index = materials.FindIndex(obj => obj.item == material);
+            materials.RemoveAt(index);
+        }
+    }
+
     public void reduceMaterial(Material material) {
         if(materials.Exists(obj => obj.item == material)) {
             int index = materials.FindIndex(obj => obj.item == material);
             ItemList item = materials[index];
             item.total -= 1;
             if(item.total <= 0) {
+                removeMaterial(material);
+            }
+        }
+    }
+
+    public void reduceMaterial(Item material) {
+        if (materials.Exists(obj => obj.item == material)) {
+            int index = materials.FindIndex(obj => obj.item == material);
+            ItemList item = materials[index];
+            item.total -= 1;
+            if (item.total <= 0) {
                 removeMaterial(material);
             }
         }
@@ -62,9 +80,18 @@ public class CraftingManager : MonoBehaviour
         }
     }
 
-    //NOT MAKING RIGHT NOW MIGHT IN THE FUTURE
     public void addMaterial(ItemList material) {
-
+        if (materials.Exists(obj => obj.item == material.GetItem())) {
+            int index = materials.FindIndex(obj => obj.item == material.GetItem());
+            ItemList item = materials[index];
+            item.total += 1;
+            materials[index] = item;
+        } else {
+            ItemList itemAdd = new ItemList();
+            itemAdd.total = 1;
+            itemAdd.item = material.GetItem();
+            materials.Add(itemAdd);
+        }
     }
 
     public bool checkList() {
@@ -90,9 +117,10 @@ public class CraftingManager : MonoBehaviour
         return true;
     }
 
-    public void createItem() {
-        if(checkList()) {
-            Debug.Log("Correct Items!");
+    public void createItem(InventoryManager inventory) {
+        clearMaterials();
+        foreach(ItemList item in currentRecipe.craftedItems) {
+            inventory.AddItem(item);
         }
     }
 }

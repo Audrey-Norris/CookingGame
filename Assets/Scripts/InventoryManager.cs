@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
-    [SerializeField] List<ItemList> totalItems = new List<ItemList>();
+    [SerializeField] private List<ItemList> totalItems = new List<ItemList>();
 
     public ItemList[] GetAllItems() {
         return totalItems.ToArray();
@@ -18,7 +18,21 @@ public class InventoryManager : MonoBehaviour
         
     }
 
+    public void ReduceItem(Item removeItem) {
+        if (totalItems.Exists(obj => obj.item == removeItem)) {
+            int index = totalItems.FindIndex(obj => obj.item == removeItem);
+            ItemList item = totalItems[index];
+            item.total -= 1;
+            if (item.total <= 0) {
+                RemoveItem(removeItem);
+            }
+        }
+    }
+
     public void RemoveItem(Item removeItem) {
-        
+        if (totalItems.Exists(obj => obj.item == removeItem)) {
+            int index = totalItems.FindIndex(obj => obj.item == removeItem);
+            totalItems.RemoveAt(index);
+        }
     }
 }

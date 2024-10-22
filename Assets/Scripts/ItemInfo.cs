@@ -53,7 +53,6 @@ public class ItemInfo : MonoBehaviour, IPointerClickHandler
         } else {
             menu.addItemCrafting(this.gameObject);
         }
-        isUsed = !isUsed;
     }
 
 
