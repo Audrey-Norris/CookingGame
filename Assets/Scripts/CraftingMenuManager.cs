@@ -29,8 +29,9 @@ public class CraftingMenuManager : MonoBehaviour
         ItemList[] items = inventory.GetAllItems();
         foreach(ItemList item in items) {
             if(item.item.getItemType() == ItemType.Material) {
+                ItemList itemInfoCopy = new ItemList(item.GetItem(), item.GetTotal());
                 GameObject newItem = Instantiate(itemPrefab, itemArea.transform);
-                newItem.GetComponent<ItemInfo>().LoadItemInfo(item, this.gameObject);
+                newItem.GetComponent<ItemInfo>().LoadItemInfo(itemInfoCopy, this.gameObject);
                 itemObjects.Add(newItem);
             }
         }
