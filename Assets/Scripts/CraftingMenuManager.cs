@@ -10,11 +10,15 @@ public class CraftingMenuManager : MonoBehaviour
     [SerializeField] GameObject itemArea;
     [SerializeField] GameObject craftingArea;
     [SerializeField] GameObject resultsArea;
+    [SerializeField] GameObject toolTip;
 
     [SerializeField] InventoryManager inventory;
     [SerializeField] List<GameObject> itemObjects = new List<GameObject>();
 
     [SerializeField] CraftingManager craftingManager;
+
+        private Coroutine tooltipCoroutine;
+
 
     // Start is called before the first frame update
     void Start()
@@ -85,6 +89,15 @@ public class CraftingMenuManager : MonoBehaviour
             item.GetComponent<ItemInfo>().isUsed = false;
             RemoveFromRecipe(itemInfo);
         }
+    }
+
+    public void TurnOnToolTip(GameObject item) {
+        toolTip.SetActive(true);
+        toolTip.GetComponent<ToolTipInfo>().LoadInfo(item);
+    }
+
+    public void TurnOffToolTip(GameObject item) {
+        toolTip.SetActive(false);
     }
 
     //Removes an item from either the item inventory panel or the crafting area panel

@@ -35,4 +35,8 @@ public class InventoryManager : MonoBehaviour
             totalItems.RemoveAt(index);
         }
     }
+
+    public bool DoesItemExist(ItemList item) {
+        return totalItems.Exists(obj => obj.item == item.item);
+    }
 }

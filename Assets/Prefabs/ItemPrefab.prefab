@@ -267,8 +267,10 @@ MonoBehaviour:
   itemInfo:
     item: {fileID: 0}
     total: 1
+  menu: {fileID: 0}
   isDragged: 0
-  isTooltip: 0
+  isUsed: 0
+  targetUIElement: {fileID: 0}
 --- !u!1 &4152759513761419986
 GameObject:
   m_ObjectHideFlags: 0
