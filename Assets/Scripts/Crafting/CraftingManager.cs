@@ -119,6 +119,11 @@ public class CraftingManager : MonoBehaviour
 
     public void createItem(InventoryManager inventory) {
         clearMaterials();
+        foreach(ItemList item in currentRecipe.materials) {
+            for(int i = 0; i < item.GetTotal(); i++) {
+                inventory.ReduceItem(item.item);
+            }
+        }
         foreach(ItemList item in currentRecipe.craftedItems) {
             inventory.AddItem(item);
         }

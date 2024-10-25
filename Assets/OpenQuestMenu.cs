@@ -18,5 +18,6 @@ public class OpenQuestMenu : MonoBehaviour, IInteractable
         //questCanvas.enabled = true;
         Debug.Log("Activating!");
         GameObject.Find("Player").GetComponent<QuestsManager>().currentQuests.Add(testQuest);
+
     }
 }
