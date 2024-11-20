@@ -1,5 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
+using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour {
@@ -20,16 +23,25 @@ public class PlayerInteract : MonoBehaviour {
 
     private void OnTriggerExit(Collider other) {
         if (other.gameObject.tag == "Interact") {
-            isInteracting = false;
-            interactObject.GetComponent<InteractionManager>().EndInteraction();
             interactObject = null;
         }
     }
 
     private void Update() {
-        if(playerActions.Actions.Interact.ReadValue<float>() > 0 && !isInteracting && interactObject!= null) {
+        CheckInteract();
+    }
+
+    private void CheckInteract() {
+        bool actionPressed = playerActions.Actions.Interact.WasReleasedThisFrame();
+        if(actionPressed && !isInteracting && interactObject != null) {
             isInteracting = true;
             interactObject.GetComponent<InteractionManager>().StartInteraction();
+            return;
+        }
+        if (actionPressed && isInteracting && interactObject != null) {
+            interactObject.GetComponent<InteractionManager>().EndInteraction();
+            isInteracting = false;
+            return;
         }
     }
 

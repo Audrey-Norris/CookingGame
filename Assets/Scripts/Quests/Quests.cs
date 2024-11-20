@@ -12,5 +12,6 @@ public class Quests : ScriptableObject
 
     public bool isCompleted = false;
 
+    public bool isActive = false;
 
 }

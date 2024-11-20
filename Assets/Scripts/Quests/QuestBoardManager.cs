@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class QuestBoardManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    [SerializeField] GameObject questPrefab;
+    [SerializeField] GameObject questArea;
+
+    [SerializeField] QuestsManager playerQuests;
+
+    [SerializeField] List<Quests> questBoardList = new List<Quests>();
+
+    public void Start() {
+        playerQuests = GameObject.Find("Player").GetComponent<QuestsManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void PopulateQuests() {
+        foreach(Quests quest in questBoardList) {
+            GameObject newQuest = Instantiate(questPrefab, questArea.transform);
+            newQuest.GetComponent<QuestInfo>().LoadQuestInfo(quest, this);
+        }
+    }
+
+    public void AddQuest(Quests quest) {
+        playerQuests.GetComponent<QuestsManager>().currentQuests.Add(quest);
     }
 }
