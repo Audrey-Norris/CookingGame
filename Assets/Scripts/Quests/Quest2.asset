@@ -20,5 +20,6 @@ MonoBehaviour:
     total: 2
   - item: {fileID: 11400000, guid: f6512390407a3e243aa10b5eef100019, type: 2}
     total: 1
+  foodPerks: 02000000
   isCompleted: 0
   isActive: 0

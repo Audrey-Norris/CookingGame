@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ItemType { Material, Equipment, Food };
+public enum ItemType { Material, Equipment, Food, Spice };
 public enum Rarity { Common, Uncommon, Rare, Expert };
 
 public class Item : ScriptableObject

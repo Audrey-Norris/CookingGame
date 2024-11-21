@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:make-a-jrpg/Assets/Scripts/SaveLoad/FileSavingSystem/FileDataManager.cs.meta
+guid: ce895dc4f9fafa94a82a3c0f5911df15
+========
+guid: 8e5d6b065f890994ebdd0fd2602d7781
+>>>>>>>> main:make-a-jrpg/Assets/Scripts/RoomInfo.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

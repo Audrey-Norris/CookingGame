@@ -8,6 +8,7 @@ public class CraftingManager : MonoBehaviour
     [SerializeField] private Recipe currentRecipe;
     [SerializeField] private List<Recipe> currentRecipes = new List<Recipe>();
     [SerializeField] private List<ItemList> materials = new List<ItemList>();
+    [SerializeField] private List<ItemList> spices = new List<ItemList>();
 
     public void clearRecipe() {
         currentRecipe = null;

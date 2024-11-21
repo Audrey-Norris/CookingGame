@@ -10,6 +10,8 @@ public class Quests : ScriptableObject
 
     public List<ItemList> itemsNeeded = new List<ItemList>();
 
+    public Perks[] foodPerks;
+
     public bool isCompleted = false;
 
     public bool isActive = false;

@@ -8,8 +8,6 @@ public enum RecipeType { Common, Uncommon, Rare, Expert };
 public class Recipe : ScriptableObject 
 {
     public string Name;
-    [TextArea(5, 10)]
-    public string Description;
     public RecipeType Type;
 
     public int Cost;

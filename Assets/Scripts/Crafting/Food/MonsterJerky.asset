@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MonsterJerky
   m_EditorClassIdentifier: 
   Name: Monster Jerky
-  Description: Jerky made out of tough monsters that boosts strength!
+  Description: Jerky made out of tough monsters
   Cost: 5
   Rarity: 0
   perks: 
