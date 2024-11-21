@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 
 public class CraftingMenuManager : MonoBehaviour
@@ -17,7 +16,7 @@ public class CraftingMenuManager : MonoBehaviour
 
     [SerializeField] CraftingManager craftingManager;
 
-        private Coroutine tooltipCoroutine;
+    private Coroutine tooltipCoroutine;
 
 
     // Start is called before the first frame update
