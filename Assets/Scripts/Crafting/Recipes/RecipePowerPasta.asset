@@ -10,18 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d60385f7e773f2648a82011800a636ae, type: 3}
-  m_Name: TomatoSoupRecipe
+  m_Name: RecipePowerPasta
   m_EditorClassIdentifier: 
-  Name: Tomato Soup
-  Description: A creamy soup made from tomatos and milk.
+  Name: Powerful Pasta
+  Description: 
   Type: 0
-  Cost: 100
+  Cost: 0
   materials:
   - item: {fileID: 11400000, guid: f6f230b18ce77be46a59eb39d7699938, type: 2}
     total: 1
-  - item: {fileID: 11400000, guid: bd8329c04cb22454bb228c44376c3eb2, type: 2}
-    total: 4
-  craftedItems:
-  - item: {fileID: 11400000, guid: 18e88f27830e73146b7ee0401e92b9bc, type: 2}
+  - item: {fileID: 11400000, guid: 22e4d02038535d54bad64bf5c643e174, type: 2}
     total: 1
-  timeToCraft: 2
+  - item: {fileID: 11400000, guid: 57693ea1cfa5c4e4cbe714bbdabd5bbd, type: 2}
+    total: 2
+  - item: {fileID: 11400000, guid: acaed13fb822a6c40a222578b7a6f0bb, type: 2}
+    total: 1
+  craftedItems:
+  - item: {fileID: 11400000, guid: f6512390407a3e243aa10b5eef100019, type: 2}
+    total: 1
+  timeToCraft: 0

@@ -6,6 +6,7 @@ using UnityEngine;
 public class CraftingManager : MonoBehaviour
 {
     [SerializeField] private Recipe currentRecipe;
+    [SerializeField] private List<Recipe> currentRecipes = new List<Recipe>();
     [SerializeField] private List<ItemList> materials = new List<ItemList>();
 
     public void clearRecipe() {

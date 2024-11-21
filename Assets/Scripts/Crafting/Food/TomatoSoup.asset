@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44e69efccf94271498ddd37aaa82138a, type: 3}
-  m_Name: Tomato
+  m_Script: {fileID: 11500000, guid: 4d43815beb1f65b47b6b7dad2328f302, type: 3}
+  m_Name: TomatoSoup
   m_EditorClassIdentifier: 
-  Name: Tomato
-  Description: A bright red fruit ready to be used.
-  Cost: 2
+  Name: Haunted Veggie Soup
+  Description: A creamy soup made from tomatos and milk. Might be slightly haunted
+  Cost: 3
   Rarity: 0
-  qualities: 01000000
+  perks: 01000000

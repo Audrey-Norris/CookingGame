@@ -6,13 +6,13 @@ using UnityEngine.UI;
 
 public class QuestInfo : MonoBehaviour
 {
-    [SerializeField] TMP_Text questName;
-    [SerializeField] TMP_Text questDescription;
-    [SerializeField] GameObject activateQuest;
-    [SerializeField] GameObject backgroundColor;
+    [SerializeField] private TMP_Text questName;
+    [SerializeField] private TMP_Text questDescription;
+    [SerializeField] private GameObject activateQuest;
+    [SerializeField] private GameObject backgroundColor;
 
-    [SerializeField] Color inactiveColor = new Color();
-    [SerializeField] Color activeColor = new Color();
+    [SerializeField] private Color inactiveColor = new Color();
+    [SerializeField] private Color activeColor = new Color();
 
     public Quests questInfo;
 

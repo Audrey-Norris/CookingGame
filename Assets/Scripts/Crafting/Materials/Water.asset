@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44e69efccf94271498ddd37aaa82138a, type: 3}
-  m_Name: Milk
+  m_Name: Water
   m_EditorClassIdentifier: 
-  Name: Milk
-  Description: It's said to make your bones stronger and normally comes from cows!
+  Name: Spring Water
+  Description: Found in the icy springs at the top of the glaciers in the icy cliffs.
   Cost: 2
   Rarity: 0
   qualities: 01000000

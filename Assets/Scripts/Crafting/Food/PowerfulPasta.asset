@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d43815beb1f65b47b6b7dad2328f302, type: 3}
+  m_Name: PowerfulPasta
+  m_EditorClassIdentifier: 
+  Name: Powerful Pasta
+  Description: 
+  Cost: 0
+  Rarity: 0
+  perks: 
