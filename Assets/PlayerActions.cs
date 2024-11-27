@@ -80,6 +80,15 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Cancel"",
+                    ""type"": ""Button"",
+                    ""id"": ""316bbd77-7971-448f-917c-d0a1e4225e86"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -192,6 +201,17 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ea560358-09de-4646-a9f2-b52f3ef4d092"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Cancel"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -206,6 +226,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         m_Actions_Interact = m_Actions.FindAction("Interact", throwIfNotFound: true);
         m_Actions_MouseScroll = m_Actions.FindAction("MouseScroll", throwIfNotFound: true);
         m_Actions_MousePosition = m_Actions.FindAction("MousePosition", throwIfNotFound: true);
+        m_Actions_Cancel = m_Actions.FindAction("Cancel", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -273,6 +294,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Actions_Interact;
     private readonly InputAction m_Actions_MouseScroll;
     private readonly InputAction m_Actions_MousePosition;
+    private readonly InputAction m_Actions_Cancel;
     public struct ActionsActions
     {
         private @PlayerActions m_Wrapper;
@@ -283,6 +305,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         public InputAction @Interact => m_Wrapper.m_Actions_Interact;
         public InputAction @MouseScroll => m_Wrapper.m_Actions_MouseScroll;
         public InputAction @MousePosition => m_Wrapper.m_Actions_MousePosition;
+        public InputAction @Cancel => m_Wrapper.m_Actions_Cancel;
         public InputActionMap Get() { return m_Wrapper.m_Actions; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -310,6 +333,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @MousePosition.started += instance.OnMousePosition;
             @MousePosition.performed += instance.OnMousePosition;
             @MousePosition.canceled += instance.OnMousePosition;
+            @Cancel.started += instance.OnCancel;
+            @Cancel.performed += instance.OnCancel;
+            @Cancel.canceled += instance.OnCancel;
         }
 
         private void UnregisterCallbacks(IActionsActions instance)
@@ -332,6 +358,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @MousePosition.started -= instance.OnMousePosition;
             @MousePosition.performed -= instance.OnMousePosition;
             @MousePosition.canceled -= instance.OnMousePosition;
+            @Cancel.started -= instance.OnCancel;
+            @Cancel.performed -= instance.OnCancel;
+            @Cancel.canceled -= instance.OnCancel;
         }
 
         public void RemoveCallbacks(IActionsActions instance)
@@ -357,5 +386,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnMouseScroll(InputAction.CallbackContext context);
         void OnMousePosition(InputAction.CallbackContext context);
+        void OnCancel(InputAction.CallbackContext context);
     }
 }
