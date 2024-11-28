@@ -18,9 +18,13 @@ public class AdvanceDialogue : MonoBehaviour {
     void Start()
     {
         dialogueManager = GetComponent<DialogueManager>();
-        sceneScript = GetComponent<SceneScript>();
         dialogueUI = GetComponent<DialogueUIManager>();
+    }
+
+    public void SetSceneScript(SceneScript newScene) {
+        sceneScript = newScene;
         currentStory = sceneScript.GetStory();
+
     }
 
     public void ContinueStory() {

@@ -33,7 +33,7 @@ public class PlayerInteract : MonoBehaviour {
         if (!isDialogue) {
             CheckInteract();
         } else {
-
+            CheckDialogue();
         }
     }
 

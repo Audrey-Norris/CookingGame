@@ -44,7 +44,7 @@ PrefabInstance:
     - target: {fileID: 430108822545028555, guid: baf19c2fdfa61b4438aeb8bcc37e22c0, type: 3}
       propertyPath: bodyText
       value: 
-      objectReference: {fileID: 1799667553617253401}
+      objectReference: {fileID: 6525831402840661906}
     - target: {fileID: 430108822545028555, guid: baf19c2fdfa61b4438aeb8bcc37e22c0, type: 3}
       propertyPath: dialogueBox
       value: 
@@ -52,7 +52,7 @@ PrefabInstance:
     - target: {fileID: 430108822545028555, guid: baf19c2fdfa61b4438aeb8bcc37e22c0, type: 3}
       propertyPath: speakerText
       value: 
-      objectReference: {fileID: 6525831402840661906}
+      objectReference: {fileID: 1799667553617253401}
     - target: {fileID: 1428920347904034048, guid: baf19c2fdfa61b4438aeb8bcc37e22c0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.495978

@@ -17,7 +17,7 @@ public class TutorialDia : SceneScript
 
     // All three methods here are in place to be overridden by child script classes
     // These methods should not be called on their own
-    public virtual string GetSpeaker(List<string> tags) {
+    public override string GetSpeaker(List<string> tags) {
         if (tags.Contains("Narrator"))
             return "Narrator";
         else if (tags.Contains("Sylas"))
@@ -26,11 +26,15 @@ public class TutorialDia : SceneScript
             return "";
     }
 
-    public virtual Story GetStory() {
+    public override TextAsset GetInkAsset() {
+        return inkAsset;
+    }
+
+    public override Story GetStory() {
         return _inkStory;
     }
 
-    public virtual void UnbindFunctions() {
+    public override void UnbindFunctions() {
     
     }
 }

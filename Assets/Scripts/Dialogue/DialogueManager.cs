@@ -25,6 +25,7 @@ public class DialogueManager : MonoBehaviour
 
     public void Update() {
         if (playerInput.GetAdvancing()) {
+            playerInput.SetAdvancing(advancing);
             advancing = true;
             StartCoroutine(ContinueDialogue());
         }
@@ -65,7 +66,6 @@ public class DialogueManager : MonoBehaviour
 
         // Reset advancing flag to allow for next input
         advancing = false;
-        playerInput.SetAdvancing(advancing);
     }
 
     public void EndKnot() { // Hides dialogue box
@@ -84,6 +84,12 @@ public class DialogueManager : MonoBehaviour
             ds.UnbindFunctions();
         }
 
+    }
+
+    public void SetSceneScript(SceneScript newScene) {
+        SceneScript sceneScript = newScene;
+        inkasset = sceneScript.GetInkAsset();
+        dialogue.SetSceneScript(newScene);
     }
 
     public void SetStory(Story newStory) {

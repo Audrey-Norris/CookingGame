@@ -10,6 +10,10 @@ public class SceneScript : MonoBehaviour {
         return "";
     }
 
+    public virtual TextAsset GetInkAsset() {
+        return null;
+    }
+
     public virtual Story GetStory() {
         return null;
     }

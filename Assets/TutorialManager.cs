@@ -14,6 +14,7 @@ public class TutorialManager : MonoBehaviour
     void Start()
     {
         player.SetDialogue(true);
+        dm.SetSceneScript(tutorialScene);
         StartCoroutine(startScene());
     }
 
