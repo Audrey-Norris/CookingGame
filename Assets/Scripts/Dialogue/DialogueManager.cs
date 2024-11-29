@@ -83,6 +83,7 @@ public class DialogueManager : MonoBehaviour
         if (TryGetComponent(out DemoScript ds)) {
             ds.UnbindFunctions();
         }
+        playerInput.SetDialogue(false);
 
     }
 
