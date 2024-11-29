@@ -7,9 +7,8 @@ public class OpenQuestMenu : MonoBehaviour, IInteractable
     [SerializeField] Canvas questCanvas;
     [SerializeField] QuestBoardManager manager;
 
-    [SerializeField] Quests testQuest;
-
     public void EndInteraction() {
+        manager.ClearQuests();
         questCanvas.enabled = false;
     }
 

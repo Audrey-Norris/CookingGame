@@ -20,6 +20,6 @@ public class TutorialManager : MonoBehaviour
 
     public IEnumerator startScene() {
         yield return new WaitForSecondsRealtime(1f);
-        dm.InitializeStoryKnot("Tutorial1");
+         dm.InitializeStoryKnot("Tutorial1");
     }
 }
