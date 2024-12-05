@@ -52,7 +52,7 @@ public class SavingSystem : MonoBehaviour
         gameData = dataManager.Load();
         //If no data can be loaded initialize to a new game
         string currentScene = SceneManager.GetActiveScene().name;
-        if (gameData == null && currentScene == "SetupScene") {
+        if (gameData == null) {
             Debug.Log("No data was found, making new Save.");
             NewGame();
         }
@@ -70,8 +70,7 @@ public class SavingSystem : MonoBehaviour
 
     private List<IDataPersistance> FindAllDataPersistenceObjects()
     {
-        IEnumerable<IDataPersistance> dataPersistanceObjects = FindObjectsOfType<MonoBehaviour>()
-            .OfType<IDataPersistance>();
+        IEnumerable<IDataPersistance> dataPersistanceObjects = FindObjectsOfType<MonoBehaviour>().OfType<IDataPersistance>();
 
         return new List<IDataPersistance>(dataPersistanceObjects);
     }
