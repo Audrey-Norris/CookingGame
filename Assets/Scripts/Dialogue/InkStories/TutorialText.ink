@@ -26,3 +26,11 @@
     As a chef you have the capability to help this town by creating magical meals that can make them strong enough to rebuild.#Narrator
     Use the request board to find out what needs to be done and then go to the main room to begin them.#Narrator
     -> END
+
+==Tutorial2==
+    This is your home base where you can plan out all of your events for the day.#Narrator
+    Note that some actions take time so plan your day out wisely to complete your quests.#Narrator
+    To the right is your expedition table. Where you can plan out your adventures to gather supplies.#Narrator
+    In front of your is your cooking station, where you can craft any meal you want!#Narrator
+    It may be small but with the proper time and resources we should be able to spruce it up a bit!#Narrator
+    -> END
