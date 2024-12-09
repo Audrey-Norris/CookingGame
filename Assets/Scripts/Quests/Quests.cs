@@ -16,4 +16,5 @@ public class Quests : ScriptableObject
 
     public bool isActive = false;
 
+    public Buildings buildingReward;
 }

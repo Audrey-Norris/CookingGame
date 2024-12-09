@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Buildings { Sawmill, Smithy, Apothecary, Outpost}
+
 public class TownStatusManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    public List<Buildings> built = new List<Buildings>();
+    public List<GameObject> buildingStrucs = new List<GameObject>();
+
+    public void AddBuilding(Buildings newBuilding) {
+        built.Add(newBuilding);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void RemoveBuilding() {
+
     }
 }

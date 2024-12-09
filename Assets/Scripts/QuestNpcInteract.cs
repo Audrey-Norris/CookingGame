@@ -6,17 +6,37 @@ public class QuestNpcInteract : MonoBehaviour, IInteractable {
 
 
     [SerializeField] Quests npcQuest;
-
-    [SerializeField] ItemList questItem;
-
+    [SerializeField] TownStatusManager town;
+    
     public void EndInteraction() {
         
     }
 
     public void StartInteraction() {
         GameObject player = GameObject.Find("Player");
-        if (player.GetComponent<InventoryManager>().DoesItemExist(npcQuest.itemsNeeded[0])) {
-            player.GetComponent<InventoryManager>().ReduceItem(questItem.item);
+        if(ConfirmQuest(npcQuest, player)) {
+            town.AddBuilding(npcQuest.buildingReward);
+        } else {
+
         }
+    }
+
+    public bool ConfirmQuest(Quests quest, GameObject player) {
+        bool questComplete = true;
+        ItemList[] items = player.GetComponent<InventoryManager>().GetAllItems();
+        foreach(ItemList item in quest.itemsNeeded) {
+            for(int i = 0; i < items.Length; i++) {
+                if (items[i].item == item.item && items[i].total >= item.total) {
+                    questComplete = true;
+                    break;
+                } else {
+                    questComplete = false;
+                }
+            }
+            if (!questComplete) {
+                return false;
+            }
+        }
+        return true;
     }
 }
