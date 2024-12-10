@@ -25,6 +25,7 @@
     
     As a chef you have the capability to help this town by creating magical meals that can make them strong enough to rebuild.#Narrator
     Use the request board to find out what needs to be done and then go to the main room to begin them.#Narrator
+    Be careful what you choose to complete. As each building gives you different buffs going forward.#Narrator
     -> END
 
 ==Tutorial2==

@@ -17,8 +17,6 @@ MonoBehaviour:
     back to work. The smithy provides better equipment for expeditions allowing them
     to be completed faster.
   itemsNeeded:
-  - item: {fileID: 11400000, guid: 67094f840e72ca44c92c246beb09fab8, type: 2}
-    total: 2
   - item: {fileID: 11400000, guid: f6512390407a3e243aa10b5eef100019, type: 2}
     total: 1
   foodPerks: 02000000
