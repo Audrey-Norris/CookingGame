@@ -11,6 +11,11 @@ public class TownStatusManager : MonoBehaviour
 
     public void AddBuilding(Buildings newBuilding) {
         built.Add(newBuilding);
+        foreach(GameObject build in buildingStrucs) {
+            if(build.name == newBuilding.ToString()) {
+                build.SetActive(true);
+            }
+        }
     }
 
     public void RemoveBuilding() {

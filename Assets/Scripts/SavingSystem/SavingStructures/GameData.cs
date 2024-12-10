@@ -21,7 +21,8 @@ public class GameData
 {
     public int totalPlaytime;
     public int[] locationPlaytime;
-    public string questChosen;
+    public string questCompleted;
+    public int itemsCrafted;
 
 
     //Inventory SO Names and totals

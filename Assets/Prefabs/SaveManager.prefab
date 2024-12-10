@@ -10,6 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5758588574019614233}
   - component: {fileID: 3996621466690697490}
+  - component: {fileID: 367386006964585182}
+  - component: {fileID: 4340240553432507987}
+  - component: {fileID: 6381255374773220318}
+  - component: {fileID: 2041063954866360951}
   m_Layer: 0
   m_Name: SaveManager
   m_TagString: Untagged
@@ -45,3 +49,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: data.game
+--- !u!114 &367386006964585182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7875677592269264799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c73d887e4a112241a473557fc99543e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalItems: []
+--- !u!114 &4340240553432507987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7875677592269264799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 057b61ac79bc31e44b5e3dc627084490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentQuests: []
+--- !u!114 &6381255374773220318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7875677592269264799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3c6e41447b766144a7704c5948bddf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2041063954866360951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7875677592269264799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba553d8344dd7c4596699f08167ced3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
