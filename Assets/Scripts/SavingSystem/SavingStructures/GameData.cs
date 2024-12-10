@@ -19,8 +19,8 @@ public class InventoryItem
 [System.Serializable]
 public class GameData
 {
-    public int totalPlaytime;
-    public int[] locationPlaytime;
+    public float totalPlaytime;
+    public float[] locationPlaytime = { 0f, 0f, 0f };
     public string questCompleted;
     public int itemsCrafted;
 

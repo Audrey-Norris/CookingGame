@@ -220,6 +220,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactObject: {fileID: 0}
   isInteracting: 0
+  isDialogue: 0
+  isAdvancing: 0
 --- !u!114 &7386729024323733479
 MonoBehaviour:
   m_ObjectHideFlags: 0

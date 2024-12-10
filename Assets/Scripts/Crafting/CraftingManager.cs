@@ -10,6 +10,12 @@ public class CraftingManager : MonoBehaviour
     [SerializeField] private List<ItemList> materials = new List<ItemList>();
     [SerializeField] private List<ItemList> spices = new List<ItemList>();
 
+    [SerializeField] private CharStats charStats;
+
+    public void Start() {
+        charStats = GameObject.Find("SaveManager").GetComponent<CharStats>();
+    }
+
     public void clearRecipe() {
         currentRecipe = null;
     }
@@ -129,5 +135,6 @@ public class CraftingManager : MonoBehaviour
         foreach(ItemList item in currentRecipe.craftedItems) {
             inventory.AddItem(item);
         }
+        charStats.IncreaseItemsCrafted(1); 
     }
 }

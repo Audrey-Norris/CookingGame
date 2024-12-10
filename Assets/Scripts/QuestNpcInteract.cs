@@ -16,7 +16,7 @@ public class QuestNpcInteract : MonoBehaviour, IInteractable {
         GameObject player = GameObject.Find("Player");
         if(ConfirmQuest(npcQuest, player)) {
             town.AddBuilding(npcQuest.buildingReward);
-            Debug.Log("You have completed the quest!");
+            GameObject.Find("SaveManager").GetComponent<CharStats>().SetQuestCompleted(npcQuest.questName);
         } else {
             Debug.Log("You have not completed the quest!");
         }

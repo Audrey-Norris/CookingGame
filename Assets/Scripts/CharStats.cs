@@ -1,13 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharStats : MonoBehaviour, IDataPersistance 
 {
-    [SerializeField] private int totalPlaytime;
-    [SerializeField] private int[] locationPlaytime = {0,0,0};
+    [SerializeField] private float totalPlaytime;
+    [SerializeField] private float[] locationPlaytime = {0f,0f,0f};
     [SerializeField] private string questCompleted;
     [SerializeField] private int itemsCrafted;
+
+    private void Update() {
+        if(SceneManager.GetActiveScene().buildIndex != 0) {
+            totalPlaytime += Time.deltaTime;
+            locationPlaytime[SceneManager.GetActiveScene().buildIndex-1] += Time.deltaTime;
+        }
+    }
 
     public void SetTotalPlaytime(int playtime) {
         totalPlaytime = playtime;
@@ -25,6 +33,10 @@ public class CharStats : MonoBehaviour, IDataPersistance
         foreach(ItemList item in items) {
             itemsCrafted += item.total;
         }
+    }
+
+    public void IncreaseItemsCrafted(int i) {
+        itemsCrafted += 1;
     }
 
     public void LoadData(GameData data) {
