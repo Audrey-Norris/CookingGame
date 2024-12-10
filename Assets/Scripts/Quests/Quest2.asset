@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questName: Blacksmiths Refueling
   questDescription: The blacksmiths need some food to be able to heal up and get
-    back to work. Get them some pasta and jerky to get back on their feet!
+    back to work. The smithy provides better equipment for expeditions allowing them
+    to be completed faster.
   itemsNeeded:
   - item: {fileID: 11400000, guid: 67094f840e72ca44c92c246beb09fab8, type: 2}
     total: 2

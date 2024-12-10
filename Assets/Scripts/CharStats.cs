@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class CharStats : MonoBehaviour, IDataPersistance 
 {
     [SerializeField] private float totalPlaytime;
-    [SerializeField] private float[] locationPlaytime = {0f,0f,0f};
+    [SerializeField] private float[] locationPlaytime = {0f,0f,0f,0f};
     [SerializeField] private string questCompleted;
     [SerializeField] private int itemsCrafted;
 

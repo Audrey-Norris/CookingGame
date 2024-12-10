@@ -22,7 +22,7 @@ public class CraftingMenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        inventory = GameObject.Find("Player").GetComponent<InventoryManager>();
+        inventory = GameObject.Find("SaveManager").GetComponent<InventoryManager>();
         craftingManager = this.gameObject.GetComponent<CraftingManager>();
     }
 
@@ -118,12 +118,8 @@ public class CraftingMenuManager : MonoBehaviour
     }
 
     public void craftItem() {
-        bool itemCreated = craftingManager.checkList();
-        if (itemCreated) {
-            craftingManager.createItem(inventory);
-        } else {
-            //WARNING MESSAGE
-        }
+        craftingManager.createItem(inventory);
+        RemoveAllItems();
     }
 
 }

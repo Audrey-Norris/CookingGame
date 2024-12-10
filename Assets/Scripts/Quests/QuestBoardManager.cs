@@ -13,7 +13,7 @@ public class QuestBoardManager : MonoBehaviour
     [SerializeField] List<GameObject> questObjects = new List<GameObject>();
 
     public void Start() {
-        playerQuests = GameObject.Find("Player").GetComponent<QuestsManager>();
+        playerQuests = GameObject.Find("SaveManager").GetComponent<QuestsManager>();
     }
 
     public void PopulateQuests() {

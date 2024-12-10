@@ -20,9 +20,10 @@ public class InventoryItem
 public class GameData
 {
     public float totalPlaytime;
-    public float[] locationPlaytime = { 0f, 0f, 0f };
+    public float[] locationPlaytime = { 0f, 0f, 0f, 0f };
     public string questCompleted;
     public int itemsCrafted;
+    public bool[] tutorialsCompleted = { false, false, false };
 
 
     //Inventory SO Names and totals

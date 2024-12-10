@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Quest1
   m_EditorClassIdentifier: 
   questName: Lumberjacks Jacked?
-  questDescription: The lumberjacks need tomato soup to get stronger!
+  questDescription: The lumberjacks need power buffing food so they can rebuild the
+    sawmill. Rebuilding the sawmill will increase fortification defense strength
+    overtime.
   itemsNeeded:
   - item: {fileID: 11400000, guid: 18e88f27830e73146b7ee0401e92b9bc, type: 2}
     total: 2
@@ -22,3 +24,4 @@ MonoBehaviour:
   foodPerks: 00000000
   isCompleted: 0
   isActive: 0
+  buildingReward: 0

@@ -6,6 +6,8 @@ using UnityEngine;
 public class Quests : ScriptableObject
 {
     public string questName;
+
+    [TextArea(15, 20)]
     public string questDescription;
 
     public List<ItemList> itemsNeeded = new List<ItemList>();

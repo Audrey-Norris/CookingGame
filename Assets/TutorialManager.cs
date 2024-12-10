@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TutorialManager : MonoBehaviour
+public class TutorialManager : MonoBehaviour, IDataPersistance 
 {
 
     [SerializeField] private DialogueManager dm;
@@ -17,16 +17,18 @@ public class TutorialManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject.Find("SaveManager").GetComponent<SavingSystem>().LoadGame();
         ActivateDialogue();
     }
 
     public void ActivateDialogue() {
         if (!tutorialCompletion[currentTutorial]) {
-            player.SetDialogue(true);
             dm.SetSceneScript(tutorialScene);
             if (currentTutorial == 0) {
+                player.SetDialogue(true);
                 StartCoroutine(startMorning());
             } else if (currentTutorial == 1) {
+                player.SetDialogue(true);
                 StartCoroutine(startAfternoon());
             }
         }
@@ -47,5 +49,18 @@ public class TutorialManager : MonoBehaviour
         currentTutorial++;
     }
 
+    public void LoadData(GameData data) {
+        currentTutorial = 0;
+        tutorialCompletion = data.tutorialsCompleted;
+        foreach (bool tutorial in tutorialCompletion) {
+            if (tutorial)
+            {
+                currentTutorial++;
+            }
+        }
+    }
 
+    public void SaveData(ref GameData data) {
+        data.tutorialsCompleted = tutorialCompletion;
+    }
 }

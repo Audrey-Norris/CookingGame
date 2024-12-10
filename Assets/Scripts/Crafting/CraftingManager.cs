@@ -89,6 +89,7 @@ public class CraftingManager : MonoBehaviour
     }
 
     public void addMaterial(ItemList material) {
+        Debug.Log(material.item.Name);
         if (materials.Exists(obj => obj.item == material.GetItem())) {
             int index = materials.FindIndex(obj => obj.item == material.GetItem());
             ItemList item = materials[index];
@@ -125,7 +126,38 @@ public class CraftingManager : MonoBehaviour
         return true;
     }
 
+    public bool checkList(int i) {
+        bool matCheck = false;
+        //Loops through each item that has been added to the list
+        foreach (ItemList addedItem in materials) {
+            //Loops through each item that is in the recipe
+            foreach (ItemList recipeItem in currentRecipes[i].materials) {
+                //If an item added to the list matches the recipe then mat check is true and we break out of the loop else mat check is false.
+                if (recipeItem.item.name == addedItem.item.name && recipeItem.total == addedItem.total) {
+                    matCheck = true;
+                    break;
+                } else {
+                    matCheck = false;
+                }
+            }
+            //If at any time matCheck is still false after a loop the added item is incorrect and the function returns false.
+            if (!matCheck) {
+                return false;
+            }
+        }
+        //If they get through all the items and have no issues then return true.
+        return true;
+    }
+
     public void createItem(InventoryManager inventory) {
+        int y = 0;
+        foreach (Recipe recipe in currentRecipes) {
+            if(checkList(y)) {
+                currentRecipe = recipe;
+                break;
+            }
+            y++;
+        }
         clearMaterials();
         foreach(ItemList item in currentRecipe.materials) {
             for(int i = 0; i < item.GetTotal(); i++) {

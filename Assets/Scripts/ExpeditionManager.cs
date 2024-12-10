@@ -15,7 +15,7 @@ public class ExpeditionManager : MonoBehaviour
     [SerializeField] private List<ExpeditionInfo> expeditions = new List<ExpeditionInfo>();
 
     public void Start() {
-        inventory = GameObject.Find("Player").GetComponent<InventoryManager>();
+        inventory = GameObject.Find("SaveManager").GetComponent<InventoryManager>();
         phase = GameObject.Find("PhaseManager").GetComponent<PhaseManager>();
     }
 
