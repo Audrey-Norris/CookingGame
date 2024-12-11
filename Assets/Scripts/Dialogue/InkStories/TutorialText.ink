@@ -34,4 +34,6 @@
     To the right is your expedition table. Where you can plan out your adventures to gather supplies.#Narrator
     In front of your is your cooking station, where you can craft any meal you want!#Narrator
     It may be small but with the proper time and resources we should be able to spruce it up a bit!#Narrator
+    If you want to figure out what items you need to craft food. Go to the stove in the back.#Narrator
+    Expeditions will label the types of items each one allows.#Narrator
     -> END

@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: Quest2
   m_EditorClassIdentifier: 
   questName: Blacksmiths Refueling
-  questDescription: The blacksmiths need some food to be able to heal up and get
+  questDescription: 'The blacksmiths need some food to be able to heal up and get
     back to work. The smithy provides better equipment for expeditions allowing them
     to be completed faster.
+
+
+    Create Powerful Pasta'
   itemsNeeded:
   - item: {fileID: 11400000, guid: f6512390407a3e243aa10b5eef100019, type: 2}
     total: 1

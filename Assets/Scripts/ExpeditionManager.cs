@@ -43,6 +43,7 @@ public class ExpeditionManager : MonoBehaviour
             }
             phase.UpdateTime(activeExpedition.GetTime());
             activeExpedition.SetActive();
+            activeExpedition.gameObject.SetActive(false);
             activeExpedition = expeditions[0];
         }
     }

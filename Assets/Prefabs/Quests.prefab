@@ -84,7 +84,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questCanvas: {fileID: 974842817478860832}
   manager: {fileID: 4989950684512391065}
-  testQuest: {fileID: 11400000, guid: c3a9df0ca63ead44ba369746d4e07503, type: 2}
 --- !u!114 &4989950684512391065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,6 +100,7 @@ MonoBehaviour:
   questArea: {fileID: 3105036613048888392}
   playerQuests: {fileID: 0}
   questBoardList: []
+  questObjects: []
 --- !u!1 &5649317162417936293
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,6 +214,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6600357698285011231}
     m_Modifications:
+    - target: {fileID: 5864631146757130694, guid: 9384a0a5d7f5dbf45acc3582f6deec0a, type: 3}
+      propertyPath: m_CellSize.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864631146757130694, guid: 9384a0a5d7f5dbf45acc3582f6deec0a, type: 3}
+      propertyPath: m_CellSize.y
+      value: 450
+      objectReference: {fileID: 0}
     - target: {fileID: 7241477183706589335, guid: 9384a0a5d7f5dbf45acc3582f6deec0a, type: 3}
       propertyPath: m_Name
       value: QuestBoardMenu
