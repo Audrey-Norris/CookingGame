@@ -8,8 +8,8 @@ public enum DayStates { Upkeep, Chore, Celebration};
 public class PhaseManager : MonoBehaviour
 {
     private DayStates currentState = DayStates.Upkeep;
-    private int MAXTIMER = 6;
-    private int timer = 6;
+    [SerializeField] private int MAXTIMER = 6;
+    [SerializeField] private int timer = 6;
 
     [SerializeField] private TMP_Text timerText;
 

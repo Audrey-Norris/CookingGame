@@ -11,7 +11,7 @@ public class TutorialManager : MonoBehaviour, IDataPersistance
 
     [SerializeField] private int currentTutorial = 0;
 
-    [SerializeField] bool[] tutorialCompletion = { false, false, false };
+    [SerializeField] private bool[] tutorialCompletion = { false, false, false };
 
 
     // Start is called before the first frame update
@@ -58,6 +58,13 @@ public class TutorialManager : MonoBehaviour, IDataPersistance
                 currentTutorial++;
             }
         }
+    }
+
+    public bool GetTutorialCompletion(int i) {
+        if (tutorialCompletion[i]) {
+            return true;
+        }
+        return false;
     }
 
     public void SaveData(ref GameData data) {

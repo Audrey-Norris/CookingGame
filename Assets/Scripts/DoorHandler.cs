@@ -8,11 +8,14 @@ public class DoorHandler : MonoBehaviour, IInteractable
     [SerializeField] private int newScene;
 
     public void EndInteraction() {
-        throw new System.NotImplementedException();
+        return;
     }
 
     public void StartInteraction() {
-        GameObject.Find("SaveManager").GetComponent<SavingSystem>().SaveGame();
+        GameObject save = GameObject.Find("SaveManager");
+        if (save != null) {
+            save.GetComponent<SavingSystem>().SaveGame();
+        }
         swap.ChangeScene(newScene);
         EndInteraction();
     }

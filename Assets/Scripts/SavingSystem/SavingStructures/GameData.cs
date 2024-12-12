@@ -24,7 +24,7 @@ public class GameData
     public string questCompleted;
     public int itemsCrafted;
     public bool[] tutorialsCompleted = { false, false, false };
-
+    public int totalDays = 0;
 
     //Inventory SO Names and totals
     public List<InventoryItem> inventory;

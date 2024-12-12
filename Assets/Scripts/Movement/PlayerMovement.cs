@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     
     [SerializeField] private int jumpForce = 5;
     [SerializeField] private bool isGrounded = true;
+    [SerializeField] private bool canMove = true;
 
     
     // Start is called before the first frame update
@@ -26,10 +27,13 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerMove();
-        if(isGrounded) {
-            playerJump();
+        if(canMove) {
+            playerMove();
+            if (isGrounded) {
+                playerJump();
+            }
         }
+
     }
 
     private void playerMove() {
@@ -51,6 +55,13 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void startMovement() {
+        canMove = true;
+    }
+
+    public void stopMovement() {
+        canMove = false;
+    }
     public void setGrounded(bool status) {
         isGrounded = status;
     }

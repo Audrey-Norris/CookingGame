@@ -7,6 +7,9 @@ public class SceneSwap : MonoBehaviour
 {
     
     public void ChangeScene(int i) {
+        if (SceneManager.GetActiveScene().buildIndex == 4) {
+            GameObject.Find("SaveManager").GetComponent<CharStats>().IncreaseDays();
+        }
         SceneManager.LoadScene(i);
     }
 

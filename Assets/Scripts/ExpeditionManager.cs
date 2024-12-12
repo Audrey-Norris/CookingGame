@@ -35,7 +35,6 @@ public class ExpeditionManager : MonoBehaviour
         }
     }
 
-
     public void GoOnExpedition() {
         if(phase.GetTime() == 0 || phase.GetTime()-activeExpedition.GetTime() >= 0) {
             foreach(ItemList item in activeExpedition.GetItems()) {

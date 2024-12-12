@@ -9,6 +9,7 @@ public class CharStats : MonoBehaviour, IDataPersistance
     [SerializeField] private float[] locationPlaytime = {0f,0f,0f,0f};
     [SerializeField] private string questCompleted;
     [SerializeField] private int itemsCrafted;
+    [SerializeField] private int totalDays;
 
     private void Update() {
         if(SceneManager.GetActiveScene().buildIndex != 0) {
@@ -36,7 +37,31 @@ public class CharStats : MonoBehaviour, IDataPersistance
     }
 
     public void IncreaseItemsCrafted(int i) {
-        itemsCrafted += 1;
+        itemsCrafted += i;
+    }
+
+    public void IncreaseDays() {
+        totalDays++;
+    }
+
+    public float GetPlayTime() {
+        return totalPlaytime;
+    }
+
+    public float[] GetLocationPlaytime() {
+        return locationPlaytime;
+    }
+
+    public string GetQuestCompleted() {
+        return questCompleted;
+    }
+
+    public int GetItemsCrafted() {
+        return itemsCrafted;
+    }
+
+    public int GetTotalDays() {
+        return totalDays;
     }
 
     public void LoadData(GameData data) {

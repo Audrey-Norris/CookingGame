@@ -18,6 +18,8 @@ public class DialogueManager : MonoBehaviour
     public PlayerInteract playerInput;
     public bool advancing;
 
+    public GameObject player;
+
     void Awake() {
         dialogueUI = GetComponent<DialogueUIManager>();
         dialogue = GetComponent<AdvanceDialogue>();
@@ -38,7 +40,7 @@ public class DialogueManager : MonoBehaviour
         currentStory.ChoosePathString(storyName);
         currentKnot = currentStory.state.currentPathString;
 
-        GameObject player = GameObject.Find("Player");
+        player = GameObject.Find("Player");
 
         // Show dialogue box
         dialogueUI.ShowDialogueBox();
@@ -53,7 +55,7 @@ public class DialogueManager : MonoBehaviour
         dialogue.ContinueStory();
 
         if (player != null) {
-            //player.GetComponent<Movement>().disableMovement();
+            player.GetComponent<PlayerMovement>().stopMovement();
         }
 
     }
@@ -69,17 +71,11 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void EndKnot() { // Hides dialogue box
-        if (GameObject.Find("Player") != null) {
-            // Enabling movement while not interacting
-            //GameObject.Find("Player").GetComponent<PlayerInput>().MoveEnable();
+        if (player != null) {
+            player.GetComponent<PlayerMovement>().startMovement();
         }
 
         dialogueUI.HideDialogueBox();
-        // enable movement
-        if (GameObject.Find("Player")) {
-            //GameObject.Find("Player").GetComponent<Movement>().enableMovement();
-        }
-
         if (TryGetComponent(out DemoScript ds)) {
             ds.UnbindFunctions();
         }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 
 public class CraftingMenuManager : MonoBehaviour
@@ -13,6 +14,7 @@ public class CraftingMenuManager : MonoBehaviour
 
     [SerializeField] InventoryManager inventory;
     [SerializeField] List<GameObject> itemObjects = new List<GameObject>();
+    [SerializeField] List<GameObject> craftingObjects = new List<GameObject>();
 
     [SerializeField] CraftingManager craftingManager;
 
@@ -46,9 +48,13 @@ public class CraftingMenuManager : MonoBehaviour
             itemObjects.Remove(item);
             Destroy(item);
         }
+        foreach (GameObject item in craftingObjects.ToArray()) {
+            craftingObjects.Remove(item);
+            Destroy(item);
+        }
     }
 
-    //Adds an item to either the item inventory panel or the crafting area panel
+    //Adds an item to crafting area panel
     public void addItemCrafting(GameObject item) {
         ItemList itemInfo = item.GetComponent<ItemInfo>().itemInfo;
         ItemList newItemInfo = new ItemList(itemInfo.item, itemInfo.total);
@@ -56,17 +62,20 @@ public class CraftingMenuManager : MonoBehaviour
             GameObject newItem = Instantiate(item);
             itemInfo.SetTotal((itemInfo.GetTotal() - 1));
             item.GetComponent<ItemInfo>().UpdateItemInfo(itemInfo);
-
             newItemInfo.SetTotal(1);
             newItem.GetComponent<ItemInfo>().UpdateItemInfo(newItemInfo);
             newItem.transform.parent = craftingArea.transform; //SHOULD ADD ADDING FUNCTION
             newItem.GetComponent<ItemInfo>().isUsed = true;
             AddToRecipe(newItemInfo);
+            craftingObjects.Add(newItem);
         } else {
             item.gameObject.transform.parent = craftingArea.transform;
             item.GetComponent<ItemInfo>().isUsed = true;
+            itemObjects.Remove(item);
+            craftingObjects.Add(item);
             AddToRecipe(itemInfo);
         }
+
     }
 
     public void addItemInven(GameObject item) {
@@ -86,8 +95,10 @@ public class CraftingMenuManager : MonoBehaviour
         } else {
             item.gameObject.transform.parent = itemArea.transform;
             item.GetComponent<ItemInfo>().isUsed = false;
+            itemObjects.Add(item);
             RemoveFromRecipe(itemInfo);
         }
+        craftingObjects.Remove(item);
     }
 
     public void TurnOnToolTip(GameObject item) {
@@ -121,6 +132,6 @@ public class CraftingMenuManager : MonoBehaviour
     public void craftItem() {
         craftingManager.createItem(inventory);
         RemoveAllItems();
+        PopulateItems();
     }
-
 }
