@@ -23,21 +23,26 @@ public class ItemInfo : MonoBehaviour, IPointerClickHandler {
 
     [SerializeField] private RectTransform targetUIElement; // Reference to the UI element's RectTransform
 
+    [SerializeField] public bool toolTipActive;
 
     void Update() {
         Vector2 localMousePosition = targetUIElement.InverseTransformPoint(Input.mousePosition);
         if (targetUIElement.rect.Contains(localMousePosition)) {
             ShowTooltip();
-        } else {
+        } else if (toolTipActive) {
             HideTooltip();
         }
     }
 
     private void ShowTooltip() {
+        Debug.Log(itemInfo.item.Name);
+        toolTipActive = true;
         menu.TurnOnToolTip(this.gameObject);
     }
 
     private void HideTooltip() {
+        Debug.Log("Running!");
+        toolTipActive = false;
         menu.TurnOffToolTip(this.gameObject);
     }
 

@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Monster Meat
   m_EditorClassIdentifier: 
   Name: Monster Meat
-  Description: 
+  Description: Harvested from a monster, it's the perfect main entry to any dish
   Cost: 0
   Rarity: 0
-  qualities: 04000000

@@ -102,7 +102,6 @@ public class CraftingMenuManager : MonoBehaviour
     }
 
     public void TurnOnToolTip(GameObject item) {
-        Debug.Log(item.name);
         toolTip.SetActive(true);
         toolTip.GetComponent<ToolTipInfo>().LoadInfo(item);
     }
