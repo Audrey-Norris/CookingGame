@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TutorialManager : MonoBehaviour, IDataPersistance 
 {
@@ -22,6 +23,9 @@ public class TutorialManager : MonoBehaviour, IDataPersistance
     }
 
     public void ActivateDialogue() {
+        if(SceneManager.GetActiveScene().buildIndex == 3) {
+            currentTutorial = 2;
+        }
         if (!tutorialCompletion[currentTutorial]) {
             dm.SetSceneScript(tutorialScene);
             if (currentTutorial == 0) {
@@ -30,6 +34,9 @@ public class TutorialManager : MonoBehaviour, IDataPersistance
             } else if (currentTutorial == 1) {
                 player.SetDialogue(true);
                 StartCoroutine(startAfternoon());
+            } else if (currentTutorial == 2) {
+                player.SetDialogue(true);
+                StartCoroutine(startTown());
             }
         }
     }
@@ -45,6 +52,13 @@ public class TutorialManager : MonoBehaviour, IDataPersistance
     public IEnumerator startAfternoon() {
         yield return new WaitForSecondsRealtime(1f);
         dm.InitializeStoryKnot("Tutorial2");
+        tutorialCompletion[currentTutorial] = true;
+        currentTutorial++;
+    }
+
+    public IEnumerator startTown() {
+        yield return new WaitForSecondsRealtime(1f);
+        dm.InitializeStoryKnot("Tutorial3");
         tutorialCompletion[currentTutorial] = true;
         currentTutorial++;
     }

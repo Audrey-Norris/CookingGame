@@ -25,6 +25,7 @@
     
     As a chef you have the capability to help this town by creating magical meals that can make them strong enough to rebuild.#Narrator
     Use the request board to find out what needs to be done and then go to the main room to begin them.#Narrator
+    The townspeople are out the door to your right where you can turn in a quest when you're done. #Narrator
     Be careful what you choose to complete. As each building gives you different buffs going forward.#Narrator
     -> END
 
@@ -37,4 +38,11 @@
     If you want to figure out what items you need to craft food. Go to the stove in the back.#Narrator
     Expeditions will label the types of items each one allows.#Narrator
     What items you have can be viewed by pressing Q!#Narrator
+    -> END
+
+==Tutorial3==
+    This is where the townspeople live and where you can turn in quests. #Narrator
+    Once you've created the correct items as written at the crafting station. #Narrator
+    You can speak to the designated npc and if the building has been created you've succeeded. #Narrator
+    Then go through the other door to end the game. #Narrator
     -> END
