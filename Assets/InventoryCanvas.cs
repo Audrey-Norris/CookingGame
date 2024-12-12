@@ -21,12 +21,10 @@ public class InventoryCanvas : MonoBehaviour
     public void PopulateItems() {
         ItemList[] items = inventory.GetAllItems();
         foreach (ItemList item in items) {
-            if (item.item.getItemType() == ItemType.Material) {
                 ItemList itemInfoCopy = new ItemList(item.GetItem(), item.GetTotal());
                 GameObject newItem = Instantiate(itemPrefab, itemArea.transform);
                 newItem.GetComponent<ItemInfo>().LoadItemInfo(itemInfoCopy, this.gameObject);
                 itemObjects.Add(newItem);
-            }
         }
     }
 

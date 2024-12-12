@@ -23,10 +23,12 @@ public class QuestNpcInteract : MonoBehaviour, IInteractable {
     }
 
     public bool ConfirmQuest(Quests quest, GameObject player) {
-        bool questComplete = false;
+        bool questComplete = true;
         ItemList[] items = player.GetComponent<InventoryManager>().GetAllItems();
         foreach(ItemList item in quest.itemsNeeded) {
             for(int i = 0; i < items.Length; i++) {
+                Debug.Log(items[i].item);
+                Debug.Log(item.item);
                 if (items[i].item == item.item && items[i].total >= item.total) {
                     questComplete = true;
                     break;
