@@ -16,7 +16,7 @@ public class ItemInfo : MonoBehaviour, IPointerClickHandler {
     public ItemList itemInfo;
 
     [SerializeField] CraftingMenuManager menu;
-
+    [SerializeField] InventoryCanvas inventory;
 
     public bool isDragged = false;
     public bool isUsed = false;
@@ -35,15 +35,22 @@ public class ItemInfo : MonoBehaviour, IPointerClickHandler {
     }
 
     private void ShowTooltip() {
-        Debug.Log(itemInfo.item.Name);
         toolTipActive = true;
-        menu.TurnOnToolTip(this.gameObject);
+        if(menu) {
+            menu.TurnOnToolTip(this.gameObject);
+        } else {
+            Debug.Log("Running!");
+            inventory.TurnOnToolTip(this.gameObject);
+        }
     }
 
     private void HideTooltip() {
-        Debug.Log("Running!");
         toolTipActive = false;
-        menu.TurnOffToolTip(this.gameObject);
+        if (menu) {
+            menu.TurnOffToolTip(this.gameObject);
+        } else {
+            inventory.TurnOffToolTip(this.gameObject);
+        }
     }
 
     public void UpdateItemInfo(ItemList itemInfo) {
@@ -58,7 +65,11 @@ public class ItemInfo : MonoBehaviour, IPointerClickHandler {
         this.itemInfo = itemInfo;
         total = itemInfo.GetTotal();
         totalText.GetComponent<TMP_Text>().text = total.ToString();
-        this.menu = menu.GetComponent<CraftingMenuManager>();
+        if(menu.GetComponent<CraftingMenuManager>()) {
+            this.menu = menu.GetComponent<CraftingMenuManager>();
+        } else {
+            this.inventory = menu.GetComponent<InventoryCanvas>();
+        }
         targetUIElement = this.gameObject.GetComponent<RectTransform>();
     }
 
@@ -73,40 +84,13 @@ public class ItemInfo : MonoBehaviour, IPointerClickHandler {
     }
 
     public void OnPointerClick(PointerEventData eventData) { 
-        if(isUsed) {
-            menu.addItemInven(this.gameObject);
-        } else {
-            menu.addItemCrafting(this.gameObject);
+        if(menu) {
+            if (isUsed) {
+                menu.addItemInven(this.gameObject);
+            } else {
+                menu.addItemCrafting(this.gameObject);
+            }
         }
+
     }
-
-    /*
-void Update() {
-    if (isDragged) {
-        FollowMouse();
-    }
-}
-
-public void OnPointerClick(PointerEventData eventData) {
-    if (isDragged) {
-
-    } else {
-        if(itemInfo.GetTotal() > 1) {
-            GameObject item = Instantiate(this.gameObject);
-            item.GetComponent<ItemInfo>().itemInfo.SetTotal(1);
-            item.transform.parent = this.transform.parent.transform.parent.transform.parent;
-            item.GetComponent<ItemInfo>().isDragged = true;
-            itemInfo.SetTotal(itemInfo.GetTotal()-1);
-            total = itemInfo.GetTotal();
-            totalText.GetComponent<TMP_Text>().text = total.ToString();
-
-        } else {
-            this.transform.parent = this.transform.parent.transform.parent.transform.parent;
-            isDragged = true;
-        }
-    }
-}
-private void FollowMouse() {
-    transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z);
-} */
 }

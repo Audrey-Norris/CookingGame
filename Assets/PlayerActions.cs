@@ -89,6 +89,15 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Inventory"",
+                    ""type"": ""Button"",
+                    ""id"": ""0274abc4-d145-48af-839d-5c98049f73fe"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -212,6 +221,17 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
                     ""action"": ""Cancel"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""327a6799-1f99-4bf9-b01f-998518ff14cd"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Inventory"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -227,6 +247,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         m_Actions_MouseScroll = m_Actions.FindAction("MouseScroll", throwIfNotFound: true);
         m_Actions_MousePosition = m_Actions.FindAction("MousePosition", throwIfNotFound: true);
         m_Actions_Cancel = m_Actions.FindAction("Cancel", throwIfNotFound: true);
+        m_Actions_Inventory = m_Actions.FindAction("Inventory", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -295,6 +316,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Actions_MouseScroll;
     private readonly InputAction m_Actions_MousePosition;
     private readonly InputAction m_Actions_Cancel;
+    private readonly InputAction m_Actions_Inventory;
     public struct ActionsActions
     {
         private @PlayerActions m_Wrapper;
@@ -306,6 +328,7 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         public InputAction @MouseScroll => m_Wrapper.m_Actions_MouseScroll;
         public InputAction @MousePosition => m_Wrapper.m_Actions_MousePosition;
         public InputAction @Cancel => m_Wrapper.m_Actions_Cancel;
+        public InputAction @Inventory => m_Wrapper.m_Actions_Inventory;
         public InputActionMap Get() { return m_Wrapper.m_Actions; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -336,6 +359,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @Cancel.started += instance.OnCancel;
             @Cancel.performed += instance.OnCancel;
             @Cancel.canceled += instance.OnCancel;
+            @Inventory.started += instance.OnInventory;
+            @Inventory.performed += instance.OnInventory;
+            @Inventory.canceled += instance.OnInventory;
         }
 
         private void UnregisterCallbacks(IActionsActions instance)
@@ -361,6 +387,9 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
             @Cancel.started -= instance.OnCancel;
             @Cancel.performed -= instance.OnCancel;
             @Cancel.canceled -= instance.OnCancel;
+            @Inventory.started -= instance.OnInventory;
+            @Inventory.performed -= instance.OnInventory;
+            @Inventory.canceled -= instance.OnInventory;
         }
 
         public void RemoveCallbacks(IActionsActions instance)
@@ -387,5 +416,6 @@ public partial class @PlayerActions: IInputActionCollection2, IDisposable
         void OnMouseScroll(InputAction.CallbackContext context);
         void OnMousePosition(InputAction.CallbackContext context);
         void OnCancel(InputAction.CallbackContext context);
+        void OnInventory(InputAction.CallbackContext context);
     }
 }
