@@ -6,14 +6,18 @@ using UnityEngine;
 public class CraftingMenuManager : MonoBehaviour
 {
     [SerializeField] GameObject itemPrefab;
+    [SerializeField] GameObject recipePrefab;
+    [SerializeField] GameObject recipeArea;
     [SerializeField] GameObject itemArea;
     [SerializeField] GameObject craftingArea;
     [SerializeField] GameObject resultsArea;
     [SerializeField] GameObject toolTip;
 
     [SerializeField] InventoryManager inventory;
+    [SerializeField] RecipeManager recipes;
     [SerializeField] List<GameObject> itemObjects = new List<GameObject>();
     [SerializeField] List<GameObject> craftingObjects = new List<GameObject>();
+    [SerializeField] List<GameObject> recipeObjects = new List<GameObject>();
 
     [SerializeField] CraftingManager craftingManager;
 
@@ -24,6 +28,7 @@ public class CraftingMenuManager : MonoBehaviour
     void Start()
     {
         inventory = GameObject.Find("SaveManager").GetComponent<InventoryManager>();
+        recipes = GameObject.Find("SaveManager").GetComponent<RecipeManager>();
         craftingManager = this.gameObject.GetComponent<CraftingManager>();
     }
 
@@ -52,6 +57,7 @@ public class CraftingMenuManager : MonoBehaviour
             Destroy(item);
         }
     }
+
 
     //Adds an item to crafting area panel
     public void addItemCrafting(GameObject item) {
@@ -131,5 +137,28 @@ public class CraftingMenuManager : MonoBehaviour
         craftingManager.createItem(inventory);
         RemoveAllItems();
         PopulateItems();
+    }
+
+
+    public void setCurrentRecipe(Recipe recipe) {
+        //ADD VISUAL FEEDBACK
+        craftingManager.setRecipe(recipe);
+    }
+
+    public void PopulateRecipes() {
+        Recipe[] recipeList = recipes.GetAllRecipes();
+        foreach (Recipe recipe in recipeList) {
+            GameObject newItem = Instantiate(recipePrefab, recipeArea.transform);
+            newItem.GetComponent<RecipeInfo>().LoadItemInfo(recipe, this.gameObject);
+            recipeObjects.Add(newItem);
+        }
+    }
+
+    //Destroys all items
+    public void RemoveAllRecipes() {
+        foreach (GameObject recipe in recipeObjects.ToArray()) {
+            recipeObjects.Remove(recipe);
+            Destroy(recipe);
+        }
     }
 }

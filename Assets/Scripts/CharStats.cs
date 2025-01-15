@@ -13,8 +13,8 @@ public class CharStats : MonoBehaviour, IDataPersistance
 
     private void Update() {
         if(SceneManager.GetActiveScene().buildIndex != 0) {
-            totalPlaytime += Time.deltaTime;
-            locationPlaytime[SceneManager.GetActiveScene().buildIndex-1] += Time.deltaTime;
+            //totalPlaytime += Time.deltaTime;
+            //locationPlaytime[SceneManager.GetActiveScene().buildIndex-1] += Time.deltaTime;
         }
     }
 

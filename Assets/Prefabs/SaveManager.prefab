@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3996621466690697490}
   - component: {fileID: 367386006964585182}
   - component: {fileID: 4340240553432507987}
+  - component: {fileID: -8139968860736268291}
   - component: {fileID: 6381255374773220318}
   m_Layer: 0
   m_Name: SaveManager
@@ -74,6 +75,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentQuests: []
+--- !u!114 &-8139968860736268291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7875677592269264799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f066b1218ebb042819ddb8d56fa6c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6381255374773220318
 MonoBehaviour:
   m_ObjectHideFlags: 0
