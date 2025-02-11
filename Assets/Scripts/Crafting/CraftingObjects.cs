@@ -1,5 +1,7 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 [System.Serializable]
@@ -29,4 +31,15 @@ public class ItemList {
             this.total = total;
         }
 
+}
+
+[System.Serializable]
+public struct Flavor {
+    public string name;
+    public int total;
+
+    public Flavor(string Name) {
+        this.name = Name;
+        this.total = 0;
+    }
 }
