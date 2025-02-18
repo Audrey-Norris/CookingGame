@@ -23,6 +23,8 @@ public class CraftingMenuManager : MonoBehaviour
 
     private Coroutine tooltipCoroutine;
 
+    [SerializeField] private int currentStage = 0;
+
 
     // Start is called before the first frame update
     void Start()
@@ -37,12 +39,27 @@ public class CraftingMenuManager : MonoBehaviour
     public void PopulateItems() {
         ItemList[] items = inventory.GetAllItems();
         foreach(ItemList item in items) {
-            if(item.item.getItemType() == ItemType.Material) {
-                ItemList itemInfoCopy = new ItemList(item.GetItem(), item.GetTotal());
-                GameObject newItem = Instantiate(itemPrefab, itemArea.transform);
-                newItem.GetComponent<ItemInfo>().LoadItemInfo(itemInfoCopy, this.gameObject);
-                itemObjects.Add(newItem);
+            switch(currentStage) {
+                case 0:
+                    if (item.item.getItemType() == ItemType.Material) {
+                        ItemList itemInfoCopy = new ItemList(item.GetItem(), item.GetTotal());
+                        GameObject newItem = Instantiate(itemPrefab, itemArea.transform);
+                        newItem.GetComponent<ItemInfo>().LoadItemInfo(itemInfoCopy, this.gameObject);
+                        itemObjects.Add(newItem);
+                    }
+                    break;
+                case 1:
+                    if (item.item.getItemType() == ItemType.Spice) {
+                        ItemList itemInfoCopy = new ItemList(item.GetItem(), item.GetTotal());
+                        GameObject newItem = Instantiate(itemPrefab, itemArea.transform);
+                        newItem.GetComponent<ItemInfo>().LoadItemInfo(itemInfoCopy, this.gameObject);
+                        itemObjects.Add(newItem);
+                    }
+                    break;
+                default:
+                    break;
             }
+
         }
     }
 
