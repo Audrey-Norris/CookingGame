@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private bool isGrounded = true;
     [SerializeField] private bool canMove = true;
 
+    [SerializeField] private FootstepsAudio footsteps;
+
     
     // Start is called before the first frame update
     void Awake()
@@ -39,13 +41,18 @@ public class PlayerMovement : MonoBehaviour
     private void playerMove() {
         Vector3 moveInput = playerActions.Actions.Walking.ReadValue<Vector2>();
         int speed = walkSpeed;
-        
-        if(playerActions.Actions.Sprint.ReadValue<float>() > 0) {
+
+        if (playerActions.Actions.Sprint.ReadValue<float>() > 0) {
             speed *= sprintMultiplier;
         } 
         rb.transform.Translate(Vector3.forward * moveInput.y * (speed*Time.deltaTime));
         rb.transform.Rotate(Vector3.up * moveInput.x * (rotationSpeed * Time.deltaTime));
 
+        if(moveInput.x != 0 || moveInput.z != 0) {
+            footsteps.walking = true;
+        } else {
+            footsteps.walking = false;
+        }
     }
 
     private void playerJump() { 
