@@ -6,6 +6,4 @@ public class QuestsManager : MonoBehaviour
 {
     public List<Quests> currentQuests = new List<Quests>();
 
-
-    
 }

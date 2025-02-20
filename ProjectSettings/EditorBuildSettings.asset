@@ -12,12 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 7cbeb68d1272b624994840402e868974
   - enabled: 1
-    path: Assets/Scenes/MorningScene.unity
+    path: Assets/Scenes/OldScenes/MorningScene.unity
     guid: aa0067dcbf3c6344cb70149455be36b4
   - enabled: 1
-    path: Assets/Scenes/TownScene.unity
+    path: Assets/Scenes/OldScenes/TownScene.unity
     guid: 43e4fe45b214bc74c978a05409a090d2
   - enabled: 1
-    path: Assets/Scenes/EveningScene.unity
+    path: Assets/Scenes/OldScenes/EveningScene.unity
     guid: a3c982bfd440ecc448a89b0c4b3117a2
   m_configObjects: {}

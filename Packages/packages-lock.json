@@ -172,6 +172,16 @@
         "com.unity.testtools.codecoverage": "1.2.4"
       }
     },
+    "com.unity.feature.gameplay-storytelling": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.cinemachine": "2.9.5",
+        "com.unity.timeline": "1.7.6",
+        "com.unity.visualscripting": "1.9.1"
+      }
+    },
     "com.unity.ide.rider": {
       "version": "3.0.26",
       "depth": 0,

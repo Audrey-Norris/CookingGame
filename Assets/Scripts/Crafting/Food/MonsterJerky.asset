@@ -17,3 +17,14 @@ MonoBehaviour:
   Cost: 5
   Rarity: 0
   perks: 
+  flavorList:
+  - name: Spicy
+    total: 0
+  - name: Sweet
+    total: 0
+  - name: Bitter
+    total: 0
+  - name: Sour
+    total: 0
+  - name: Umami
+    total: 0
