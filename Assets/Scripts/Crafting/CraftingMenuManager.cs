@@ -25,6 +25,8 @@ public class CraftingMenuManager : MonoBehaviour
 
     [SerializeField] private int currentStage = 0;
 
+    [SerializeField] private AudioClip[] completionClips;
+
 
     // Start is called before the first frame update
     void Start()
@@ -39,27 +41,12 @@ public class CraftingMenuManager : MonoBehaviour
     public void PopulateItems() {
         ItemList[] items = inventory.GetAllItems();
         foreach(ItemList item in items) {
-            switch(currentStage) {
-                case 0:
-                    if (item.item.getItemType() == ItemType.Material) {
-                        ItemList itemInfoCopy = new ItemList(item.GetItem(), item.GetTotal());
-                        GameObject newItem = Instantiate(itemPrefab, itemArea.transform);
-                        newItem.GetComponent<ItemInfo>().LoadItemInfo(itemInfoCopy, this.gameObject);
-                        itemObjects.Add(newItem);
-                    }
-                    break;
-                case 1:
-                    if (item.item.getItemType() == ItemType.Spice) {
-                        ItemList itemInfoCopy = new ItemList(item.GetItem(), item.GetTotal());
-                        GameObject newItem = Instantiate(itemPrefab, itemArea.transform);
-                        newItem.GetComponent<ItemInfo>().LoadItemInfo(itemInfoCopy, this.gameObject);
-                        itemObjects.Add(newItem);
-                    }
-                    break;
-                default:
-                    break;
+            if (item.item.getItemType() == ItemType.Material) {
+                ItemList itemInfoCopy = new ItemList(item.GetItem(), item.GetTotal());
+                GameObject newItem = Instantiate(itemPrefab, itemArea.transform);
+                newItem.GetComponent<ItemInfo>().LoadItemInfo(itemInfoCopy, this.gameObject);
+                itemObjects.Add(newItem);
             }
-
         }
     }
 
@@ -177,5 +164,10 @@ public class CraftingMenuManager : MonoBehaviour
             recipeObjects.Remove(recipe);
             Destroy(recipe);
         }
+    }
+
+    public void PlayCompleteAudio() {
+        AudioClip clip = completionClips[Random.Range(0, 4)];
+        this.gameObject.GetComponent<AudioSource>().Play();
     }
 }
