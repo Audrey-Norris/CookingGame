@@ -36,6 +36,20 @@ public class CraftingMenuManager : MonoBehaviour
         craftingManager = this.gameObject.GetComponent<CraftingManager>();
     }
 
+    //NEED TO: SETUP RECIPES, MAKE FUNCTIONALITY TO CLICK ON ITEMS, 
+
+
+
+
+
+
+
+
+
+
+
+
+    //OLD SCRIPTS!!!
 
     //Will populate items into the item inventory panel
     public void PopulateItems() {
@@ -168,6 +182,6 @@ public class CraftingMenuManager : MonoBehaviour
 
     public void PlayCompleteAudio() {
         AudioClip clip = completionClips[Random.Range(0, 4)];
-        this.gameObject.GetComponent<AudioSource>().Play();
+        this.gameObject.GetComponent<AudioSource>().PlayOneShot(clip);
     }
 }
