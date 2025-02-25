@@ -168,6 +168,6 @@ public class CraftingMenuManager : MonoBehaviour
 
     public void PlayCompleteAudio() {
         AudioClip clip = completionClips[Random.Range(0, 4)];
-        this.gameObject.GetComponent<AudioSource>().Play();
+        this.gameObject.GetComponent<AudioSource>().PlayOneShot(clip);
     }
 }

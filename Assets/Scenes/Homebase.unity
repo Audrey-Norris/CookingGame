@@ -245,7 +245,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.6
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -341,7 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce360abfb5b359a408fa06a5b16c6cfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stepRate: 0.6
+  stepRate: 0.55
   stepCoolDown: 0
   footStep: {fileID: 8300000, guid: c0c9b96f6417fdf4aa50762bd03b7c9d, type: 3}
   audio: {fileID: 101084171}
@@ -6778,19 +6778,19 @@ PrefabInstance:
     - target: {fileID: 428120418284151852, guid: 550b8b1f11b286841a313ee6ca0ecad5, type: 3}
       propertyPath: completionClips.Array.data[0]
       value: 
-      objectReference: {fileID: 8300000, guid: d21537eb1a6f4d24086269f8db54fceb, type: 3}
+      objectReference: {fileID: 8300000, guid: 248fc1022d991da469d6985210542aee, type: 3}
     - target: {fileID: 428120418284151852, guid: 550b8b1f11b286841a313ee6ca0ecad5, type: 3}
       propertyPath: completionClips.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: f549c918441bd5c43a07c00f0f2e9511, type: 3}
+      objectReference: {fileID: 8300000, guid: 962b6a4b17892354f800033519e49ecd, type: 3}
     - target: {fileID: 428120418284151852, guid: 550b8b1f11b286841a313ee6ca0ecad5, type: 3}
       propertyPath: completionClips.Array.data[2]
       value: 
-      objectReference: {fileID: 8300000, guid: 706a5f94aa9fc7b4b8f1eb8a7721efbc, type: 3}
+      objectReference: {fileID: 8300000, guid: 0c8a0f8ba423c1d42a513cf1e41a00d4, type: 3}
     - target: {fileID: 428120418284151852, guid: 550b8b1f11b286841a313ee6ca0ecad5, type: 3}
       propertyPath: completionClips.Array.data[3]
       value: 
-      objectReference: {fileID: 8300000, guid: 13fa92bfd1d13d2439c486ba70993397, type: 3}
+      objectReference: {fileID: 8300000, guid: db23bc7dbca3b7c4f9f65ad57b55f80b, type: 3}
     - target: {fileID: 773900681352484280, guid: 550b8b1f11b286841a313ee6ca0ecad5, type: 3}
       propertyPath: m_Name
       value: Recipes
@@ -6817,7 +6817,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2106093831365271131, guid: 550b8b1f11b286841a313ee6ca0ecad5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2106093831365271131, guid: 550b8b1f11b286841a313ee6ca0ecad5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -6830,6 +6830,10 @@ PrefabInstance:
     - target: {fileID: 2106093831365271131, guid: 550b8b1f11b286841a313ee6ca0ecad5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2106093831365271131, guid: 550b8b1f11b286841a313ee6ca0ecad5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayCompleteAudio
       objectReference: {fileID: 0}
     - target: {fileID: 2106093831365271131, guid: 550b8b1f11b286841a313ee6ca0ecad5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -6899,6 +6903,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5719040359505709651, guid: 550b8b1f11b286841a313ee6ca0ecad5, type: 3}
+      propertyPath: audio
+      value: 
+      objectReference: {fileID: 8300000, guid: b7bf56d66fdbda748baa18cc32e76a64, type: 3}
+    - target: {fileID: 5719040359505709651, guid: 550b8b1f11b286841a313ee6ca0ecad5, type: 3}
+      propertyPath: cookingsource
+      value: 
+      objectReference: {fileID: 889721905}
     - target: {fileID: 8012376489091900668, guid: 550b8b1f11b286841a313ee6ca0ecad5, type: 3}
       propertyPath: m_Name
       value: Cooking
@@ -6942,7 +6954,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
