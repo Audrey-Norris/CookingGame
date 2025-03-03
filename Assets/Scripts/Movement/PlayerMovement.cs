@@ -19,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private FootstepsAudio footsteps;
 
+    [SerializeField] private Animator playerAnimator;
+
     
     // Start is called before the first frame update
     void Awake()
@@ -42,17 +44,29 @@ public class PlayerMovement : MonoBehaviour
         Vector3 moveInput = playerActions.Actions.Walking.ReadValue<Vector2>();
         int speed = walkSpeed;
 
+        Debug.Log(moveInput);
+
+        if (moveInput.x != 0 || moveInput.y != 0) {
+            playerAnimator.SetBool("Walking", true);
+            footsteps.walking = true;
+        } else {
+            playerAnimator.SetBool("Walking", false);
+            playerAnimator.SetBool("Running", false);
+            footsteps.walking = false;
+        }
+
         if (playerActions.Actions.Sprint.ReadValue<float>() > 0) {
             speed *= sprintMultiplier;
-        } 
+            playerAnimator.SetBool("Running", true);
+        } else {
+            playerAnimator.SetBool("Running", false);
+        }
+
+
         rb.transform.Translate(Vector3.forward * moveInput.y * (speed*Time.deltaTime));
         rb.transform.Rotate(Vector3.up * moveInput.x * (rotationSpeed * Time.deltaTime));
 
-        if(moveInput.x != 0 || moveInput.z != 0) {
-            footsteps.walking = true;
-        } else {
-            footsteps.walking = false;
-        }
+
     }
 
     private void playerJump() { 
