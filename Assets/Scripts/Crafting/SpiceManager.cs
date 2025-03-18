@@ -7,6 +7,7 @@ public class SpiceManager : MonoBehaviour
 
     [SerializeField] private List<GameObject> spiceObjects = new List<GameObject>();
 
+    [SerializeField] private Recipe currentRecipe;
 
     public void AddSpice() {
 
@@ -22,6 +23,10 @@ public class SpiceManager : MonoBehaviour
 
     public void CraftItems() {
 
+    }
+
+    public void SetRecipe(Recipe recipe) {
+        currentRecipe = recipe;
     }
 
 }

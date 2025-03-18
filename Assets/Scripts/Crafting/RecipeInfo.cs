@@ -40,6 +40,8 @@ public class RecipeInfo : MonoBehaviour
         targetUIElement = this.gameObject.GetComponent<RectTransform>();
     }
 
-
+    public void SetInfo() {
+        GameObject.Find("CookingMenu").GetComponent<RecipeListManager>().SetCurrentRecipe(recipe);
+    }
 
 }

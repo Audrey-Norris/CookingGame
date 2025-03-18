@@ -10,18 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d60385f7e773f2648a82011800a636ae, type: 3}
-  m_Name: RecipeMonsterJerky
+  m_Name: LavamanderBake
   m_EditorClassIdentifier: 
-  Name: Monster Jerky
-  Description: 
+  Name: Lavamander Bake
   Type: 0
-  Cost: 100
-  materials:
-  - item: {fileID: 11400000, guid: acaed13fb822a6c40a222578b7a6f0bb, type: 2}
-    total: 1
-  - item: {fileID: 11400000, guid: 40d2f7b878e52624db9d8be4da1e6deb, type: 2}
-    total: 2
-  craftedItems:
-  - item: {fileID: 11400000, guid: 67094f840e72ca44c92c246beb09fab8, type: 2}
-    total: 3
+  Description: Using the tails of the some of the most fearsome creatures around
+    this bake strides the line between soft and chewy. With plenty of cheese to go
+    around.
+  Cost: 0
+  materials: []
+  craftedItem: {fileID: 11400000, guid: 969d3f5969c956a4db807c47dece9d2f, type: 2}
   timeToCraft: 0

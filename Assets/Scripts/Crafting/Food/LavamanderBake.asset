@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d43815beb1f65b47b6b7dad2328f302, type: 3}
-  m_Name: MonsterJerky
+  m_Name: LavamanderBake
   m_EditorClassIdentifier: 
-  Name: Monster Jerky
-  Description: Jerky made out of tough monsters
-  Cost: 5
+  Name: Lavamander Bake
+  Description: A soft cheesy bake with bits of chewy and firey lavamander tail inside.
+    Anyone who can stand the temperature of this bake will gain some natural resitance
+    to temperature changes.
+  Cost: 0
   Rarity: 0
   perks: 
   flavorList:

@@ -164,9 +164,11 @@ public class CraftingManager : MonoBehaviour
                 inventory.ReduceItem(item.item);
             }
         }
+        /*
         foreach(ItemList item in currentRecipe.craftedItems) {
             inventory.AddItem(item);
         }
         charStats.IncreaseItemsCrafted(1); 
+        */
     }
 }

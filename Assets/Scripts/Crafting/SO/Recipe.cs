@@ -14,7 +14,7 @@ public class Recipe : ScriptableObject
 
     public ItemList[] materials;
 
-    public ItemList[] craftedItems;
+    public Food craftedItem;
 
     public int timeToCraft;
 

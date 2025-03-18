@@ -10,10 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d43815beb1f65b47b6b7dad2328f302, type: 3}
-  m_Name: TomatoSoup
+  m_Name: WitchshroomStew
   m_EditorClassIdentifier: 
-  Name: Haunted Veggie Soup
-  Description: A creamy soup made from tomatos and milk. Might be slightly haunted
-  Cost: 3
+  Name: Witchshroom Stew
+  Description: A warm but dark looking stew filled to the brim with magic. Said to
+    enhance anyone's resistance to the arcane after they've eaten it.
+  Cost: 0
   Rarity: 0
   perks: 
+  flavorList:
+  - name: Spicy
+    total: 0
+  - name: Sweet
+    total: 0
+  - name: Bitter
+    total: 0
+  - name: Sour
+    total: 0
+  - name: Umami
+    total: 0

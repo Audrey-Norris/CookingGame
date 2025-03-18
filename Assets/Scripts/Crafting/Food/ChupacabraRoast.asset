@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d43815beb1f65b47b6b7dad2328f302, type: 3}
+  m_Name: ChupacabraRoast
+  m_EditorClassIdentifier: 
+  Name: Chupacabra Roast
+  Description: A tender and warm meal especially after the effort it takes to defeat
+    a beast like this. Due to it's ability to turn it's victims to stone this roast
+    typically makes those who eat it hardier.
+  Cost: 0
+  Rarity: 0
+  perks: 
+  flavorList:
+  - name: Spicy
+    total: 0
+  - name: Sweet
+    total: 0
+  - name: Bitter
+    total: 0
+  - name: Sour
+    total: 0
+  - name: Umami
+    total: 0

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 
 public class RecipeListManager : MonoBehaviour
 {
@@ -12,9 +14,13 @@ public class RecipeListManager : MonoBehaviour
     [SerializeField] List<GameObject> recipeObjects = new List<GameObject>();
     [SerializeField] RecipeManager recipesKnown;
 
+    [SerializeField] private TMP_Text recipeTitle;
+    [SerializeField] private TMP_Text recipeDescription;
 
     [SerializeField] Recipe currentRecipe;
+    [SerializeField] private bool recipeSelect = false;
 
+    [SerializeField] private GameObject FlavorMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +37,23 @@ public class RecipeListManager : MonoBehaviour
             GameObject newRecipe = Instantiate(recipePrefab, recipeArea.transform);
             newRecipe.GetComponent<RecipeInfo>().LoadRecipeInfo(recipe, this.gameObject);
             recipeObjects.Add(newRecipe);
+        }
+    }
+
+    public void SetCurrentRecipe(Recipe recipe) {
+        recipeTitle.text = recipe.Name;
+        recipeDescription.text = recipe.craftedItem.Description;
+        currentRecipe = recipe;
+        recipeSelect = true;
+    }
+
+    public void MoveToSpices() {
+        if (recipeSelect) {
+            FlavorMenu.GetComponent<Canvas>().enabled = true;
+            FlavorMenu.GetComponent<SpiceManager>().SetRecipe(currentRecipe);
+            this.GetComponent<Canvas>().enabled = false;
+        } else {
+            Debug.Log("Error! No Recipe Selected!");
         }
     }
 
