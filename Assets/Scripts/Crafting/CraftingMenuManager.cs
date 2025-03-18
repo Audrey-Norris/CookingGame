@@ -163,6 +163,7 @@ public class CraftingMenuManager : MonoBehaviour
         craftingManager.setRecipe(recipe);
     }
 
+    /*
     public void PopulateRecipes() {
         Recipe[] recipeList = recipes.GetAllRecipes();
         foreach (Recipe recipe in recipeList) {
@@ -170,7 +171,7 @@ public class CraftingMenuManager : MonoBehaviour
             newItem.GetComponent<RecipeInfo>().LoadItemInfo(recipe, this.gameObject);
             recipeObjects.Add(newItem);
         }
-    }
+    } */
 
     //Destroys all items
     public void RemoveAllRecipes() {

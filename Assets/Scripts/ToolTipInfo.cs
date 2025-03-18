@@ -17,4 +17,13 @@ public class ToolTipInfo : MonoBehaviour
         itemAmount.text = item.GetTotal().ToString();
         this.transform.position = new Vector3(itemObject.transform.position.x+300, itemObject.transform.position.y-100, itemObject.transform.position.z);
     }
+
+    /*
+    public void LoadRecipe(GameObject itemObject) {
+        Recipe recipe = itemObject.GetComponent<RecipeInfo>().recipe;
+        itemTitle.text = recipe.Name;
+        itemDescription.text = recipe.;
+        itemAmount.text = ;
+        this.transform.position = new Vector3(itemObject.transform.position.x + 300, itemObject.transform.position.y - 100, itemObject.transform.position.z);
+    } */
 }

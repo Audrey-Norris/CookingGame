@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class RecipeInfo : MonoBehaviour, IPointerClickHandler 
+public class RecipeInfo : MonoBehaviour
 {
     [SerializeField] Sprite sprite;
 
@@ -14,7 +14,7 @@ public class RecipeInfo : MonoBehaviour, IPointerClickHandler
 
     public Recipe recipe;
 
-    [SerializeField] CraftingMenuManager menu;
+    [SerializeField] RecipeListManager menu;
     [SerializeField] InventoryCanvas inventory;
 
     public bool isDragged = false;
@@ -29,37 +29,17 @@ public class RecipeInfo : MonoBehaviour, IPointerClickHandler
     }
 
     //WILL NEED MORE IN THE FUTURE
-    public void LoadItemInfo(Recipe recipe, GameObject menu) {
+    public void LoadRecipeInfo(Recipe recipe, GameObject menu) {
         this.recipe = recipe;
         recipeName.GetComponent<TMP_Text>().text = recipe.Name.ToString();
-        if (menu.GetComponent<CraftingMenuManager>()) {
-            this.menu = menu.GetComponent<CraftingMenuManager>();
+        if (menu.GetComponent<RecipeListManager>()) {
+            this.menu = menu.GetComponent<RecipeListManager>();
         } else {
             this.inventory = menu.GetComponent<InventoryCanvas>();
         }
         targetUIElement = this.gameObject.GetComponent<RectTransform>();
     }
 
-    public void LoadItemInfo(Sprite itemSprite, int itemTotal) {
-        sprite = itemSprite;
-        itemImage.GetComponent<Image>().sprite = itemSprite;
-        recipeName.GetComponent<TMP_Text>().text = recipe.Name.ToString();
-        targetUIElement = this.gameObject.GetComponent<RectTransform>();
 
-    }
 
-    public void SetActive() {
-
-    }
-
-    public void SetInactive() {
-
-    }
-
-    public void OnPointerClick(PointerEventData eventData) {
-        if (menu) {
-            menu.setCurrentRecipe(recipe);
-        }
-
-    }
 }
