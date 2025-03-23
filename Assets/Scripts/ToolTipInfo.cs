@@ -10,6 +10,8 @@ public class ToolTipInfo : MonoBehaviour
     [SerializeField] TMP_Text itemDescription;
     [SerializeField] TMP_Text itemAmount;
 
+    [SerializeField] public bool isActive = false;
+
     public void LoadInfo(GameObject itemObject) {
         ItemList item = itemObject.GetComponent<ItemInfo>().itemInfo;
         itemTitle.text = item.item.Name;

@@ -40,6 +40,13 @@ public class RecipeListManager : MonoBehaviour
         }
     }
 
+    public void RemoveRecipes() {
+        foreach(GameObject item in recipeObjects.ToArray()) {
+            recipeObjects.Remove(item);
+            Destroy(item);
+        }
+    }
+
     public void SetCurrentRecipe(Recipe recipe) {
         recipeTitle.text = recipe.Name;
         recipeDescription.text = recipe.craftedItem.Description;
@@ -51,7 +58,9 @@ public class RecipeListManager : MonoBehaviour
         if (recipeSelect) {
             FlavorMenu.GetComponent<Canvas>().enabled = true;
             FlavorMenu.GetComponent<SpiceManager>().SetRecipe(currentRecipe);
+            FlavorMenu.GetComponent<SpiceManager>().PopulateSpices();
             this.GetComponent<Canvas>().enabled = false;
+            RemoveRecipes();
         } else {
             Debug.Log("Error! No Recipe Selected!");
         }

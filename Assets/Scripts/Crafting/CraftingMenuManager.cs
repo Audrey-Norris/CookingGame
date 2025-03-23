@@ -88,12 +88,12 @@ public class CraftingMenuManager : MonoBehaviour
             newItemInfo.SetTotal(1);
             newItem.GetComponent<ItemInfo>().UpdateItemInfo(newItemInfo);
             newItem.transform.parent = craftingArea.transform; //SHOULD ADD ADDING FUNCTION
-            newItem.GetComponent<ItemInfo>().isUsed = true;
+            //newItem.GetComponent<ItemInfo>().isUsed = true;
             AddToRecipe(newItemInfo);
             craftingObjects.Add(newItem);
         } else {
             item.gameObject.transform.parent = craftingArea.transform;
-            item.GetComponent<ItemInfo>().isUsed = true;
+            //item.GetComponent<ItemInfo>().isUsed = true;
             itemObjects.Remove(item);
             craftingObjects.Add(item);
             AddToRecipe(itemInfo);
@@ -111,13 +111,13 @@ public class CraftingMenuManager : MonoBehaviour
 
             newItemInfo.SetTotal(1);
             newItem.GetComponent<ItemInfo>().UpdateItemInfo(newItemInfo);
-            newItem.GetComponent<ItemInfo>().isUsed = false;
+            //newItem.GetComponent<ItemInfo>().isUsed = false;
             newItem.transform.parent = itemArea.transform; //SHOULD ADD ADDING FUNCTION
             RemoveFromRecipe(newItemInfo);
 
         } else {
             item.gameObject.transform.parent = itemArea.transform;
-            item.GetComponent<ItemInfo>().isUsed = false;
+            //item.GetComponent<ItemInfo>().isUsed = false;
             itemObjects.Add(item);
             RemoveFromRecipe(itemInfo);
         }
