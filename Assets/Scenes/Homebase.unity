@@ -8383,6 +8383,7 @@ MonoBehaviour:
   activeSpiceArea: {fileID: 1453638839}
   currentRecipe: {fileID: 0}
   sliders: {fileID: 957712457}
+  RecipeMenu: {fileID: 5157619906650625164}
   spicy: 0
   sweet: 0
   bitter: 0
@@ -9665,7 +9666,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1563696373}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 957712456}
+        m_TargetAssemblyTypeName: SpiceManager, Assembly-CSharp
+        m_MethodName: CraftItems
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1563696373
 MonoBehaviour:
   m_ObjectHideFlags: 0

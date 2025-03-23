@@ -17,6 +17,8 @@ public class SpiceManager : MonoBehaviour
 
     [SerializeField] private SliderManager sliders;
 
+    [SerializeField] private GameObject RecipeMenu;
+
 
     [SerializeField] private int spicy = 0, sweet = 0, bitter = 0, sour = 0, savory = 0;
 
@@ -54,7 +56,6 @@ public class SpiceManager : MonoBehaviour
         }
 
         if (itemInfo.total > 1) { //If there is greater than 1 spice objects create a new object
-            Debug.Log("Running!");
             ItemList newItem = new ItemList(itemInfo.item, 1);
             CreateSpiceObject(newItem, location, listLocation);
             itemInfo.total--;
@@ -74,7 +75,14 @@ public class SpiceManager : MonoBehaviour
     }
 
     public void RemoveSpice() { //Might Not Need
-
+        foreach (GameObject item in spiceObjects.ToArray()) {
+            spiceObjects.Remove(item);
+            Destroy(item);
+        }
+        foreach (GameObject item in activeSpiceObjects.ToArray()) {
+            activeSpiceObjects.Remove(item);
+            Destroy(item);
+        }
     }
 
     //Takes the entire list of spices currently active and calculates the spice value of the dish
@@ -129,11 +137,30 @@ public class SpiceManager : MonoBehaviour
     }
 
     public void CraftItems() {
+        ItemList newFoodItem = new ItemList();
+        Food food = currentRecipe.craftedItem;
+        food.flavorList[0].total = spicy;
+        food.flavorList[1].total = sweet;
+        food.flavorList[2].total = bitter;
+        food.flavorList[3].total = sour;
+        food.flavorList[4].total = savory;
 
+        newFoodItem.item = currentRecipe.craftedItem;
+        newFoodItem.total = 1;
+
+        inventory.AddItem(newFoodItem);
+        MoveToRecipes();
     }
 
     public void SetRecipe(Recipe recipe) {
         currentRecipe = recipe;
+    }
+
+    public void MoveToRecipes() {
+        RecipeMenu.GetComponent<Canvas>().enabled = true;
+        RecipeMenu.GetComponent<RecipeListManager>().PopulateRecipes();
+        this.GetComponent<Canvas>().enabled = false;
+        RemoveSpice();
     }
 
 }
