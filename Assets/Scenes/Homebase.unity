@@ -16870,6 +16870,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -2537824487161673501, guid: b2318526a5b9fe145adaa0e33eccedbc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 205e8ed56d843314dbef3aaea4a0f3c2, type: 2}
     - target: {fileID: 919132149155446097, guid: b2318526a5b9fe145adaa0e33eccedbc, type: 3}
       propertyPath: m_Name
       value: WindowWall
