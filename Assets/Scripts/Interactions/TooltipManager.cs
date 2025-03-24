@@ -18,7 +18,6 @@ public class TooltipManager : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     // Update is called once per frame
     void Update()
     {
-        /*
         if (isActive) {
             ShowTooltip();
         } else {
@@ -26,7 +25,6 @@ public class TooltipManager : MonoBehaviour, IPointerEnterHandler, IPointerExitH
                 HideTooltip();
             }
         } 
-        */
     }
 
     public void ShowTooltip() {

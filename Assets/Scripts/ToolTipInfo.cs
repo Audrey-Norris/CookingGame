@@ -17,7 +17,7 @@ public class ToolTipInfo : MonoBehaviour
         itemTitle.text = item.item.Name;
         itemDescription.text = item.item.Description;
         itemAmount.text = item.GetTotal().ToString();
-        this.transform.position = new Vector3(itemObject.transform.position.x+300, itemObject.transform.position.y-100, itemObject.transform.position.z);
+        this.transform.position = new Vector3(itemObject.transform.position.x+400, itemObject.transform.position.y-150, itemObject.transform.position.z);
     }
 
     /*
