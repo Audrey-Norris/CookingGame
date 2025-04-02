@@ -444,7 +444,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 84da3b54180fe1d45b4750eb7c4cfc1e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bd8c695efe88fef43a4e6f20b4475b08, type: 2}
+      objectReference: {fileID: 2100000, guid: a485a71d062206442a4b77b270aaf3f6, type: 2}
     - target: {fileID: 919132149155446097, guid: 84da3b54180fe1d45b4750eb7c4cfc1e, type: 3}
       propertyPath: m_Name
       value: Wall
@@ -863,6 +863,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9abbc7b111dce5342908df47d2317113, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a485a71d062206442a4b77b270aaf3f6, type: 2}
     - target: {fileID: 919132149155446097, guid: 9abbc7b111dce5342908df47d2317113, type: 3}
       propertyPath: m_Name
       value: DoorWallL
@@ -891,7 +895,7 @@ AudioSource:
   m_GameObject: {fileID: 101084169}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 5751895131926269773, guid: 8d3e12d3fbdae2c4c98cd15a3247df7c, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.6
@@ -1121,7 +1125,7 @@ AudioSource:
   m_GameObject: {fileID: 112139557}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 8d3e12d3fbdae2c4c98cd15a3247df7c, type: 2}
+  OutputAudioMixerGroup: {fileID: 5751895131926269773, guid: 8d3e12d3fbdae2c4c98cd15a3247df7c, type: 2}
   m_audioClip: {fileID: 8300000, guid: 0f3732aabccaa3b41b79947e4f757e3d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.3
@@ -1571,10 +1575,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 587280316005718937, guid: 7a17b6adc32206a43a1cd11d39b20358, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a485a71d062206442a4b77b270aaf3f6, type: 2}
     - target: {fileID: 919132149155446097, guid: 7a17b6adc32206a43a1cd11d39b20358, type: 3}
       propertyPath: m_Name
       value: Bar
       objectReference: {fileID: 0}
+    - target: {fileID: 4884572407134431720, guid: 7a17b6adc32206a43a1cd11d39b20358, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a485a71d062206442a4b77b270aaf3f6, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7874,7 +7886,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 84da3b54180fe1d45b4750eb7c4cfc1e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bd8c695efe88fef43a4e6f20b4475b08, type: 2}
+      objectReference: {fileID: 2100000, guid: a485a71d062206442a4b77b270aaf3f6, type: 2}
     - target: {fileID: 919132149155446097, guid: 84da3b54180fe1d45b4750eb7c4cfc1e, type: 3}
       propertyPath: m_Name
       value: Wall (4)
@@ -8015,7 +8027,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 84da3b54180fe1d45b4750eb7c4cfc1e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bd8c695efe88fef43a4e6f20b4475b08, type: 2}
+      objectReference: {fileID: 2100000, guid: a485a71d062206442a4b77b270aaf3f6, type: 2}
     - target: {fileID: 919132149155446097, guid: 84da3b54180fe1d45b4750eb7c4cfc1e, type: 3}
       propertyPath: m_Name
       value: Wall (2)
@@ -8513,7 +8525,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 84da3b54180fe1d45b4750eb7c4cfc1e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bd8c695efe88fef43a4e6f20b4475b08, type: 2}
+      objectReference: {fileID: 2100000, guid: a485a71d062206442a4b77b270aaf3f6, type: 2}
     - target: {fileID: 919132149155446097, guid: 84da3b54180fe1d45b4750eb7c4cfc1e, type: 3}
       propertyPath: m_Name
       value: Wall (5)
@@ -9702,7 +9714,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 84da3b54180fe1d45b4750eb7c4cfc1e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bd8c695efe88fef43a4e6f20b4475b08, type: 2}
+      objectReference: {fileID: 2100000, guid: a485a71d062206442a4b77b270aaf3f6, type: 2}
     - target: {fileID: 919132149155446097, guid: 84da3b54180fe1d45b4750eb7c4cfc1e, type: 3}
       propertyPath: m_Name
       value: Wall (7)
@@ -10089,6 +10101,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3c33b7939724e6b45ba1b8aa7901c1ed, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a485a71d062206442a4b77b270aaf3f6, type: 2}
     - target: {fileID: 919132149155446097, guid: 3c33b7939724e6b45ba1b8aa7901c1ed, type: 3}
       propertyPath: m_Name
       value: WallHalf (2)
@@ -10167,6 +10183,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3c33b7939724e6b45ba1b8aa7901c1ed, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a485a71d062206442a4b77b270aaf3f6, type: 2}
     - target: {fileID: 919132149155446097, guid: 3c33b7939724e6b45ba1b8aa7901c1ed, type: 3}
       propertyPath: m_Name
       value: WallHalf (1)
@@ -10248,7 +10268,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 84da3b54180fe1d45b4750eb7c4cfc1e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bd8c695efe88fef43a4e6f20b4475b08, type: 2}
+      objectReference: {fileID: 2100000, guid: a485a71d062206442a4b77b270aaf3f6, type: 2}
     - target: {fileID: 919132149155446097, guid: 84da3b54180fe1d45b4750eb7c4cfc1e, type: 3}
       propertyPath: m_Name
       value: Wall (3)
@@ -10330,7 +10350,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 84da3b54180fe1d45b4750eb7c4cfc1e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bd8c695efe88fef43a4e6f20b4475b08, type: 2}
+      objectReference: {fileID: 2100000, guid: a485a71d062206442a4b77b270aaf3f6, type: 2}
     - target: {fileID: 919132149155446097, guid: 84da3b54180fe1d45b4750eb7c4cfc1e, type: 3}
       propertyPath: m_Name
       value: Wall (6)
@@ -10860,7 +10880,7 @@ AudioSource:
   m_GameObject: {fileID: 1482867782}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 8d3e12d3fbdae2c4c98cd15a3247df7c, type: 2}
+  OutputAudioMixerGroup: {fileID: 5751895131926269773, guid: 8d3e12d3fbdae2c4c98cd15a3247df7c, type: 2}
   m_audioClip: {fileID: 8300000, guid: 8a0028ea8fb7a134ea21defb52883034, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2
@@ -11065,6 +11085,69 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1543266702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1543266703}
+  m_Layer: 0
+  m_Name: BackgroundMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1543266703
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543266702}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.4273424, y: 4.4608927, z: 1.5867739}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1560701502}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1560701501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1560701502}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1560701502
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560701501}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1543266703}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1563696370
 GameObject:
   m_ObjectHideFlags: 0
@@ -11340,6 +11423,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 9fb2d546ebbe80744bac3e5f7745d8d4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a485a71d062206442a4b77b270aaf3f6, type: 2}
     - target: {fileID: 919132149155446097, guid: 9fb2d546ebbe80744bac3e5f7745d8d4, type: 3}
       propertyPath: m_Name
       value: DoorWallR
@@ -11568,6 +11655,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3c33b7939724e6b45ba1b8aa7901c1ed, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a485a71d062206442a4b77b270aaf3f6, type: 2}
     - target: {fileID: 919132149155446097, guid: 3c33b7939724e6b45ba1b8aa7901c1ed, type: 3}
       propertyPath: m_Name
       value: WallHalf (2)
@@ -11649,7 +11740,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 84da3b54180fe1d45b4750eb7c4cfc1e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bd8c695efe88fef43a4e6f20b4475b08, type: 2}
+      objectReference: {fileID: 2100000, guid: a485a71d062206442a4b77b270aaf3f6, type: 2}
     - target: {fileID: 919132149155446097, guid: 84da3b54180fe1d45b4750eb7c4cfc1e, type: 3}
       propertyPath: m_Name
       value: Wall (1)
@@ -16874,6 +16965,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 205e8ed56d843314dbef3aaea4a0f3c2, type: 2}
+    - target: {fileID: -1660384031183063813, guid: b2318526a5b9fe145adaa0e33eccedbc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a485a71d062206442a4b77b270aaf3f6, type: 2}
     - target: {fileID: 919132149155446097, guid: b2318526a5b9fe145adaa0e33eccedbc, type: 3}
       propertyPath: m_Name
       value: WindowWall
@@ -17098,6 +17193,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3c33b7939724e6b45ba1b8aa7901c1ed, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a485a71d062206442a4b77b270aaf3f6, type: 2}
     - target: {fileID: 919132149155446097, guid: 3c33b7939724e6b45ba1b8aa7901c1ed, type: 3}
       propertyPath: m_Name
       value: WallHalf
@@ -17866,6 +17965,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3c33b7939724e6b45ba1b8aa7901c1ed, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a485a71d062206442a4b77b270aaf3f6, type: 2}
     - target: {fileID: 919132149155446097, guid: 3c33b7939724e6b45ba1b8aa7901c1ed, type: 3}
       propertyPath: m_Name
       value: WallHalf (1)
@@ -18947,4 +19050,5 @@ SceneRoots:
   - {fileID: 1676118790}
   - {fileID: 991105591}
   - {fileID: 879092216}
+  - {fileID: 1543266703}
   - {fileID: 1658698569}
