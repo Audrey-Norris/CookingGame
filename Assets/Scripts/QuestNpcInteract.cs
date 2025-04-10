@@ -11,11 +11,10 @@ public class QuestNpcInteract : MonoBehaviour, IInteractable {
     public void EndInteraction() {
         
     }
-
     public void StartInteraction() {
         GameObject player = GameObject.Find("Player");
         if(ConfirmQuest(npcQuest, player)) {
-            town.AddBuilding(npcQuest.buildingReward);
+            //town.AddBuilding(npcQuest.buildingReward);
             GameObject.Find("SaveManager").GetComponent<CharStats>().SetQuestCompleted(npcQuest.questName);
         } else {
             Debug.Log("You have not completed the quest!");
@@ -25,6 +24,7 @@ public class QuestNpcInteract : MonoBehaviour, IInteractable {
     public bool ConfirmQuest(Quests quest, GameObject player) {
         bool questComplete = true;
         ItemList[] items = player.GetComponent<InventoryManager>().GetAllItems();
+        /*
         foreach(ItemList item in quest.itemsNeeded) {
             for(int i = 0; i < items.Length; i++) {
                 Debug.Log(items[i].item);
@@ -40,6 +40,7 @@ public class QuestNpcInteract : MonoBehaviour, IInteractable {
                 return false;
             }
         }
+        */
         return true;
     }
 }
