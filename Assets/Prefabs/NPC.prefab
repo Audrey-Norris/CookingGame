@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7758925712596590810}
   - component: {fileID: 5508581280427339891}
   - component: {fileID: 849772834687303098}
+  - component: {fileID: 5344243533547908532}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -97,6 +98,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53ffaba23272416429eedaeb90c81d0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &5344243533547908532
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114028299016779454}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ae1fcfdb69596784a8a61d05a0c0a87e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3366427437590319557
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,6 +181,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 0ae91b7acbdad1142bf68509d716600f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
