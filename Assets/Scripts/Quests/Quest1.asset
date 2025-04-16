@@ -12,16 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c52852f9b43cf545ba7df2365c65d21, type: 3}
   m_Name: Quest1
   m_EditorClassIdentifier: 
-  questName: Lumberjacks Jacked?
-  questDescription: "The lumberjacks need power buffing food so they can rebuild
-    the sawmill. Rebuilding the sawmill will increase fortification defense strength
-    overtime. \n\nCreate Tomato Soup and Monster Jerky"
-  itemsNeeded:
-  - item: {fileID: 11400000, guid: 18e88f27830e73146b7ee0401e92b9bc, type: 2}
-    total: 2
-  - item: {fileID: 11400000, guid: 67094f840e72ca44c92c246beb09fab8, type: 2}
-    total: 2
-  foodPerks: 00000000
+  questName: Lumberjacks Request
+  questDescription: 'The lumberjacks are looking to get back into the forest to find
+    fresh lumber to rebuild the defenses.
+
+
+    They love a bowl with plenty of spice
+    and a bit of salty flavor.'
+  itemNeeded: {fileID: 0}
+  foodPerks: 02000000
+  flavorList:
+  - name: Spicy
+    total: 20
+  - name: Sweet
+    total: 0
+  - name: Bitter
+    total: 0
+  - name: Sour
+    total: 0
+  - name: Umami
+    total: 10
   isCompleted: 0
   isActive: 0
-  buildingReward: 0

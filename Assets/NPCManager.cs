@@ -1,18 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
+
+public enum NPCStates { Pickup, Eating, Leaving};
 
 public class NPCManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
+    public NPCStates state;
+
+    public Transform moveLocation;
+
+    public void Update() {
         
+        if(state == 0) {
+            MoveNPC();
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void MoveNPC() {
+        float dist = Vector3.Distance(this.transform.position, moveLocation.transform.position);
+        if(dist > 0.5f) {
+            var step = 1.5f * Time.deltaTime;
+            this.transform.position = Vector3.MoveTowards(transform.position, moveLocation.position, step);
+        }
+
     }
+
 }

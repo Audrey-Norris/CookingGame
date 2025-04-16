@@ -18,7 +18,7 @@ MonoBehaviour:
     typically makes those who eat it hardier.
   Cost: 0
   Rarity: 0
-  perks: 
+  perks: 02000000
   flavorList:
   - name: Spicy
     total: 0

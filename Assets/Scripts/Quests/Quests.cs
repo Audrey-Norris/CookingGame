@@ -31,8 +31,5 @@ public class Quests : ScriptableObject
         for (int i = 0; i < 5; i++) {
             this.flavorList[i].total = 0;
         }
-
-
-
     }
 }

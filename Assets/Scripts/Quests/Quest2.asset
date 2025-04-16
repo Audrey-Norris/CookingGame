@@ -13,16 +13,24 @@ MonoBehaviour:
   m_Name: Quest2
   m_EditorClassIdentifier: 
   questName: Blacksmiths Refueling
-  questDescription: 'The blacksmiths need some food to be able to heal up and get
-    back to work. The smithy provides better equipment for expeditions allowing them
-    to be completed faster.
+  questDescription: 'The blacksmiths are looking to refuel so they can get the forges
+    smelting new weapons.
 
 
-    Create Powerful Pasta'
-  itemsNeeded:
-  - item: {fileID: 11400000, guid: f6512390407a3e243aa10b5eef100019, type: 2}
-    total: 1
-  foodPerks: 02000000
+    They want a bowl that''s shocking in flavor all the
+    way!'
+  itemNeeded: {fileID: 0}
+  foodPerks: 00000000
+  flavorList:
+  - name: Spicy
+    total: 0
+  - name: Sweet
+    total: 0
+  - name: Bitter
+    total: 30
+  - name: Sour
+    total: 0
+  - name: Umami
+    total: 0
   isCompleted: 0
   isActive: 0
-  buildingReward: 1

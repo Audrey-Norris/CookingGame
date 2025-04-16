@@ -8,14 +8,18 @@ public class OpenCookingMenu : MonoBehaviour, IInteractable
 
     [SerializeField] Canvas cookingCanvas;
 
+    [SerializeField] AudioSetup audio;
+
     public void EndInteraction() {
         //cookingCanvas.transform.gameObject.GetComponent<RecipeListManager>().RemoveAllItems();
         //cookingCanvas.transform.gameObject.GetComponent<RecipeListManager>().RemoveAllRecipes();
         cookingCanvas.enabled = false;
+        audio.ChangeAudioSnapShot(1);
     }
 
     public void StartInteraction() {
         cookingCanvas.transform.gameObject.GetComponent<RecipeListManager>().PopulateRecipes();
         cookingCanvas.enabled = true;
+        audio.ChangeAudioSnapShot(3);
     }
 }

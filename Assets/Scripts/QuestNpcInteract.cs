@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class QuestNpcInteract : MonoBehaviour, IInteractable {
 
 
-    [SerializeField] Quests npcQuest;
-    [SerializeField] TownStatusManager town;
-    
+    [SerializeField] private Quests npcQuest;
+    [SerializeField] private TownStatusManager town;
+
+    [SerializeField] private VisualEffect effect;
+    [SerializeField] private Animator animator;
+
     public void EndInteraction() {
         
     }
@@ -24,6 +28,10 @@ public class QuestNpcInteract : MonoBehaviour, IInteractable {
     public bool ConfirmQuest(Quests quest, GameObject player) {
         bool questComplete = true;
         ItemList[] items = player.GetComponent<InventoryManager>().GetAllItems();
+
+        effect.Play();
+        animator.Play("GoodResult");
+
         /*
         foreach(ItemList item in quest.itemsNeeded) {
             for(int i = 0; i < items.Length; i++) {
