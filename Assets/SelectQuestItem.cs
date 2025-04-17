@@ -15,6 +15,6 @@ public class SelectQuestItem : MonoBehaviour
     }
 
     public void ContinueQuest() {
-
+        //GameObject.Find("QuestsManager").GetComponent<QuestsManager>().ConfirmQuest();
     }
 }
