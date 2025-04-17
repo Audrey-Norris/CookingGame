@@ -11,8 +11,12 @@ public class TooltipManager : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     [SerializeField] private GameObject toolTip;
 
-    public void Awake() {
-        toolTip = GameObject.Find("FlavorMenu").GetComponentInChildren<ToolTipInfo>().gameObject;
+    public void Start() {
+        if(this.GetComponent<ItemInfo>().GetMenu().GetComponent<SpiceManager>()) {
+            toolTip = this.GetComponent<ItemInfo>().GetMenu().GetComponentInChildren<ToolTipInfo>().gameObject;
+        } else if(this.GetComponent<ItemInfo>().GetMenu().GetComponent<InventoryCanvas>()) {
+            toolTip = this.GetComponent<ItemInfo>().GetMenu().GetComponentInChildren<ToolTipInfo>().gameObject;
+        }
     }
     
     // Update is called once per frame
@@ -28,7 +32,9 @@ public class TooltipManager : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     }
 
     public void ShowTooltip() {
-        toolTip.transform.GetChild(0).gameObject.SetActive(true);
+        if(this.GetComponent<ItemInfo>().GetMenu().GetComponent<SpiceManager>()) {
+            toolTip.transform.GetChild(0).gameObject.SetActive(true);
+        }
         toolTip.GetComponent<ToolTipInfo>().LoadInfo(this.gameObject);
     }
 

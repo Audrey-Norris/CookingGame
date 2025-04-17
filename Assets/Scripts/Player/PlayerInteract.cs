@@ -10,6 +10,9 @@ public class PlayerInteract : MonoBehaviour {
 
     [SerializeField] private GameObject interactObject = null;
     [SerializeField] private bool isInteracting = false;
+
+    [SerializeField] private Canvas inventory;
+
     public bool isDialogue = false;
     public bool isAdvancing = false;
 
@@ -32,6 +35,7 @@ public class PlayerInteract : MonoBehaviour {
     private void Update() {
         if (!isDialogue) {
             CheckInteract();
+            CheckInventory();
         } else {
             CheckDialogue();
         }
@@ -48,6 +52,19 @@ public class PlayerInteract : MonoBehaviour {
                 interactObject.GetComponent<InteractionManager>().EndInteraction();
                 isInteracting = false;
                 return;
+        }
+    }
+
+    public void CheckInventory() {
+        bool actionPressed = playerActions.Actions.Inventory.WasReleasedThisFrame();
+        if(actionPressed && inventory.isActiveAndEnabled) {
+            inventory.GetComponent<InventoryCanvas>().RemoveAllItems();
+            inventory.enabled = false;
+            return;
+        } else if (actionPressed && !inventory.isActiveAndEnabled){
+            inventory.GetComponent<InventoryCanvas>().PopulateItems();
+            inventory.enabled = true;
+            return;
         }
     }
 

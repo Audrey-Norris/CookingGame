@@ -13,8 +13,6 @@ public class InventoryCanvas : MonoBehaviour
     [SerializeField] GameObject itemPrefab;
     [SerializeField] GameObject itemArea;
 
-    [SerializeField] GameObject toolTip;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -38,13 +36,8 @@ public class InventoryCanvas : MonoBehaviour
             Destroy(item);
         }
     }
+    
+    public void ShowItem() {
 
-    public void TurnOnToolTip(GameObject item) {
-        toolTip.SetActive(true);
-        toolTip.GetComponent<ToolTipInfo>().LoadInfo(item);
-    }
-
-    public void TurnOffToolTip(GameObject item) {
-        toolTip.SetActive(false);
     }
 }

@@ -31,6 +31,24 @@ public class ItemInfo : MonoBehaviour {
     }
 
     public void MoveLocations() {
-        menu.GetComponent<SpiceManager>().AddSpice(this.gameObject);
+        if(menu.GetComponent<SpiceManager>()) {
+            menu.GetComponent<SpiceManager>().AddSpice(this.gameObject);
+        }
+    }
+
+    public void SelectQuestItem() {
+        if (menu.GetComponent<InventoryCanvas>()) {
+            menu.GetComponent<SelectQuestItem>().SetQuestItem(this.gameObject);
+        }
+    }
+
+    public void ShowInfo() {
+        if(menu.GetComponent<InventoryCanvas>()) {
+            menu.GetComponent<InventoryCanvas>().ShowItem();
+        }
+    }
+
+    public GameObject GetMenu () {
+        return menu;
     }
 }

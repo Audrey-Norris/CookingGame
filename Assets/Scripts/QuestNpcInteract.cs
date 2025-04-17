@@ -16,18 +16,20 @@ public class QuestNpcInteract : MonoBehaviour, IInteractable {
     public void EndInteraction() {
         
     }
-    public void StartInteraction() {
+    public void StartInteraction() { // Change this to open special inventory UI to select a meal to give to client
         GameObject player = GameObject.Find("Player");
-        if(ConfirmQuest(npcQuest, player)) {
-            //town.AddBuilding(npcQuest.buildingReward);
-            GameObject.Find("SaveManager").GetComponent<CharStats>().SetQuestCompleted(npcQuest.questName);
-        } else {
-            Debug.Log("You have not completed the quest!");
-        }
+        GameObject inventory = GameObject.Find("InventoryCanvas");
+        inventory.GetComponent<Canvas>().enabled = true;
     }
 
-    public bool ConfirmQuest(Quests quest, GameObject player) {
-        bool questComplete = false;
+    public bool ConfirmQuest(Quests quest, Food item) {
+        bool questComplete = true;
+
+        for(int i = 0; i < quest.flavorList.Length; i++) {
+            if (item.flavorList[i].total < quest.flavorList[i].total) {
+                questComplete = false;
+            }
+        }
 
         if(questComplete) {
             goodEffect.Play();
@@ -37,6 +39,6 @@ public class QuestNpcInteract : MonoBehaviour, IInteractable {
             animator.Play("BadResult");
         }
 
-        return true;
+        return questComplete;
     }
 }

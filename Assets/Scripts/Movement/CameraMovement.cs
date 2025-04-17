@@ -8,6 +8,7 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] InputActionReference mouse;
     [SerializeField] InputActionReference scroll;
 
+    float cameraVerticalRotation;
 
     // Update is called once per frame
     void Update()
@@ -17,8 +18,14 @@ public class CameraMovement : MonoBehaviour
     }
 
     private void FollowMouse() {
-        Vector3 target = this.GetComponent<Camera>().ScreenToWorldPoint(new Vector3(mouse.action.ReadValue<Vector2>().x, mouse.action.ReadValue<Vector2>().y, this.GetComponent<Camera>().nearClipPlane));
-        transform.LookAt(target, Vector3.up);
+        float inputX = mouse.action.ReadValue<Vector2>().x;
+        float inputY = mouse.action.ReadValue<Vector2>().y;
+
+        cameraVerticalRotation -= inputY;
+        cameraVerticalRotation = Mathf.Clamp(cameraVerticalRotation, -90f, -90f);
+        transform.localEulerAngles = Vector3.right * cameraVerticalRotation;
+
+        this.gameObject.transform.parent.Rotate(Vector3.up * inputX);
     }
 
     private void ZoomMouse() {
