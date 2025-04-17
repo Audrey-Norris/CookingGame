@@ -1,9 +1,34 @@
 fileFormatVersion: 2
-guid: f8b97d01a6ad1494fa0939729f70efad
+guid: e33a0cef3db866544b461103261adaa8
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eyebrow
+    second: {fileID: 2100000, guid: 820da02d5cdbc264bb2ff6d30405d6f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eyes
+    second: {fileID: 2100000, guid: 2338dbd08bbd8f64d813ddbf9cb28534, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin
+    second: {fileID: 2100000, guid: 1e6428933d3887c46b6b75fcd499e0b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: b3b6a38224298874a97c5a6263fd794f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: standardSurface1
+    second: {fileID: 2100000, guid: 6cc51c888a610e641a29befe7719439e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

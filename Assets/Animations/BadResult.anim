@@ -51,9 +51,9 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.x
-    path: Mesh
-    classID: 23
+    attribute: material._Color.r
+    path: Npc/FinalMesh
+    classID: 137
     script: {fileID: 0}
     flags: 16
   - serializedVersion: 2
@@ -90,9 +90,9 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.y
-    path: Mesh
-    classID: 23
+    attribute: material._Color.g
+    path: Npc/FinalMesh
+    classID: 137
     script: {fileID: 0}
     flags: 16
   - serializedVersion: 2
@@ -129,9 +129,9 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.z
-    path: Mesh
-    classID: 23
+    attribute: material._Color.b
+    path: Npc/FinalMesh
+    classID: 137
     script: {fileID: 0}
     flags: 16
   - serializedVersion: 2
@@ -168,9 +168,9 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.w
-    path: Mesh
-    classID: 23
+    attribute: material._Color.a
+    path: Npc/FinalMesh
+    classID: 137
     script: {fileID: 0}
     flags: 16
   m_PPtrCurves: []
@@ -182,37 +182,37 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1096652136
-      attribute: 229608305
+      path: 1575159915
+      attribute: 1303350129
       script: {fileID: 0}
-      typeID: 23
+      typeID: 137
       customType: 22
       isPPtrCurve: 0
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 1096652136
-      attribute: 498043761
+      path: 1575159915
+      attribute: 1571785585
       script: {fileID: 0}
-      typeID: 23
+      typeID: 137
       customType: 22
       isPPtrCurve: 0
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 1096652136
-      attribute: 766479217
+      path: 1575159915
+      attribute: 1840221041
       script: {fileID: 0}
-      typeID: 23
+      typeID: 137
       customType: 22
       isPPtrCurve: 0
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 1096652136
-      attribute: 1034914673
+      path: 1575159915
+      attribute: 2108656497
       script: {fileID: 0}
-      typeID: 23
+      typeID: 137
       customType: 22
       isPPtrCurve: 0
       isIntCurve: 0
@@ -273,9 +273,9 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.x
-    path: Mesh
-    classID: 23
+    attribute: material._Color.r
+    path: Npc/FinalMesh
+    classID: 137
     script: {fileID: 0}
     flags: 16
   - serializedVersion: 2
@@ -312,9 +312,9 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.y
-    path: Mesh
-    classID: 23
+    attribute: material._Color.g
+    path: Npc/FinalMesh
+    classID: 137
     script: {fileID: 0}
     flags: 16
   - serializedVersion: 2
@@ -351,9 +351,9 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.z
-    path: Mesh
-    classID: 23
+    attribute: material._Color.b
+    path: Npc/FinalMesh
+    classID: 137
     script: {fileID: 0}
     flags: 16
   - serializedVersion: 2
@@ -390,9 +390,9 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: material._Color.w
-    path: Mesh
-    classID: 23
+    attribute: material._Color.a
+    path: Npc/FinalMesh
+    classID: 137
     script: {fileID: 0}
     flags: 16
   m_EulerEditorCurves: []
