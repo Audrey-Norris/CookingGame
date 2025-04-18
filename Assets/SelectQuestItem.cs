@@ -15,6 +15,6 @@ public class SelectQuestItem : MonoBehaviour
     }
 
     public void ContinueQuest() {
-        //GameObject.Find("QuestsManager").GetComponent<QuestsManager>().ConfirmQuest();
+        GameObject.Find("SaveManager").GetComponent<QuestsManager>().QuestChecker((Food)currentQuestItem.GetComponent<ItemInfo>().itemInfo.item);
     }
 }

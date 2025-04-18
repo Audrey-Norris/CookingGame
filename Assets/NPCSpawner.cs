@@ -20,6 +20,7 @@ public class NPCSpawner : MonoBehaviour
             Vector3 position = transform.position;
             GameObject npc = Instantiate(NPCPrefab, position, Quaternion.identity);
             npc.GetComponent<NPCManager>().moveLocation = movePosition.transform;
+            npc.transform.LookAt(movePosition.transform);
         }
     }
 }

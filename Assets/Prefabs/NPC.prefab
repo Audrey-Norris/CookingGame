@@ -141,6 +141,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   moveLocation: {fileID: 0}
+  goodEffect: {fileID: 4329721495336268451}
+  badEffect: {fileID: 3305569107072136617}
+  animator: {fileID: 5344243533547908532}
+  npcanimator: {fileID: 6331546598021926322}
 --- !u!114 &7789704635184615664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,9 +159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcQuest: {fileID: 11400000, guid: c3a9df0ca63ead44ba369746d4e07503, type: 2}
   town: {fileID: 0}
-  goodEffect: {fileID: 4329721495336268451}
-  badEffect: {fileID: 3305569107072136617}
-  animator: {fileID: 5344243533547908532}
+  quests: {fileID: 0}
 --- !u!95 &5344243533547908532
 Animator:
   serializedVersion: 5
