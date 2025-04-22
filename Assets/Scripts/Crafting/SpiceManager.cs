@@ -22,6 +22,9 @@ public class SpiceManager : MonoBehaviour
 
     [SerializeField] private int spicy = 0, sweet = 0, bitter = 0, sour = 0, savory = 0;
 
+    [SerializeField] private SoundEffectStorage soundEffect;
+    [SerializeField] private SoundEffectManager soundManager;
+
     public void PopulateSpices() {
         inventory = GameObject.Find("SaveManager").GetComponent<InventoryManager>();
         ItemList[] spices = inventory.GetAllItems();
@@ -148,8 +151,14 @@ public class SpiceManager : MonoBehaviour
         newFoodItem.item = currentRecipe.craftedItem;
         newFoodItem.total = 1;
 
+        //CreateSoundEffect
+        int random = Random.Range(0,4);
+        soundManager.PlayEffect(soundEffect.GetAudio(random));
+
         inventory.AddItem(newFoodItem);
         MoveToRecipes();
+
+
     }
 
     public void SetRecipe(Recipe recipe) {

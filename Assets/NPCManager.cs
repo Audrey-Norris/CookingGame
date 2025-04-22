@@ -16,6 +16,8 @@ public class NPCManager : MonoBehaviour
     [SerializeField] private VisualEffect badEffect;
     [SerializeField] private Animator animator;
     [SerializeField] private Animator npcanimator;
+    [SerializeField] public SoundEffectManager soundmanager;
+    [SerializeField] private SoundEffectStorage storage;
 
     public void Update() {
         
@@ -43,6 +45,7 @@ public class NPCManager : MonoBehaviour
         if (result) {
             goodEffect.Play();
             animator.Play("GoodResult");
+            soundmanager.PlayEffect(storage.GetAudio(0));
         } else {
             badEffect.Play();
             animator.Play("BadResult");

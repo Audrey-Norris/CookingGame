@@ -9,6 +9,8 @@ public class NPCSpawner : MonoBehaviour
 
     [SerializeField] GameObject movePosition;
 
+    [SerializeField] SoundEffectManager soundEffectManager;
+
     //TESTING
     public void Start() {
         SpawnNPC();
@@ -20,6 +22,7 @@ public class NPCSpawner : MonoBehaviour
             Vector3 position = transform.position;
             GameObject npc = Instantiate(NPCPrefab, position, Quaternion.identity);
             npc.GetComponent<NPCManager>().moveLocation = movePosition.transform;
+            npc.GetComponent<NPCManager>().soundmanager = soundEffectManager;
             npc.transform.LookAt(movePosition.transform);
         }
     }

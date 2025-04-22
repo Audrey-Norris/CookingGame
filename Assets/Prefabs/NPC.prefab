@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 849772834687303098}
   - component: {fileID: 7789704635184615664}
   - component: {fileID: 5344243533547908532}
+  - component: {fileID: 1967737900822577158}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Interact
@@ -145,6 +146,8 @@ MonoBehaviour:
   badEffect: {fileID: 3305569107072136617}
   animator: {fileID: 5344243533547908532}
   npcanimator: {fileID: 6331546598021926322}
+  soundmanager: {fileID: 0}
+  storage: {fileID: 1967737900822577158}
 --- !u!114 &7789704635184615664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,6 +184,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1967737900822577158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114028299016779454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d4cebeeaa421c7489dd7fd326e044bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 13bd554afa4080b41bd010476c7cfff0, type: 3}
 --- !u!1 &3366427437590319557
 GameObject:
   m_ObjectHideFlags: 0
