@@ -9,6 +9,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: WoodSecondary
     second: {fileID: 2100000, guid: 7432395868eb18440a5c83092beff8f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: standardSurface1
+    second: {fileID: 2100000, guid: 1b9b2ec8920cec541bc40cf19a2695bd, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
