@@ -16,6 +16,7 @@ MonoBehaviour:
   Description: 
   Cost: 0
   Rarity: 0
+  sprite: {fileID: 21300000, guid: 393ab029711150049a7cb10578eb9057, type: 3}
   qualities: 
   flavorList:
   - name: Spicy

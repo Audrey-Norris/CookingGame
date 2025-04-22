@@ -18,6 +18,7 @@ MonoBehaviour:
     to temperature changes.
   Cost: 0
   Rarity: 0
+  sprite: {fileID: 21300000, guid: db3c79a8769c52b47a872452ae2026a9, type: 3}
   perks: 00000000
   flavorList:
   - name: Spicy

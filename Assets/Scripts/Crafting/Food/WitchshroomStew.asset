@@ -17,6 +17,7 @@ MonoBehaviour:
     enhance anyone's resistance to the arcane after they've eaten it.
   Cost: 0
   Rarity: 0
+  sprite: {fileID: 21300000, guid: 1a6dd59986201ba4589563cbfef3d6cb, type: 3}
   perks: 03000000
   flavorList:
   - name: Spicy

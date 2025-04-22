@@ -13,6 +13,8 @@ public class Item : ScriptableObject
     public int Cost;
     public Rarity Rarity;
 
+    public Sprite sprite;
+
     private ItemType Type;
 
     public ItemType getItemType() {

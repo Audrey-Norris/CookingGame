@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class ItemInfo : MonoBehaviour {
+
     [SerializeField] Sprite sprite;
     [SerializeField] int total;
     [SerializeField] GameObject itemImage;
@@ -26,6 +27,8 @@ public class ItemInfo : MonoBehaviour {
     public void LoadItemInfo(ItemList itemInfo, GameObject menu) {
         this.itemInfo = itemInfo;
         total = itemInfo.GetTotal();
+        sprite = itemInfo.item.sprite;
+        itemImage.GetComponent<Image>().sprite = sprite;
         totalText.GetComponent<TMP_Text>().text = total.ToString();
         this.menu = menu;
     }
