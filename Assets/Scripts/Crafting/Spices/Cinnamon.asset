@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c5302c90f1220843b2179af35936eb1, type: 3}
-  m_Name: FrozenFruit
+  m_Name: Cinnamon
   m_EditorClassIdentifier: 
-  Name: Frozen Fruit
+  Name: 'Cinnamon '
   Description: 
   Cost: 0
   Rarity: 0
@@ -21,10 +21,10 @@ MonoBehaviour:
   - name: Spicy
     total: 0
   - name: Sweet
-    total: 0
+    total: 10
   - name: Bitter
     total: 0
   - name: Sour
-    total: 20
+    total: 0
   - name: Umami
     total: 0

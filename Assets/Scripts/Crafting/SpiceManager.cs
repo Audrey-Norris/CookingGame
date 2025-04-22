@@ -25,6 +25,14 @@ public class SpiceManager : MonoBehaviour
     [SerializeField] private SoundEffectStorage soundEffect;
     [SerializeField] private SoundEffectManager soundManager;
 
+    [SerializeField] private int craftingTime;
+
+    [SerializeField] private PhaseManager phaseManager;
+
+    public void Awake() {
+        phaseManager = GameObject.Find("PhaseManager").GetComponent<PhaseManager>();
+    }
+
     public void PopulateSpices() {
         inventory = GameObject.Find("SaveManager").GetComponent<InventoryManager>();
         ItemList[] spices = inventory.GetAllItems();
@@ -158,6 +166,7 @@ public class SpiceManager : MonoBehaviour
         inventory.AddItem(newFoodItem);
         MoveToRecipes();
 
+        phaseManager.UpdateTime(craftingTime);
 
     }
 

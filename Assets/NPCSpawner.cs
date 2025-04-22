@@ -11,12 +11,6 @@ public class NPCSpawner : MonoBehaviour
 
     [SerializeField] SoundEffectManager soundEffectManager;
 
-    //TESTING
-    public void Start() {
-        SpawnNPC();
-    }
-
-
     public void SpawnNPC() {
         if (NPCPrefab != null) {
             Vector3 position = transform.position;

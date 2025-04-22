@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class QuestsManager : MonoBehaviour
 {
+
+    public List<Quests> allQuests = new List<Quests>();
+
     public List<Quests> currentQuests = new List<Quests>();
 
     [SerializeField] private Quests activeQuest;
