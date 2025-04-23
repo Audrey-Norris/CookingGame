@@ -28,7 +28,8 @@ public class PhaseManager : MonoBehaviour
 
         if(timer == 0) {
             //SEND TO END SCREEN FOR DEMO
-
+            SceneSwap sceneSwap = new SceneSwap();
+            sceneSwap.ChangeScene(3);
         }
     }
 
