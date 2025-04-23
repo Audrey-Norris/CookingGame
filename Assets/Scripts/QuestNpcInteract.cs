@@ -14,12 +14,13 @@ public class QuestNpcInteract : MonoBehaviour, IInteractable {
     public void EndInteraction() {
         
     }
+
     public void StartInteraction() { // Change this to open special inventory UI to select a meal to give to client
         GameObject player = GameObject.Find("Player");
         GameObject inventory = GameObject.Find("InventoryCanvas");
         inventory.GetComponent<InventoryCanvas>().PopulateItems();
         quests = GameObject.Find("SaveManager").GetComponent<QuestsManager>();
-        quests.SetActiveQuest(npcQuest, this.gameObject);
+        npcQuest = quests.GetActiveQuest();
         inventory.GetComponent<Canvas>().enabled = true;
     }
 }

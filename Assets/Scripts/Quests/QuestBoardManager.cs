@@ -12,6 +12,10 @@ public class QuestBoardManager : MonoBehaviour
     [SerializeField] List<Quests> questBoardList = new List<Quests>();
     [SerializeField] List<GameObject> questObjects = new List<GameObject>();
 
+    [SerializeField] private Quests currentQuest;
+
+    [SerializeField] private QuestToolTip tooltip;
+
     public void Start() {
         playerQuests = GameObject.Find("SaveManager").GetComponent<QuestsManager>();
     }
@@ -24,8 +28,14 @@ public class QuestBoardManager : MonoBehaviour
         }
     }
 
-    public void AddQuest(Quests quest) {
-        playerQuests.GetComponent<QuestsManager>().currentQuests.Add(quest);
+    public void AddQuest() {
+        playerQuests.GetComponent<QuestsManager>().SetActiveQuest(currentQuest);
+        //playerQuests.GetComponent<QuestsManager>().currentQuests.Add(quest);
+    }
+
+    public void ShowInfo(Quests quest) {
+        currentQuest = quest;
+        tooltip.LoadQuest(currentQuest);
     }
 
     public void ClearQuests() {

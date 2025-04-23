@@ -149,6 +149,7 @@ public class SpiceManager : MonoBehaviour
     }
 
     public void CraftItems() {
+        int total = 0;
         ItemList newFoodItem = new ItemList();
         Food food = currentRecipe.craftedItem;
         food.flavorList[0].total = spicy;
@@ -157,7 +158,13 @@ public class SpiceManager : MonoBehaviour
         food.flavorList[3].total = sour;
         food.flavorList[4].total = savory;
 
-        newFoodItem.item = currentRecipe.craftedItem;
+        for (int i = 0; i < food.flavorList.Length; i++) {
+            total += food.flavorList[i].total;
+        }
+
+        food.rarity = (int)Mathf.Floor(total / 50);
+
+        newFoodItem.item = food;
         newFoodItem.total = 1;
 
         //CreateSoundEffect
@@ -177,8 +184,8 @@ public class SpiceManager : MonoBehaviour
     public void MoveToRecipes() {
         RecipeMenu.GetComponent<Canvas>().enabled = true;
         RecipeMenu.GetComponent<RecipeListManager>().PopulateRecipes();
-        this.GetComponent<Canvas>().enabled = false;
         RemoveSpice();
+        this.GetComponent<Canvas>().enabled = false;
     }
 
 }

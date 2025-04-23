@@ -11,6 +11,8 @@ public class Food : Item
 
     public Flavor[] flavorList = new Flavor[5];
 
+    public int rarity = 0;
+
     public Food() {
         this.setItemType(ItemType.Food);
 

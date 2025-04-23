@@ -8,7 +8,6 @@ public class QuestInfo : MonoBehaviour
 {
     [SerializeField] private TMP_Text questName;
     [SerializeField] private TMP_Text questDescription;
-    [SerializeField] private GameObject activateQuest;
     [SerializeField] private GameObject backgroundColor;
 
     [SerializeField] private Color inactiveColor = new Color();
@@ -17,6 +16,7 @@ public class QuestInfo : MonoBehaviour
     public Quests questInfo;
 
     [SerializeField] QuestBoardManager menu;
+
 
     public void LoadQuestInfo(Quests questInfo, QuestBoardManager menuQ) {
         this.questInfo = questInfo;
@@ -28,7 +28,6 @@ public class QuestInfo : MonoBehaviour
 
     public void UIActivate() {
         if (questInfo.isActive) {
-            activateQuest.SetActive(false);
             backgroundColor.GetComponent<Image>().color = activeColor;
         } else {
             backgroundColor.GetComponent<Image>().color = inactiveColor;
@@ -39,5 +38,9 @@ public class QuestInfo : MonoBehaviour
         questInfo.isActive = true;
         menu.AddQuest(questInfo);
         UIActivate();
+    }
+
+    public void ShowInfo() {
+        menu.GetComponent<QuestBoardManager>().ShowInfo(this.questInfo);
     }
 }

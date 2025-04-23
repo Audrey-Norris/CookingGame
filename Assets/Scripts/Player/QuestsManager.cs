@@ -10,13 +10,16 @@ public class QuestsManager : MonoBehaviour
     public List<Quests> currentQuests = new List<Quests>();
 
     [SerializeField] private Quests activeQuest;
-    [SerializeField] private GameObject questNPC;
+    [SerializeField] public GameObject questNPC;
 
     [SerializeField] private RenownManager renownManager;
 
-    public void SetActiveQuest(Quests quest, GameObject npc) {
+    public void SetActiveQuest(Quests quest) {
         activeQuest = quest;
-        questNPC = npc;
+    }
+
+    public Quests GetActiveQuest() {
+        return activeQuest;
     }
 
     public void QuestChecker(Food item) {

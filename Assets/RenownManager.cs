@@ -49,7 +49,6 @@ public class RenownManager : MonoBehaviour
         renownList[(int)faction].currentFavor++;
         renownList[(int)faction].value = baseRenown+renownList[(int)faction].currentFavor;
         CalculateLevel(renownList[(int)faction].value);
-
     }
 
     public int CalculateLevel(int value) {

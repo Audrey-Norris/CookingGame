@@ -59,8 +59,8 @@ public class RecipeListManager : MonoBehaviour
             FlavorMenu.GetComponent<Canvas>().enabled = true;
             FlavorMenu.GetComponent<SpiceManager>().SetRecipe(currentRecipe);
             FlavorMenu.GetComponent<SpiceManager>().PopulateSpices();
-            this.GetComponent<Canvas>().enabled = false;
             RemoveRecipes();
+            this.GetComponent<Canvas>().enabled = false;
         } else {
             Debug.Log("Error! No Recipe Selected!");
         }
