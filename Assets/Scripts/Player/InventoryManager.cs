@@ -22,7 +22,7 @@ public class InventoryManager : MonoBehaviour
         if (totalItems.Exists(obj => obj.item == removeItem)) {
             int index = totalItems.FindIndex(obj => obj.item == removeItem);
             ItemList item = totalItems[index];
-            item.total -= 1;
+            item.total --;
             if (item.total <= 0) {
                 RemoveItem(removeItem);
             }
