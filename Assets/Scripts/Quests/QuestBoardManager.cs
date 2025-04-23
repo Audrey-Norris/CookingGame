@@ -31,6 +31,8 @@ public class QuestBoardManager : MonoBehaviour
     public void AddQuest() { //NEED TO SPAWN NPC THAT IS WAITING FOR MEAL
         currentQuest.isActive = true;
         playerQuests.GetComponent<QuestsManager>().SetActiveQuest(currentQuest);
+        this.GetComponent<OpenQuestMenu>().EndInteraction();
+        GameObject.Find("NpcSpawner").GetComponent<NPCSpawner>().SpawnNPC();
         //playerQuests.GetComponent<QuestsManager>().currentQuests.Add(quest);
     }
 
