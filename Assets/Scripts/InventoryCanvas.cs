@@ -22,12 +22,17 @@ public class InventoryCanvas : MonoBehaviour
     public void PopulateItems() {
         ItemList[] items = inventory.GetAllItems();
         foreach (ItemList item in items) {
+            ItemList itemInfoCopy = new ItemList(item.GetItem(), item.GetTotal());
+            GameObject newItem = Instantiate(itemPrefab, itemArea.transform);
+            newItem.GetComponent<ItemInfo>().LoadItemInfo(itemInfoCopy, this.gameObject);
+            itemObjects.Add(newItem);
+            /*
             if(item.item.getItemType() != ItemType.Food) {
                 ItemList itemInfoCopy = new ItemList(item.GetItem(), item.GetTotal());
                 GameObject newItem = Instantiate(itemPrefab, itemArea.transform);
                 newItem.GetComponent<ItemInfo>().LoadItemInfo(itemInfoCopy, this.gameObject);
                 itemObjects.Add(newItem);
-            }
+            }*/
         }
     }
 

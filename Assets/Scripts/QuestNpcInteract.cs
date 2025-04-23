@@ -20,6 +20,7 @@ public class QuestNpcInteract : MonoBehaviour, IInteractable {
         GameObject inventory = GameObject.Find("InventoryCanvas");
         inventory.GetComponent<InventoryCanvas>().PopulateItems();
         quests = GameObject.Find("SaveManager").GetComponent<QuestsManager>();
+        quests.questNPC = this.gameObject;
         npcQuest = quests.GetActiveQuest();
         inventory.GetComponent<Canvas>().enabled = true;
     }

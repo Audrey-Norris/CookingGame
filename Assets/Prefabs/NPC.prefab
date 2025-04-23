@@ -950,7 +950,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3262753834737357351, guid: 74277fab7d0bc0b4c818e9f5e1e62bd5, type: 3}
       propertyPath: m_InitialEventNameOverriden
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3262753834737357351, guid: 74277fab7d0bc0b4c818e9f5e1e62bd5, type: 3}
       propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[0].m_Value.x
@@ -1081,7 +1081,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3262753834737357351, guid: 74277fab7d0bc0b4c818e9f5e1e62bd5, type: 3}
       propertyPath: m_InitialEventNameOverriden
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3262753834737357351, guid: 74277fab7d0bc0b4c818e9f5e1e62bd5, type: 3}
       propertyPath: m_PropertySheet.m_Vector3f.m_Array.Array.data[0].m_Value.x

@@ -23,21 +23,11 @@ public class QuestInfo : MonoBehaviour
         questName.text = questInfo.questName;
         questDescription.text = questInfo.questDescription;
         menu = menuQ;
-        UIActivate();
-    }
-
-    public void UIActivate() {
-        if (questInfo.isActive) {
-            backgroundColor.GetComponent<Image>().color = activeColor;
-        } else {
-            backgroundColor.GetComponent<Image>().color = inactiveColor;
-        }
     }
 
     public void ActivateQuest() {
         questInfo.isActive = true;
         menu.AddQuest();
-        UIActivate();
     }
 
     public void ShowInfo() {

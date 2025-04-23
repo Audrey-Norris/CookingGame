@@ -112,28 +112,55 @@ public class SpiceManager : MonoBehaviour
                         case "Spicy": //Spicy reduces sweetness
                             spicy += flavor.total;
                             sweet -= Mathf.FloorToInt(flavor.total / 3);
+                            if(sweet < 0) {
+                                sweet = 0;
+                            }
                             break;
                         case "Sweet": //Sweet enchances umami and reduces spicy and bitter
                             sweet += flavor.total;
                             savory += Mathf.FloorToInt(flavor.total / 3);
                             spicy -= Mathf.FloorToInt(flavor.total / 3);
                             bitter -= Mathf.FloorToInt(flavor.total / 3);
+                            if (spicy < 0) {
+                                spicy = 0;
+                            }
+                            if (bitter < 0) {
+                                bitter = 0;
+                            }
                             break;
                         case "Bitter": //Bitter reduces savory and sweet
                             bitter += flavor.total;
                             savory -= Mathf.FloorToInt(flavor.total / 3);
                             sweet -= Mathf.FloorToInt(flavor.total / 3);
+                            if (savory < 0) {
+                                savory = 0;
+                            }
+                            if (sweet < 0) {
+                                sweet = 0;
+                            }
                             break;
                         case "Sour": //Sour reduces bitter and spice and sweet
                             sour += flavor.total;
                             spicy -= Mathf.FloorToInt(flavor.total / 3);
                             bitter -= Mathf.FloorToInt(flavor.total / 3);
                             sweet -= Mathf.FloorToInt(flavor.total / 3);
+                            if (spicy < 0) {
+                                spicy = 0;
+                            }
+                            if (bitter < 0) {
+                                bitter = 0;
+                            }
+                            if (sweet < 0) {
+                                sweet = 0;
+                            }
                             break;
                         case "Umami": //Savory enhances sweet reduces bitter
                             savory += flavor.total;
                             sweet += Mathf.FloorToInt(flavor.total / 3);
                             bitter -= Mathf.FloorToInt(flavor.total / 3);
+                            if (bitter < 0) {
+                                bitter = 0;
+                            }
                             break;
                     }
                 }

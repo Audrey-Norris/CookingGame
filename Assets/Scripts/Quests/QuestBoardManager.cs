@@ -33,6 +33,9 @@ public class QuestBoardManager : MonoBehaviour
         playerQuests.GetComponent<QuestsManager>().SetActiveQuest(currentQuest);
         this.GetComponent<OpenQuestMenu>().EndInteraction();
         GameObject.Find("NPCSpawner").GetComponent<NPCSpawner>().SpawnNPC();
+        GameObject mainUI = GameObject.Find("MainUI");
+        mainUI.GetComponent<MainUIManager>().SetQuest(true);
+        mainUI.GetComponentInChildren<SetActiveQuest>().SetQuest(currentQuest);
         //playerQuests.GetComponent<QuestsManager>().currentQuests.Add(quest);
     }
 

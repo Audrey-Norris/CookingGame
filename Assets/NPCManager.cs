@@ -11,6 +11,7 @@ public class NPCManager : MonoBehaviour
     public NPCStates state;
 
     public Transform moveLocation;
+    public Transform moveLocation2;
 
     [SerializeField] private VisualEffect goodEffect;
     [SerializeField] private VisualEffect badEffect;
@@ -21,20 +22,26 @@ public class NPCManager : MonoBehaviour
 
     public void Update() {
         
-        if(state == 0) {
+        if(state == NPCStates.Pickup || state == NPCStates.Leaving) {
             MoveNPC();
         }
 
     }
 
     public void MoveNPC() {
-        float dist = Vector3.Distance(this.transform.position, moveLocation.transform.position);
+        Transform location = (state == NPCStates.Pickup) ? moveLocation : moveLocation2;
+        float dist = Vector3.Distance(this.transform.position, location.transform.position);
         if(dist > 0.5f) {
             npcanimator.SetBool("isMoving", true);
             var step = 1.5f * Time.deltaTime;
-            this.transform.position = Vector3.MoveTowards(transform.position, moveLocation.position, step);
+            this.transform.position = Vector3.MoveTowards(transform.position, location.position, step);
         } else {
             npcanimator.SetBool("isMoving", false);
+            if(state == NPCStates.Leaving) {
+                GameObject.Destroy(this.gameObject);
+            } else {
+                state += 1;
+            }
         }
 
     }
@@ -50,6 +57,8 @@ public class NPCManager : MonoBehaviour
             badEffect.Play();
             animator.Play("BadResult");
         }
+        state += 1;
+        this.transform.LookAt(moveLocation2);
     }
 
 }
