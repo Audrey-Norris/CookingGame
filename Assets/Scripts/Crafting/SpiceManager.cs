@@ -178,7 +178,7 @@ public class SpiceManager : MonoBehaviour
     public void CraftItems() {
         int total = 0;
         ItemList newFoodItem = new ItemList();
-        Food food = currentRecipe.craftedItem;
+        Food food = Instantiate(currentRecipe.craftedItem);
         food.flavorList[0].total = spicy;
         food.flavorList[1].total = sweet;
         food.flavorList[2].total = bitter;

@@ -20,6 +20,7 @@ public class InventoryCanvas : MonoBehaviour
     }
 
     public void PopulateItems() {
+        RemoveAllItems();
         ItemList[] items = inventory.GetAllItems();
         foreach (ItemList item in items) {
             ItemList itemInfoCopy = new ItemList(item.GetItem(), item.GetTotal());

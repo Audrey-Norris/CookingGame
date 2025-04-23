@@ -31,6 +31,7 @@ public class RecipeListManager : MonoBehaviour
     // Update is called once per frame
     
     public void PopulateRecipes() {
+        RemoveRecipes();
         Recipe[] recipes = recipesKnown.GetAllRecipes();
 
         foreach (Recipe recipe in recipes) {

@@ -13359,6 +13359,17 @@ Transform:
   - {fileID: 1705467954}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1019550972 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4236221072037816596, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
+  m_PrefabInstance: {fileID: 1109945060}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80ecc1a3e4a7d3043a628e316d844f1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1028151167 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4509730249614501482, guid: d3e2f069291c64a4ea3ac6262718ed75, type: 3}
@@ -13669,6 +13680,10 @@ PrefabInstance:
       propertyPath: totalItems.Array.data[2].total
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4340240553432507987, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
+      propertyPath: renownManager
+      value: 
+      objectReference: {fileID: 1019550972}
     - target: {fileID: 4340240553432507987, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
       propertyPath: allQuests.Array.size
       value: 5
