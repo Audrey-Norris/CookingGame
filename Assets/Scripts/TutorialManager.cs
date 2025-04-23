@@ -12,14 +12,19 @@ public class TutorialManager : MonoBehaviour, IDataPersistance
 
     [SerializeField] private int currentTutorial = 0;
 
+    [SerializeField] private bool isTutorialComplete = false;
+
     [SerializeField] private bool[] tutorialCompletion = { false, false, false };
 
 
     // Start is called before the first frame update
     void Start()
     {
-        GameObject.Find("SaveManager").GetComponent<SavingSystem>().LoadGame();
-        ActivateDialogue();
+        if(!isTutorialComplete) {
+            ActivateDialogue();
+        } else {
+            this.enabled = false;
+        }
     }
 
     public void ActivateDialogue() {

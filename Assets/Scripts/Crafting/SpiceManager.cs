@@ -199,7 +199,8 @@ public class SpiceManager : MonoBehaviour
         soundManager.PlayEffect(soundEffect.GetAudio(random));
 
         inventory.AddItem(newFoodItem);
-        MoveToRecipes();
+
+        CloseMenu();
 
         phaseManager.UpdateTime(craftingTime);
     }
@@ -211,6 +212,11 @@ public class SpiceManager : MonoBehaviour
     public void MoveToRecipes() {
         RecipeMenu.GetComponent<Canvas>().enabled = true;
         RecipeMenu.GetComponent<RecipeListManager>().PopulateRecipes();
+        RemoveSpice();
+        this.GetComponent<Canvas>().enabled = false;
+    }
+
+    public void CloseMenu() {
         RemoveSpice();
         this.GetComponent<Canvas>().enabled = false;
     }

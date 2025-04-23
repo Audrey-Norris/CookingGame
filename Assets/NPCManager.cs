@@ -47,7 +47,6 @@ public class NPCManager : MonoBehaviour
     }
 
     public void NPCReaction(bool result) {
-        //TESTING PURPOSES REMOVED LATER
         GameObject.Find("InventoryCanvas").GetComponent<Canvas>().enabled = false;
         if (result) {
             goodEffect.Play();
