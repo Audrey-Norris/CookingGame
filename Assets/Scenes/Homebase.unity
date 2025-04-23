@@ -216,11 +216,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a3e00f7afda7344e813706b5e7fcaa7, type: 3}
---- !u!1 &16957670 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4330242456925897432, guid: 2c98fa2ab600c0244b9fc943a88e3c7c, type: 3}
-  m_PrefabInstance: {fileID: 945702544}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &18707198 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7b2e576d0cb9f0a4db839bbcfb1800e2, type: 3}
@@ -13100,32 +13095,10 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 101084171}
   m_SourcePrefab: {fileID: 100100000, guid: a4cd0e4292f408149b025e0a43cc8a0e, type: 3}
---- !u!114 &780634707 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7654865186831138254, guid: 2c98fa2ab600c0244b9fc943a88e3c7c, type: 3}
-  m_PrefabInstance: {fileID: 945702544}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &792323755 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5989973327337827488, guid: d3e2f069291c64a4ea3ac6262718ed75, type: 3}
   m_PrefabInstance: {fileID: 28879686}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &808102167 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4081975098653400775, guid: 2c98fa2ab600c0244b9fc943a88e3c7c, type: 3}
-  m_PrefabInstance: {fileID: 945702544}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -13321,38 +13294,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Quests
       objectReference: {fileID: 0}
-    - target: {fileID: 4330242456925897432, guid: 2c98fa2ab600c0244b9fc943a88e3c7c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5334650926929360925, guid: 2c98fa2ab600c0244b9fc943a88e3c7c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5334650926929360925, guid: 2c98fa2ab600c0244b9fc943a88e3c7c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5334650926929360925, guid: 2c98fa2ab600c0244b9fc943a88e3c7c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 945702545}
-    - target: {fileID: 5334650926929360925, guid: 2c98fa2ab600c0244b9fc943a88e3c7c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5334650926929360925, guid: 2c98fa2ab600c0244b9fc943a88e3c7c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: AddQuest
-      objectReference: {fileID: 0}
-    - target: {fileID: 5334650926929360925, guid: 2c98fa2ab600c0244b9fc943a88e3c7c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: QuestBoardManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5334650926929360925, guid: 2c98fa2ab600c0244b9fc943a88e3c7c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: Quests, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 6600357698285011231, guid: 2c98fa2ab600c0244b9fc943a88e3c7c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.26
@@ -13393,38 +13334,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7690130422957665322, guid: 2c98fa2ab600c0244b9fc943a88e3c7c, type: 3}
-      propertyPath: button
-      value: 
-      objectReference: {fileID: 16957670}
-    - target: {fileID: 7690130422957665322, guid: 2c98fa2ab600c0244b9fc943a88e3c7c, type: 3}
-      propertyPath: faction
-      value: 
-      objectReference: {fileID: 780634707}
-    - target: {fileID: 7690130422957665322, guid: 2c98fa2ab600c0244b9fc943a88e3c7c, type: 3}
-      propertyPath: questTitle
-      value: 
-      objectReference: {fileID: 808102167}
-    - target: {fileID: 7690130422957665322, guid: 2c98fa2ab600c0244b9fc943a88e3c7c, type: 3}
-      propertyPath: questDecription
-      value: 
-      objectReference: {fileID: 1903057134}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c98fa2ab600c0244b9fc943a88e3c7c, type: 3}
---- !u!114 &945702545 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2522811799632845220, guid: 2c98fa2ab600c0244b9fc943a88e3c7c, type: 3}
-  m_PrefabInstance: {fileID: 945702544}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3131db0c164ce9409c4a5c643c3d387, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &972847087
 GameObject:
   m_ObjectHideFlags: 0
@@ -25872,17 +25786,6 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &1903057134 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5597577024624141350, guid: 2c98fa2ab600c0244b9fc943a88e3c7c, type: 3}
-  m_PrefabInstance: {fileID: 945702544}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1926342045
 PrefabInstance:
   m_ObjectHideFlags: 0

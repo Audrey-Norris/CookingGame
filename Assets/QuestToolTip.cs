@@ -18,7 +18,7 @@ public class QuestToolTip : MonoBehaviour
     public void LoadQuest(Quests quest) {
         questTitle.text = quest.questName;
         questDecription.text = quest.questDescription;
-        faction.text = quest.faction.ToString();
+        faction.text = "Faction: " + quest.faction.ToString();
         button.SetActive(true);
     }
 

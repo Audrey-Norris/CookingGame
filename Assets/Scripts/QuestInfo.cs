@@ -36,7 +36,7 @@ public class QuestInfo : MonoBehaviour
 
     public void ActivateQuest() {
         questInfo.isActive = true;
-        menu.AddQuest(questInfo);
+        menu.AddQuest();
         UIActivate();
     }
 

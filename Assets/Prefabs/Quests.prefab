@@ -51,7 +51,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6536206488503234366
 RectTransform:
   m_ObjectHideFlags: 0
@@ -153,7 +153,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3869435644865223136}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2522811799632845220}
+        m_TargetAssemblyTypeName: QuestBoardManager, Assembly-CSharp
+        m_MethodName: AddQuest
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: Quests, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5649317162417936293
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,7 +331,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9581de8a18eae4743b5515663bd0f7b1, type: 2}
   questObjects: []
   currentQuest: {fileID: 0}
-  tooltip: {fileID: 0}
+  tooltip: {fileID: 7690130422957665322}
 --- !u!114 &4226215712831973568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,7 +411,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Title
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -429,9 +441,9 @@ MonoBehaviour:
   m_fontSize: 46
   m_fontSizeBase: 46
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 15
+  m_fontSizeMax: 46
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
@@ -634,10 +646,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1875727684859328821}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 215, y: -388}
-  m_SizeDelta: {x: 350, y: 550}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -10, y: 52}
+  m_SizeDelta: {x: -100, y: -330}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2012460395078778578
 CanvasRenderer:
@@ -667,7 +679,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Description
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -697,9 +709,9 @@ MonoBehaviour:
   m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 10
+  m_fontSizeMax: 20
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
@@ -801,7 +813,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Faction
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -884,7 +896,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5864631146757130694, guid: 9384a0a5d7f5dbf45acc3582f6deec0a, type: 3}
       propertyPath: m_CellSize.y
-      value: 400
+      value: 350
       objectReference: {fileID: 0}
     - target: {fileID: 7241477183706589335, guid: 9384a0a5d7f5dbf45acc3582f6deec0a, type: 3}
       propertyPath: m_Name
@@ -972,7 +984,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8102329657293809324, guid: 9384a0a5d7f5dbf45acc3582f6deec0a, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2044511946109192956, guid: 9384a0a5d7f5dbf45acc3582f6deec0a, type: 3}
@@ -1040,8 +1052,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questBoard: {fileID: 2522811799632845220}
-  questTitle: {fileID: 0}
-  questDecription: {fileID: 0}
-  faction: {fileID: 0}
+  questTitle: {fileID: 4081975098653400775}
+  questDecription: {fileID: 5597577024624141350}
+  faction: {fileID: 7654865186831138254}
   expectations: {fileID: 0}
-  button: {fileID: 0}
+  button: {fileID: 4330242456925897432}

@@ -28,7 +28,8 @@ public class QuestBoardManager : MonoBehaviour
         }
     }
 
-    public void AddQuest() {
+    public void AddQuest() { //NEED TO SPAWN NPC THAT IS WAITING FOR MEAL
+        currentQuest.isActive = true;
         playerQuests.GetComponent<QuestsManager>().SetActiveQuest(currentQuest);
         //playerQuests.GetComponent<QuestsManager>().currentQuests.Add(quest);
     }
