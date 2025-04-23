@@ -12,6 +12,8 @@ public class QuestsManager : MonoBehaviour
     [SerializeField] private Quests activeQuest;
     [SerializeField] private GameObject questNPC;
 
+    [SerializeField] private RenownManager renownManager;
+
     public void SetActiveQuest(Quests quest, GameObject npc) {
         activeQuest = quest;
         questNPC = npc;
@@ -20,6 +22,7 @@ public class QuestsManager : MonoBehaviour
     public void QuestChecker(Food item) {
         if(ConfirmQuest(activeQuest, item)) {
             questNPC.GetComponent<NPCManager>().NPCReaction(true);
+            renownManager.UpdateReknown(activeQuest.faction);
         } else {
             questNPC.GetComponent<NPCManager>().NPCReaction(false);
         }

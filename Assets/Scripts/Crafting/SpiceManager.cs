@@ -28,6 +28,7 @@ public class SpiceManager : MonoBehaviour
     [SerializeField] private int craftingTime;
 
     [SerializeField] private PhaseManager phaseManager;
+    [SerializeField] private RenownManager renownManager;
 
     public void Awake() {
         phaseManager = GameObject.Find("PhaseManager").GetComponent<PhaseManager>();
@@ -167,7 +168,6 @@ public class SpiceManager : MonoBehaviour
         MoveToRecipes();
 
         phaseManager.UpdateTime(craftingTime);
-
     }
 
     public void SetRecipe(Recipe recipe) {

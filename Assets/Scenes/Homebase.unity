@@ -13292,7 +13292,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 974842817478860832, guid: 2c98fa2ab600c0244b9fc943a88e3c7c, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2906671710811480297, guid: 2c98fa2ab600c0244b9fc943a88e3c7c, type: 3}
       propertyPath: m_Size.x
@@ -13836,62 +13836,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -8139968860736268291, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: knownRecipes.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: -8139968860736268291, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: knownRecipes.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 85814278a19278b40a5ff56ee07a5220, type: 2}
-    - target: {fileID: -8139968860736268291, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: knownRecipes.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 7e675b74fd918694484b8c9cdbbccaa3, type: 2}
-    - target: {fileID: -8139968860736268291, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: knownRecipes.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 46cac1ec4e835084c90e5a76a5a98e3c, type: 2}
     - target: {fileID: 367386006964585182, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
       propertyPath: totalItems.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 367386006964585182, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: totalItems.Array.data[0].item
-      value: 
-      objectReference: {fileID: 11400000, guid: 8350a18f500dbd843b5b7487afcdbc08, type: 2}
     - target: {fileID: 367386006964585182, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
       propertyPath: totalItems.Array.data[1].item
       value: 
-      objectReference: {fileID: 11400000, guid: 8350a18f500dbd843b5b7487afcdbc08, type: 2}
+      objectReference: {fileID: 11400000, guid: 3a8815a6683bf8f4d91919a16a41dc0c, type: 2}
     - target: {fileID: 367386006964585182, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
       propertyPath: totalItems.Array.data[2].item
       value: 
-      objectReference: {fileID: 11400000, guid: ee4c2f8ff3017c44294362cb95a134f4, type: 2}
+      objectReference: {fileID: 11400000, guid: 13d732dc7900bde4da858ca160fdd9a8, type: 2}
     - target: {fileID: 367386006964585182, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
       propertyPath: totalItems.Array.data[0].total
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 367386006964585182, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
       propertyPath: totalItems.Array.data[1].total
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 367386006964585182, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
       propertyPath: totalItems.Array.data[2].total
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 4340240553432507987, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: currentQuests.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4340240553432507987, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: currentQuests.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: c3a9df0ca63ead44ba369746d4e07503, type: 2}
-    - target: {fileID: 4340240553432507987, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: currentQuests.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 8dcfaad2c85cf8440b21991537ac7bd3, type: 2}
     - target: {fileID: 5758588574019614233, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.495978

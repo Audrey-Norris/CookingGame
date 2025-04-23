@@ -27,7 +27,7 @@ public class PhaseManager : MonoBehaviour
         watch.UpdateTime(MAXTIMER - timer);
 
         if(timer == 0) {
-            //SEND TO END SCREEN FOR DEMO
+            //SEND TO END SCREEN FOR DEMO CHANGE TO DISABLING ALL COOKING AND HAVING THE PLAYER LEAVE
             SceneSwap sceneSwap = new SceneSwap();
             sceneSwap.ChangeScene(3);
         }

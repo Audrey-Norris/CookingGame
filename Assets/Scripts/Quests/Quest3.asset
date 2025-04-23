@@ -10,28 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c52852f9b43cf545ba7df2365c65d21, type: 3}
-  m_Name: Quest2
+  m_Name: Quest3
   m_EditorClassIdentifier: 
-  questName: Blacksmiths Refueling
-  questDescription: 'The blacksmiths are looking to refuel so they can get the forges
-    smelting new weapons.
-
-
-    They want a bowl that''s shocking in flavor all the
-    way!'
+  questName: 
+  questDescription: 
   itemNeeded: {fileID: 0}
-  foodPerks: 00000000
+  foodPerks: 
   flavorList:
   - name: Spicy
     total: 0
   - name: Sweet
-    total: 0
-  - name: Bitter
     total: 20
+  - name: Bitter
+    total: 0
   - name: Sour
     total: 0
   - name: Umami
     total: 0
   isCompleted: 0
   isActive: 0
-  faction: 1
+  faction: 0

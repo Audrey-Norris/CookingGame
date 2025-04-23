@@ -20,6 +20,8 @@ public class Quests : ScriptableObject
 
     public bool isActive = false;
 
+    public Factions faction;
+
     public Quests() {
 
         this.flavorList[0].name = "Spicy";
