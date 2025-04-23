@@ -19,9 +19,13 @@ public class SliderManager : MonoBehaviour {
     }
 
     public FoodSlider GetFlavor(string flavor) {
+        Debug.Log("Searching Flavor! " + flavor);
         foreach(FoodSlider slider in sliders) {
             if(slider.flavor.name == flavor) {
+                Debug.Log(slider.flavor.name);
                 return slider;
+            } else {
+                Debug.Log("Not found!");
             }
         }
         return null;
