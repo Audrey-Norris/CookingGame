@@ -8,7 +8,7 @@ public class TriggerDialogue : MonoBehaviour
     [SerializeField] private TutorialManager tutorial;
 
     private void Start() {
-        if(tutorial.GetTutorialCompletion(1)) {
+        if(tutorial.GetTutorialCompletion()) {
             this.gameObject.SetActive(false);
         }
     }

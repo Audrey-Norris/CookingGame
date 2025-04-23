@@ -33,7 +33,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void InitializeStoryKnot(string storyName) {
+    public void InitializeStoryKnot(string storyName) { 
         if (currentStory == null) {
             SetStory(new Story(inkasset.text));
         }
@@ -56,6 +56,7 @@ public class DialogueManager : MonoBehaviour
 
         if (player != null) {
             player.GetComponent<PlayerMovement>().stopMovement();
+            player.GetComponent<PlayerInteract>().isDialogue = true;
         }
 
     }
@@ -73,6 +74,7 @@ public class DialogueManager : MonoBehaviour
     public void EndKnot() { // Hides dialogue box
         if (player != null) {
             player.GetComponent<PlayerMovement>().startMovement();
+            player.GetComponent<PlayerInteract>().isDialogue = false;
         }
 
         dialogueUI.HideDialogueBox();

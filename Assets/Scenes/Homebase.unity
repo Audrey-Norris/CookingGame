@@ -14335,6 +14335,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2394528133058870002, guid: bc53460710197cb4eb43eee40411e2e0, type: 3}
+      propertyPath: dialogueUI
+      value: 
+      objectReference: {fileID: 1791916113}
+    - target: {fileID: 2394528133058870002, guid: bc53460710197cb4eb43eee40411e2e0, type: 3}
+      propertyPath: sceneScript
+      value: 
+      objectReference: {fileID: 1298573125}
+    - target: {fileID: 2394528133058870002, guid: bc53460710197cb4eb43eee40411e2e0, type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 1791916112}
     - target: {fileID: 3761761427326591645, guid: bc53460710197cb4eb43eee40411e2e0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.495978
@@ -14379,6 +14391,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueGroup
       objectReference: {fileID: 0}
+    - target: {fileID: 8390009835526868543, guid: bc53460710197cb4eb43eee40411e2e0, type: 3}
+      propertyPath: inkasset
+      value: 
+      objectReference: {fileID: 4900000, guid: 7433340574b41554393217d211810b34, type: 3}
     - target: {fileID: 8390009835526868543, guid: bc53460710197cb4eb43eee40411e2e0, type: 3}
       propertyPath: playerInput
       value: 
@@ -25361,6 +25377,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 638297d086c1ebe4c875dbf073aece2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1791916113 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5036850686095593687, guid: bc53460710197cb4eb43eee40411e2e0, type: 3}
+  m_PrefabInstance: {fileID: 1300769625}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a606f06d0f323c44f87441b72d01c398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1810537944

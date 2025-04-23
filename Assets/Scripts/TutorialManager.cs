@@ -14,8 +14,7 @@ public class TutorialManager : MonoBehaviour, IDataPersistance
 
     [SerializeField] private bool isTutorialComplete = false;
 
-    [SerializeField] private bool[] tutorialCompletion = { false, false, false };
-
+    [SerializeField] private bool success = false;
 
     // Start is called before the first frame update
     void Start()
@@ -28,65 +27,36 @@ public class TutorialManager : MonoBehaviour, IDataPersistance
     }
 
     public void ActivateDialogue() {
-        if(SceneManager.GetActiveScene().buildIndex == 3) {
-            currentTutorial = 2;
+        StartCoroutine(startTutorial());
+    }
+
+    public IEnumerator startTutorial() {
+        yield return new WaitForSecondsRealtime(1f);
+        if(currentTutorial != 5) {
+            dm.InitializeStoryKnot("Tutorial" + (currentTutorial + 1));
+        } else {
+            dm.InitializeStoryKnot("Tutorial" + (currentTutorial + 1)+success.ToString());
         }
-        if (!tutorialCompletion[currentTutorial]) {
-            dm.SetSceneScript(tutorialScene);
-            if (currentTutorial == 0) {
-                player.SetDialogue(true);
-                StartCoroutine(startMorning());
-            } else if (currentTutorial == 1) {
-                player.SetDialogue(true);
-                StartCoroutine(startAfternoon());
-            } else if (currentTutorial == 2) {
-                player.SetDialogue(true);
-                StartCoroutine(startTown());
-            }
-        }
-    }
-
-    public IEnumerator startMorning() {
-        yield return new WaitForSecondsRealtime(1f);
-        dm.InitializeStoryKnot("Tutorial1");
-        tutorialCompletion[currentTutorial] = true;
         currentTutorial++;
     }
 
-
-    public IEnumerator startAfternoon() {
-        yield return new WaitForSecondsRealtime(1f);
-        dm.InitializeStoryKnot("Tutorial2");
-        tutorialCompletion[currentTutorial] = true;
-        currentTutorial++;
-    }
-
-    public IEnumerator startTown() {
-        yield return new WaitForSecondsRealtime(1f);
-        dm.InitializeStoryKnot("Tutorial3");
-        tutorialCompletion[currentTutorial] = true;
-        currentTutorial++;
+    public bool GetTutorialCompletion() {
+        return isTutorialComplete;
     }
 
     public void LoadData(GameData data) {
         currentTutorial = 0;
-        tutorialCompletion = data.tutorialsCompleted;
+        //tutorialCompletion = data.tutorialsCompleted;
+        /*
         foreach (bool tutorial in tutorialCompletion) {
             if (tutorial)
             {
                 currentTutorial++;
             }
-        }
-    }
-
-    public bool GetTutorialCompletion(int i) {
-        if (tutorialCompletion[i]) {
-            return true;
-        }
-        return false;
+        } */
     }
 
     public void SaveData(ref GameData data) {
-        data.tutorialsCompleted = tutorialCompletion;
+        //data.tutorialsCompleted = tutorialCompletion;
     }
 }
