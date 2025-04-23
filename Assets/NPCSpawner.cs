@@ -19,6 +19,7 @@ public class NPCSpawner : MonoBehaviour
             npc.GetComponent<NPCManager>().moveLocation2 = this.transform;
             npc.GetComponent<NPCManager>().soundmanager = soundEffectManager;
             npc.transform.LookAt(movePosition.transform);
+            soundEffectManager.PlayEffect(0);
         }
     }
 }

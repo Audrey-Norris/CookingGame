@@ -14,6 +14,11 @@ public class SoundEffectManager : MonoBehaviour
         audioPlayer.PlayOneShot(clip);
     }
 
+    public void PlayEffect(int i) {
+        AudioClip clip = clips[i];
+        audioPlayer.PlayOneShot(clip);
+    }
+
     public void PlayEffect(AudioClip clip) {
         audioPlayer.PlayOneShot(clip);
     }
