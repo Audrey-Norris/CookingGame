@@ -17,8 +17,8 @@ MonoBehaviour:
     fresh lumber to rebuild the defenses.
 
 
-    They love a bowl with plenty of spice
-    and a bit of salty flavor.'
+    They love a bowl with plenty of spice.'
+  questHint: Create a Spicy Food
   itemNeeded: {fileID: 0}
   foodPerks: 02000000
   flavorList:
@@ -34,3 +34,4 @@ MonoBehaviour:
     total: 0
   isCompleted: 0
   isActive: 0
+  faction: 0

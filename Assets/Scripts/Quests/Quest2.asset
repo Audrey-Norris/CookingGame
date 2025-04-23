@@ -19,6 +19,7 @@ MonoBehaviour:
 
     They want a bowl that''s shocking in flavor all the
     way!'
+  questHint: Create a bitter food.
   itemNeeded: {fileID: 0}
   foodPerks: 00000000
   flavorList:

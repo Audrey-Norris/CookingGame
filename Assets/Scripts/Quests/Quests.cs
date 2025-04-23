@@ -10,6 +10,9 @@ public class Quests : ScriptableObject
     [TextArea(15, 20)]
     public string questDescription;
 
+    [TextArea(5, 10)]
+    public string questHint;
+
     public Food itemNeeded;
 
     public Perks[] foodPerks;
