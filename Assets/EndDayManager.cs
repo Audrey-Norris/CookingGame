@@ -19,4 +19,8 @@ public class EndDayManager : MonoBehaviour
         endCanvas.enabled = false;
     }
 
+    public void EndDay() {
+        Debug.Log("End Day");
+    }
+
 }
