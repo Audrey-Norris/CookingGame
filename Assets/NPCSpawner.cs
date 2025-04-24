@@ -11,6 +11,9 @@ public class NPCSpawner : MonoBehaviour
 
     [SerializeField] SoundEffectManager soundEffectManager;
 
+    [SerializeField] TutorialManager tutorial;
+
+
     public void SpawnNPC() {
         if (NPCPrefab != null) {
             Vector3 position = transform.position;
@@ -18,6 +21,7 @@ public class NPCSpawner : MonoBehaviour
             npc.GetComponent<NPCManager>().moveLocation = movePosition.transform;
             npc.GetComponent<NPCManager>().moveLocation2 = this.transform;
             npc.GetComponent<NPCManager>().soundmanager = soundEffectManager;
+            npc.GetComponent<NPCManager>().tutorial = tutorial;
             npc.transform.LookAt(movePosition.transform);
             soundEffectManager.PlayEffect(0);
         }

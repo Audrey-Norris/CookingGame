@@ -2,9 +2,9 @@
 
 
 ==Tutorial1==
-    Hello! Welcome to the tavern #Sylas
+    To move dialogue forward press 'e' #Narrator
+    Hello! Welcome to the tavern... #Sylas
     ...or what's left of it. #Sylas
-
     We appreciate you deciding to help us out, most poeple are injured after the monster attacks. #Sylas
     Lets walk you through our process here, then we can get cooking! #Sylas
     To start head over to the order board by the door. #Sylas
@@ -60,6 +60,7 @@
     This will cause the town to help us as well. #Sylas
     Be careful though, neglecting relationships causes decline. #Sylas
     Decline could take down the village forever. #Sylas
+    I have one more thing to tell you so come back over here. #Sylas
     -> END
 
 ==Tutorial7==
@@ -70,5 +71,4 @@
     Ingredients replenish and you can continue making things. #Sylas
     Go ahead and walk out the door to end the day and get started again tomorrow. #Sylas
     I'll check in after that. #Sylas
-
     -> END

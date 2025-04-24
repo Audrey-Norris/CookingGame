@@ -20,6 +20,14 @@ public class NPCManager : MonoBehaviour
     [SerializeField] public SoundEffectManager soundmanager;
     [SerializeField] private SoundEffectStorage storage;
 
+    [SerializeField] public TutorialManager tutorial;
+
+    public void Start() {
+        if (!tutorial.GetTutorialCompletion()) {
+            tutorial.ActivateDialogue();
+        }
+    }
+
     public void Update() {
         
         if(state == NPCStates.Pickup || state == NPCStates.Leaving) {
@@ -48,6 +56,9 @@ public class NPCManager : MonoBehaviour
 
     public void NPCReaction(bool result) {
         GameObject.Find("InventoryCanvas").GetComponent<Canvas>().enabled = false;
+        tutorial.success = result;
+        tutorial.ActivateDialogue();
+
         if (result) {
             goodEffect.Play();
             animator.Play("GoodResult");
