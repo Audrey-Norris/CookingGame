@@ -20,7 +20,7 @@ public class PhaseManager : MonoBehaviour
     [SerializeField] private TutorialManager tutorialManager;
 
     public void Start() {
-        if (tutorialManager.GetTutorialCompletion()) {
+        if (!tutorialManager.GetTutorialCompletion()) {
             UpdateTime(6);
         }
     }

@@ -16,15 +16,25 @@ public class QuestBoardManager : MonoBehaviour
 
     [SerializeField] private QuestToolTip tooltip;
 
+    [SerializeField] private TutorialManager tutorial;
+
     public void Start() {
         playerQuests = GameObject.Find("SaveManager").GetComponent<QuestsManager>();
     }
 
     public void PopulateQuests() {
-        foreach(Quests quest in questBoardList) {
+
+        if(!tutorial.GetTutorialCompletion()) {
+            Quests quest = playerQuests.allQuests[0];
             GameObject newQuest = Instantiate(questPrefab, questArea.transform);
             newQuest.GetComponent<QuestInfo>().LoadQuestInfo(quest, this);
             questObjects.Add(newQuest);
+        } else {
+            foreach (Quests quest in playerQuests.currentQuests) {
+                GameObject newQuest = Instantiate(questPrefab, questArea.transform);
+                newQuest.GetComponent<QuestInfo>().LoadQuestInfo(quest, this);
+                questObjects.Add(newQuest);
+            }
         }
     }
 
