@@ -17,6 +17,14 @@ public class PhaseManager : MonoBehaviour
 
     [SerializeField] private EndDayManager endDay;
 
+    [SerializeField] private TutorialManager tutorialManager;
+
+    public void Start() {
+        if (tutorialManager.GetTutorialCompletion()) {
+            UpdateTime(6);
+        }
+    }
+
     public int GetTime() {
         return timer;
     }
