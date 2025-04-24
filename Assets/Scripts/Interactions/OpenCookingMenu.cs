@@ -11,8 +11,6 @@ public class OpenCookingMenu : MonoBehaviour, IInteractable
     [SerializeField] AudioSetup audio;
 
     public void EndInteraction() {
-        //cookingCanvas.transform.gameObject.GetComponent<RecipeListManager>().RemoveAllItems();
-        //cookingCanvas.transform.gameObject.GetComponent<RecipeListManager>().RemoveAllRecipes();
         cookingCanvas.enabled = false;
         audio.ChangeAudioSnapShot(1);
     }
