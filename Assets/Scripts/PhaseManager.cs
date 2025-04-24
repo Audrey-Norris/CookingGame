@@ -15,6 +15,8 @@ public class PhaseManager : MonoBehaviour
 
     [SerializeField] private WatchManager watch;
 
+    [SerializeField] private EndDayManager endDay;
+
     public int GetTime() {
         return timer;
     }
@@ -27,9 +29,7 @@ public class PhaseManager : MonoBehaviour
         watch.UpdateTime(MAXTIMER - timer);
 
         if(timer == 0) {
-            //SEND TO END SCREEN FOR DEMO CHANGE TO DISABLING ALL COOKING AND HAVING THE PLAYER LEAVE
-            SceneSwap sceneSwap = new SceneSwap();
-            sceneSwap.ChangeScene(3);
+            endDay.ActivateEndDay();
         }
     }
 

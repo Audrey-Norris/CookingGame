@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RecipeManager : MonoBehaviour
 {
+    [SerializeField] public List<Recipe> allRecipes = new List<Recipe>();
+
     [SerializeField] public List<Recipe> knownRecipes = new List<Recipe>();
 
     public Recipe[] GetAllRecipes() {

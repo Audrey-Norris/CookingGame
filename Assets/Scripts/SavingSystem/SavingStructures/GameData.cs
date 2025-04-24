@@ -20,11 +20,12 @@ public class InventoryItem
 public class GameData
 {
     public float totalPlaytime;
-    public float[] locationPlaytime = { 0f, 0f, 0f, 0f };
-    public string questCompleted;
-    public int itemsCrafted;
-    public bool[] tutorialsCompleted = { false, false, false };
     public int totalDays = 0;
+
+    //NEED RENOWN
+    public List<Renown> renown;
+
+    //NEED UNLOCKS
 
     //Inventory SO Names and totals
     public List<InventoryItem> inventory;

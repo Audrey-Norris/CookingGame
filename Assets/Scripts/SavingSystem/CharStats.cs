@@ -66,17 +66,11 @@ public class CharStats : MonoBehaviour, IDataPersistance
 
     public void LoadData(GameData data) {
         totalPlaytime = data.totalPlaytime;
-        locationPlaytime = data.locationPlaytime;
-        questCompleted = data.questCompleted;
-        itemsCrafted = data.itemsCrafted;
         totalDays = data.totalDays;
     }
 
     public void SaveData(ref GameData data) {
         data.totalPlaytime = totalPlaytime;
-        data.locationPlaytime = locationPlaytime;
-        data.questCompleted = questCompleted;
-        data.itemsCrafted = itemsCrafted;
         data.totalDays = totalDays;
     }
 }
