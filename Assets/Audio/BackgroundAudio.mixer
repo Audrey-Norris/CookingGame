@@ -411,7 +411,7 @@ AudioMixerSnapshotController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LeadupSong
+  m_Name: ChillSong
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 1bf26138672a7e04492707a7b0a5e584
   m_FloatValues:
@@ -500,7 +500,7 @@ AudioMixerController:
     - 3bbffe92970cef8439e0fa4bafca88ab
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 24500006}
+  m_TargetSnapshot: {fileID: -963779268204296723}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0

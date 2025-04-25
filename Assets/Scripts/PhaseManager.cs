@@ -19,6 +19,8 @@ public class PhaseManager : MonoBehaviour
 
     [SerializeField] private TutorialManager tutorialManager;
 
+    [SerializeField] private AudioSetup audio;
+
     public void Start() {
         if (!tutorialManager.GetTutorialCompletion()) {
             UpdateTime(6);
@@ -36,8 +38,16 @@ public class PhaseManager : MonoBehaviour
 
         watch.UpdateTime(MAXTIMER - timer);
 
+        CheckDayTime();
+
         if(timer == 0) {
             endDay.ActivateEndDay();
+        }
+    }
+
+    public void CheckDayTime() {
+        if(timer == 2) {
+            audio.ChangeAudioSnapShot(4);
         }
     }
 
