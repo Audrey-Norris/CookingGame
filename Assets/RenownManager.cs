@@ -36,6 +36,8 @@ public class RenownManager : MonoBehaviour
 {
 
     public List<Renown> renownList = new List<Renown>();
+    public List<Renown> dayRenownList = new List<Renown>();
+
 
     public int baseRenown = 1;
 
@@ -43,12 +45,24 @@ public class RenownManager : MonoBehaviour
         for (int i = 0; i < Factions.GetNames(typeof(Factions)).Length; i++) {
             renownList.Add(new Renown((Factions)i));
         }
+        for (int i = 0; i < Factions.GetNames(typeof(Factions)).Length; i++) {
+            dayRenownList.Add(new Renown((Factions)i));
+        }
     }
 
     public void UpdateReknown(Factions faction) {
-        renownList[(int)faction].currentFavor++;
-        renownList[(int)faction].value = baseRenown+renownList[(int)faction].currentFavor;
-        CalculateLevel(renownList[(int)faction].value);
+        dayRenownList[(int)faction].currentFavor++;
+        dayRenownList[(int)faction].value += baseRenown+renownList[(int)faction].currentFavor;
+        CalculateLevel(dayRenownList[(int)faction].value);
+    }
+
+    //END OF DAY CALCULATIONS
+    public void UpdateTotalReknown() {
+        foreach(Renown renown in dayRenownList) {
+            renownList[(int)renown.faction].currentFavor += renown.currentFavor;
+            renownList[(int)renown.faction].value += renown.value;
+            CalculateLevel(renownList[(int)renown.faction].value);
+        }
     }
 
     public int CalculateLevel(int value) {
