@@ -65,8 +65,6 @@ MonoBehaviour:
   totalItems:
   - item: {fileID: 11400000, guid: 8350a18f500dbd843b5b7487afcdbc08, type: 2}
     total: 2
-  - item: {fileID: 11400000, guid: 8350a18f500dbd843b5b7487afcdbc08, type: 2}
-    total: 2
 --- !u!114 &4340240553432507987
 MonoBehaviour:
   m_ObjectHideFlags: 0
