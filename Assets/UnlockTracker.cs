@@ -9,6 +9,8 @@ public enum UnlockType { Recipe, Spice, Upgrade };
 public class Unlock {
     public string unlockName;
     public UnlockType type;
+
+    [TextArea(3, 10)]
     public string description;
 
     public Factions faction;
@@ -35,15 +37,27 @@ public class UnlockTracker : MonoBehaviour
         List<Unlock> newUnlocks = new List<Unlock>();
         foreach(Renown faction in renownManager.renownList) {
             foreach(Unlock unlock in unlocks) {
-                if(faction.value >= unlock.value) {
+                if(faction.value >= unlock.value && faction.faction == unlock.faction) {
                     unlock.completed = true;
                     newUnlocks.Add(unlock);
+                    FacilitateUnlocks(unlock);
                 }
             }
         }
-
         return newUnlocks.ToArray();
     }
 
+    public void FacilitateUnlocks(Unlock unlock) {
+        switch(unlock.type) {
+            case UnlockType.Spice:
+                //this.GetComponent<InventoryManager>().FaciliateUnlocks();
+                break;
+            case UnlockType.Recipe:
+                this.GetComponent<RecipeManager>().FacilitateUnlocks(unlock);
+                break;
+            case UnlockType.Upgrade:
+                break;
+        }
+    }
 
 }

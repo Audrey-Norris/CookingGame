@@ -18,4 +18,10 @@ public class RecipeManager : MonoBehaviour
         }
         return null;
     }
+
+    public void FacilitateUnlocks(Unlock unlock) {
+        Recipe newRecipe = allRecipes.Find(x => x.Name == unlock.unlockName);
+        knownRecipes.Add(newRecipe);
+    }
+
 }

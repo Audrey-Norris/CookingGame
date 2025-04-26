@@ -16,6 +16,9 @@ public class DayRecapManager : MonoBehaviour
     [SerializeField] private TMP_Text day;
 
     [SerializeField] private GameObject unlocks;
+    [SerializeField] private GameObject gridArea;
+    [SerializeField] private GameObject textPrefab;
+
     [SerializeField] private GameObject button;
 
 
@@ -30,6 +33,9 @@ public class DayRecapManager : MonoBehaviour
 
     public void RunEndOfDay() {
         RenownManager rManager = saveManager.GetComponent<RenownManager>();
+
+        rManager.UpdateTotalRenown();
+
         //Updates Renown to current renow levels
         foreach (Renown faction in rManager.renownList) {
             sliders.AddRenown(faction.faction, faction.value);
@@ -43,10 +49,14 @@ public class DayRecapManager : MonoBehaviour
         //Determine unlocks
         Unlock[] newUnlocks = unlock.CheckUnlocks();
         if(newUnlocks.Length > 0) {
-            //CHECK IF THERE ARE UNLOCKS AND SHOW THEM, OTHERWISE JUST MOVE ON
+            foreach(Unlock u in newUnlocks) {
+                GameObject newText = Instantiate(textPrefab, gridArea.transform);
+                newText.GetComponent<TMP_Text>().text =  "- " + u.description;
+            }
+        } else {
+            GameObject newText = Instantiate(textPrefab, gridArea.transform);
+            newText.GetComponent<TMP_Text>().text = "Nothing unlocked today";
         }
-
-
         //Announce unlocks
         unlocks.SetActive(true);
 
@@ -58,10 +68,7 @@ public class DayRecapManager : MonoBehaviour
     /* 
      
      Steps for manager
-    1. Check renown
-    2. Add renown
-    3. Determine unlocks
-    4. Send you back or give you options on what to do
+       Done now it needs to be pretty and checks need to be made to do things.
 
     OPTIONAL: Make pretty!
      

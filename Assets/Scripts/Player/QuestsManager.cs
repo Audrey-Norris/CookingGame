@@ -25,7 +25,7 @@ public class QuestsManager : MonoBehaviour
     public void QuestChecker(Food item) {
         if(ConfirmQuest(activeQuest, item)) {
             questNPC.GetComponent<NPCManager>().NPCReaction(true);
-            renownManager.UpdateReknown(activeQuest.faction);
+            renownManager.UpdateRenown(activeQuest.faction);
         } else {
             questNPC.GetComponent<NPCManager>().NPCReaction(false);
         }

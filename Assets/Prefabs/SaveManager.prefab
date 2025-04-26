@@ -98,11 +98,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f066b1218ebb042819ddb8d56fa6c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allRecipes: []
-  knownRecipes:
+  allRecipes:
   - {fileID: 11400000, guid: 85814278a19278b40a5ff56ee07a5220, type: 2}
-  - {fileID: 11400000, guid: 7e675b74fd918694484b8c9cdbbccaa3, type: 2}
   - {fileID: 11400000, guid: 46cac1ec4e835084c90e5a76a5a98e3c, type: 2}
+  - {fileID: 11400000, guid: 7e675b74fd918694484b8c9cdbbccaa3, type: 2}
+  knownRecipes:
+  - {fileID: 11400000, guid: 7e675b74fd918694484b8c9cdbbccaa3, type: 2}
 --- !u!114 &4236221072037816596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,15 +118,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   renownList:
   - faction: 0
-    value: 3
+    value: 0
     level: 0
     currentFavor: 0
   - faction: 1
-    value: 2
+    value: 0
     level: 0
     currentFavor: 0
   - faction: 2
-    value: 4
+    value: 0
     level: 0
     currentFavor: 0
   dayRenownList:
@@ -154,5 +155,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f56248d2e2a53c149814ee71c8b2a311, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unlocks: []
-  renownManager: {fileID: 0}
+  unlocks:
+  - unlockName: Chupacabra Roast
+    type: 0
+    description: You've unlocked the Chupacabra Roast
+    faction: 2
+    value: 5
+    completed: 0
+  - unlockName: Lavamander Bake
+    type: 0
+    description: You've unlocked the Lavamander Bake
+    faction: 0
+    value: 5
+    completed: 0
+  renownManager: {fileID: 4236221072037816596}

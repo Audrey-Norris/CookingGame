@@ -38,7 +38,7 @@ public class RenownSliders : MonoBehaviour
 
     public void PreviewRenown(Factions faction, int total) {
         RenownSlider slider = GetRenown(faction);
-        slider.previewSlider.value = total;
+        slider.previewSlider.value = slider.renown.value + total;
     }
 
     public void AddRenown(Factions faction, int total) { //Adds value to the slider

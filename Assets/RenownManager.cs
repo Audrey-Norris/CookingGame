@@ -50,14 +50,14 @@ public class RenownManager : MonoBehaviour
         }
     }
 
-    public void UpdateReknown(Factions faction) {
+    public void UpdateRenown(Factions faction) {
         dayRenownList[(int)faction].currentFavor++;
         dayRenownList[(int)faction].value += baseRenown+renownList[(int)faction].currentFavor;
         CalculateLevel(dayRenownList[(int)faction].value);
     }
 
     //END OF DAY CALCULATIONS
-    public void UpdateTotalReknown() {
+    public void UpdateTotalRenown() {
         foreach(Renown renown in dayRenownList) {
             renownList[(int)renown.faction].currentFavor += renown.currentFavor;
             renownList[(int)renown.faction].value += renown.value;
