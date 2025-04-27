@@ -49,6 +49,7 @@
     This will cause the town to help us as well. #Sylas
     Be careful though, neglecting relationships causes decline. #Sylas
     Decline could take down the village forever. #Sylas
+    I have one more thing to tell you so come back over here. #Sylas
 
     -> END
 
@@ -65,10 +66,11 @@
 
 ==Tutorial7==
     As you can see that took a little bit. This equipment is rusty... #Sylas
-    The watch I gave you will help you track the time so you know when the day is over. #Sylas
+    See the watch up there? That will help you track the time. #Sylas
     Since we started later in the day we've already run out of time to do more orders. #Sylas
     So you'll be able to get started the next day. #Sylas
     Ingredients replenish and you can continue making things. #Sylas
     Go ahead and walk out the door to end the day and get started again tomorrow. #Sylas
+    Details can be found in the handbook. #Sylas
     I'll check in after that. #Sylas
     -> END

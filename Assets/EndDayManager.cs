@@ -20,6 +20,7 @@ public class EndDayManager : MonoBehaviour
     }
 
     public void EndDay() {
+
         SceneSwap sceneSwap = new SceneSwap();
         sceneSwap.ChangeScene(3);
     }

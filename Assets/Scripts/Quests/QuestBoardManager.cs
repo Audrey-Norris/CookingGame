@@ -23,19 +23,11 @@ public class QuestBoardManager : MonoBehaviour
     }
 
     public void PopulateQuests() {
-
-        if(!tutorial.GetTutorialCompletion()) {
-            Quests quest = playerQuests.allQuests[0];
-            GameObject newQuest = Instantiate(questPrefab, questArea.transform);
-            newQuest.GetComponent<QuestInfo>().LoadQuestInfo(quest, this);
-            questObjects.Add(newQuest);
-        } else {
             foreach (Quests quest in playerQuests.currentQuests) {
                 GameObject newQuest = Instantiate(questPrefab, questArea.transform);
                 newQuest.GetComponent<QuestInfo>().LoadQuestInfo(quest, this);
                 questObjects.Add(newQuest);
             }
-        }
     }
 
     public void AddQuest() { //NEED TO SPAWN NPC THAT IS WAITING FOR MEAL

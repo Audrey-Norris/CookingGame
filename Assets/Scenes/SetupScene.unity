@@ -658,12 +658,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 7e675b74fd918694484b8c9cdbbccaa3, type: 2}
     - target: {fileID: 3996621466690697490, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
+      propertyPath: renown.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996621466690697490, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
       propertyPath: spices.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3996621466690697490, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
       propertyPath: spices.Array.data[0].amount
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996621466690697490, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
+      propertyPath: renown.Array.data[1].faction
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996621466690697490, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
+      propertyPath: renown.Array.data[2].faction
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3996621466690697490, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
       propertyPath: spices.Array.data[0].itemName

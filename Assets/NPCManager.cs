@@ -23,7 +23,7 @@ public class NPCManager : MonoBehaviour
     [SerializeField] public TutorialManager tutorial;
 
     public void Start() {
-        if (!tutorial.GetTutorialCompletion()) {
+        if (!GameObject.Find("SaveManager").GetComponent<QuestsManager>().GetTutorialCompletion()) {
             tutorial.ActivateDialogue();
         }
     }

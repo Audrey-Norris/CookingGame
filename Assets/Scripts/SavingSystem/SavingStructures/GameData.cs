@@ -47,7 +47,7 @@ public class GameData
     public List<InventoryItem> inventory; // Inventory Manager
 
     //Starts a new game with items that would be needed at the start of a new game.
-    public GameData(InventoryItem[] spices, Quests quest, Recipe recipe)
+    public GameData(InventoryItem[] spices, Quests quest, Recipe recipe, List<Renown> renownList)
     {
         totalPlaytime = 0f;
         totalDays = 0;
@@ -61,6 +61,8 @@ public class GameData
         foreach (InventoryItem sp in spices) {
             inventory.Add(sp);
         }
+
+        renown = renownList;
 
         completedQuests = new List<Quests> ();
         completedQuests.Add(quest);

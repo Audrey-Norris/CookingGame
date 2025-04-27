@@ -21,6 +21,7 @@ public class SavingSystem : MonoBehaviour
     [SerializeField] private InventoryItem[] spices;
     [SerializeField] private Quests quest;
     [SerializeField] private Recipe recipe;
+    [SerializeField] private List<Renown> renown;
 
     private void Start()
     {
@@ -70,7 +71,7 @@ public class SavingSystem : MonoBehaviour
 
     public void NewGame()
     {
-        gameData = new GameData(spices, quest, recipe);
+        gameData = new GameData(spices, quest, recipe, renown);
         SaveGame();
     }
 

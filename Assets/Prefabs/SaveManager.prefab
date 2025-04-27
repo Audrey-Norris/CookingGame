@@ -50,6 +50,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: data.game
+  spices: []
+  quest: {fileID: 0}
+  recipe: {fileID: 0}
+  renown: []
 --- !u!114 &367386006964585182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,7 +87,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8dcfaad2c85cf8440b21991537ac7bd3, type: 2}
   activeQuest: {fileID: 0}
   questNPC: {fileID: 0}
-  renownManager: {fileID: 0}
+  renownManager: {fileID: 4236221072037816596}
+  isTutorial: 0
+  isEnd: 0
 --- !u!114 &-8139968860736268291
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TutorialManager : MonoBehaviour, IDataPersistance 
+public class TutorialManager : MonoBehaviour
 {
 
     [SerializeField] private DialogueManager dm;
@@ -18,13 +18,16 @@ public class TutorialManager : MonoBehaviour, IDataPersistance
 
     [SerializeField] private List<GameObject> tutorialTriggers = new List<GameObject>();
 
+    public GameObject saveManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        if(!isTutorialComplete) {
+        saveManager = GameObject.Find("SaveManager");
+        if(!saveManager.GetComponent<QuestsManager>().GetTutorialCompletion()) {
             ActivateDialogue();
         } else {
-            this.enabled = false;
+            this.gameObject.SetActive(false);
         }
     }
 
@@ -59,12 +62,8 @@ public class TutorialManager : MonoBehaviour, IDataPersistance
                 break;
         }
         if(currentTutorial == 7) {
-            isTutorialComplete = true;
+            saveManager.GetComponent<QuestsManager>().isTutorial = true;
         }
-    }
-
-    public bool GetTutorialCompletion() {
-        return isTutorialComplete;
     }
 
     public IEnumerator startTutorial(int i) {
@@ -75,21 +74,5 @@ public class TutorialManager : MonoBehaviour, IDataPersistance
             dm.InitializeStoryKnot("Tutorial" + (currentTutorial + 1) + success.ToString());
         }
         currentTutorial++;
-    }
-
-    public void LoadData(GameData data) {
-        currentTutorial = 0;
-        //tutorialCompletion = data.tutorialsCompleted;
-        /*
-        foreach (bool tutorial in tutorialCompletion) {
-            if (tutorial)
-            {
-                currentTutorial++;
-            }
-        } */
-    }
-
-    public void SaveData(ref GameData data) {
-        //data.tutorialsCompleted = tutorialCompletion;
     }
 }

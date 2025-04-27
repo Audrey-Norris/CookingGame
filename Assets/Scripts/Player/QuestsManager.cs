@@ -47,6 +47,10 @@ public class QuestsManager : MonoBehaviour, IDataPersistance
         return questComplete;
     }
 
+    public bool GetTutorialCompletion() {
+        return isTutorial;
+    }
+
     //LOADS COMPLETED QUESTS AND IF TUTORIAL WAS COMPLETED
     public void LoadData(GameData data) {
         //Sets All Quests To Completed That Were Completed

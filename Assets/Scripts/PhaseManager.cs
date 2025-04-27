@@ -22,7 +22,7 @@ public class PhaseManager : MonoBehaviour
     [SerializeField] private AudioSetup audio;
 
     public void Start() {
-        if (!tutorialManager.GetTutorialCompletion()) {
+        if (!GameObject.Find("SaveManager").GetComponent<QuestsManager>().GetTutorialCompletion()) {
             UpdateTime(6);
         }
     }

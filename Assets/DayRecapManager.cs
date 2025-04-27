@@ -64,6 +64,11 @@ public class DayRecapManager : MonoBehaviour
         button.SetActive(true);
     }
 
+    public void SaveGame() {
+        saveManager.GetComponent<SavingSystem>().SaveGame();
+    }
+
+
 
     /* 
      
