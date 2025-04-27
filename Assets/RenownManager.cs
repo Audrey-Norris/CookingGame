@@ -32,7 +32,7 @@ public class Renown {
 
 }
 
-public class RenownManager : MonoBehaviour
+public class RenownManager : MonoBehaviour, IDataPersistance 
 {
 
     public List<Renown> renownList = new List<Renown>();
@@ -67,5 +67,22 @@ public class RenownManager : MonoBehaviour
 
     public int CalculateLevel(int value) {
         return (int)Mathf.Floor(value/10); 
+    }
+
+    public void LoadData(GameData data) {
+        //Sets Renown To Proper Values
+        foreach (Renown renown in data.renown) {
+            renownList[(int)renown.faction].currentFavor += renown.currentFavor;
+            renownList[(int)renown.faction].value += renown.value;
+            CalculateLevel(renownList[(int)renown.faction].value);
+        }
+    }
+
+    public void SaveData(ref GameData data) {
+        foreach (Renown renown in renownList) {
+            data.renown[(int)renown.faction].currentFavor = renown.currentFavor;
+            data.renown[(int)renown.faction].value = renown.value;
+            CalculateLevel(renownList[(int)renown.faction].value);
+        }
     }
 }

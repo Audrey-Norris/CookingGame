@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Quest1
   m_EditorClassIdentifier: 
   questName: Lumberjacks Request
-  questDescription: 'The lumberjacks are looking to get back into the forest to find
-    fresh lumber to rebuild the defenses.
+  questDescription: 'The guards need something that will help them stay awake during
+    the watch.
 
 
-    They love a bowl with plenty of spice.'
-  questHint: Create a Spicy Food
+    Make them a bowl with plenty of spice.'
+  questHint: Cook them a spicy food (Tier 1)
   itemNeeded: {fileID: 0}
   foodPerks: 02000000
   flavorList:
@@ -34,4 +34,4 @@ MonoBehaviour:
     total: 0
   isCompleted: 0
   isActive: 0
-  faction: 0
+  faction: 2

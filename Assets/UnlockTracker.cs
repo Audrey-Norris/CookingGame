@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public enum UnlockType { Recipe, Spice, Upgrade };
@@ -23,6 +24,15 @@ public class UnlockTracker : MonoBehaviour
 {
     [SerializeField] private List<Unlock> unlocks = new List<Unlock>();
     [SerializeField] private RenownManager renownManager;
+
+
+    //ADD FUNCTION THAT UPDATES UNLOCKS WHEN IN STARTUP SCENE
+    public void Start() {
+        if(SceneManager.GetActiveScene().buildIndex == 0) { 
+            CheckUnlocks();
+        }
+    }
+
 
     public Unlock GetUnlock(string name) {
         return unlocks.Find(x => x.unlockName == name);

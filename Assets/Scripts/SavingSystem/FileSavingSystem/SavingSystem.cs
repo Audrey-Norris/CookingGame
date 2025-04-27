@@ -17,6 +17,10 @@ public class SavingSystem : MonoBehaviour
 
     public FileDataManager dataManager;
 
+    [Header("New Game Data")]
+    [SerializeField] private InventoryItem[] spices;
+    [SerializeField] private Quests quest;
+    [SerializeField] private Recipe recipe;
 
     private void Start()
     {
@@ -55,6 +59,8 @@ public class SavingSystem : MonoBehaviour
         if (gameData == null) {
             Debug.Log("No data was found, making new Save.");
             NewGame();
+        } else {
+            Debug.Log("Loadding Data From... " + Application.persistentDataPath);
         }
 
         foreach (IDataPersistance obj in dataPersistanceObjects) {
@@ -64,7 +70,7 @@ public class SavingSystem : MonoBehaviour
 
     public void NewGame()
     {
-        gameData = new GameData();
+        gameData = new GameData(spices, quest, recipe);
         SaveGame();
     }
 

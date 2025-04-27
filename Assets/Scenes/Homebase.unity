@@ -13303,7 +13303,7 @@ PrefabInstance:
     - target: {fileID: 2522811799632845220, guid: 2c98fa2ab600c0244b9fc943a88e3c7c, type: 3}
       propertyPath: playerQuests
       value: 
-      objectReference: {fileID: 1019550975}
+      objectReference: {fileID: 0}
     - target: {fileID: 2522811799632845220, guid: 2c98fa2ab600c0244b9fc943a88e3c7c, type: 3}
       propertyPath: questBoardList.Array.size
       value: 0
@@ -13649,28 +13649,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endCanvas: {fileID: 0}
   endDayTrigger: {fileID: 0}
---- !u!114 &1019550972 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4236221072037816596, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-  m_PrefabInstance: {fileID: 1109945060}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1845581294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80ecc1a3e4a7d3043a628e316d844f1c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1019550975 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4340240553432507987, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-  m_PrefabInstance: {fileID: 1109945060}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1845581294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 057b61ac79bc31e44b5e3dc627084490, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1045065210
 GameObject:
   m_ObjectHideFlags: 0
@@ -13938,131 +13916,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: df99a9277ef9e3445b4e3eec92c1a146, type: 3}
---- !u!1001 &1109945060
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8139968860736268291, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: knownRecipes.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8139968860736268291, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: knownRecipes.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 7e675b74fd918694484b8c9cdbbccaa3, type: 2}
-    - target: {fileID: 367386006964585182, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: totalItems.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 367386006964585182, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: totalItems.Array.data[1].item
-      value: 
-      objectReference: {fileID: 11400000, guid: 3a8815a6683bf8f4d91919a16a41dc0c, type: 2}
-    - target: {fileID: 367386006964585182, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: totalItems.Array.data[2].item
-      value: 
-      objectReference: {fileID: 11400000, guid: 13d732dc7900bde4da858ca160fdd9a8, type: 2}
-    - target: {fileID: 367386006964585182, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: totalItems.Array.data[0].total
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 367386006964585182, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: totalItems.Array.data[1].total
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 367386006964585182, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: totalItems.Array.data[2].total
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4340240553432507987, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: renownManager
-      value: 
-      objectReference: {fileID: 1019550972}
-    - target: {fileID: 4340240553432507987, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: allQuests.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4340240553432507987, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: allQuests.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: c3a9df0ca63ead44ba369746d4e07503, type: 2}
-    - target: {fileID: 4340240553432507987, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: allQuests.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 8dcfaad2c85cf8440b21991537ac7bd3, type: 2}
-    - target: {fileID: 4340240553432507987, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: allQuests.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: 9aec021b53521014fbd3dc85a0c5b076, type: 2}
-    - target: {fileID: 4340240553432507987, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: allQuests.Array.data[3]
-      value: 
-      objectReference: {fileID: 11400000, guid: d2ccbd76a7792a940828da829a72be00, type: 2}
-    - target: {fileID: 4340240553432507987, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: allQuests.Array.data[4]
-      value: 
-      objectReference: {fileID: 11400000, guid: 9581de8a18eae4743b5515663bd0f7b1, type: 2}
-    - target: {fileID: 4340240553432507987, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: currentQuests.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5758588574019614233, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.495978
-      objectReference: {fileID: 0}
-    - target: {fileID: 5758588574019614233, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.5531178
-      objectReference: {fileID: 0}
-    - target: {fileID: 5758588574019614233, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -4.6367884
-      objectReference: {fileID: 0}
-    - target: {fileID: 5758588574019614233, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5758588574019614233, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5758588574019614233, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5758588574019614233, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5758588574019614233, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5758588574019614233, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5758588574019614233, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7875677592269264799, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      propertyPath: m_Name
-      value: SaveManager
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6381255374773220318, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7875677592269264799, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1845581299}
-  m_SourcePrefab: {fileID: 100100000, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
 --- !u!1001 &1113183278
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27076,23 +26929,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a3e00f7afda7344e813706b5e7fcaa7, type: 3}
---- !u!1 &1845581294 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7875677592269264799, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
-  m_PrefabInstance: {fileID: 1109945060}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1845581299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1845581294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f56248d2e2a53c149814ee71c8b2a311, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1847434955
 GameObject:
   m_ObjectHideFlags: 0
@@ -28776,7 +28612,6 @@ SceneRoots:
   - {fileID: 2012641250}
   - {fileID: 945702544}
   - {fileID: 28879686}
-  - {fileID: 1109945060}
   - {fileID: 216063459}
   - {fileID: 1643928512}
   - {fileID: 1391050163}

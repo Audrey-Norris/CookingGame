@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 170801181}
   - component: {fileID: 170801180}
+  - component: {fileID: 170801182}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -217,6 +218,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &170801182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170801179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &428758312
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,6 +649,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3996621466690697490, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
+      propertyPath: quest
+      value: 
+      objectReference: {fileID: 11400000, guid: c3a9df0ca63ead44ba369746d4e07503, type: 2}
+    - target: {fileID: 3996621466690697490, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
+      propertyPath: recipe
+      value: 
+      objectReference: {fileID: 11400000, guid: 7e675b74fd918694484b8c9cdbbccaa3, type: 2}
+    - target: {fileID: 3996621466690697490, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
+      propertyPath: spices.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996621466690697490, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
+      propertyPath: spices.Array.data[0].amount
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3996621466690697490, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
+      propertyPath: spices.Array.data[0].itemName
+      value: Fire Salt
+      objectReference: {fileID: 0}
+    - target: {fileID: 4340240553432507987, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
+      propertyPath: currentQuests.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5758588574019614233, guid: 53cff293797b656459e92eaa489d1d11, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.495978

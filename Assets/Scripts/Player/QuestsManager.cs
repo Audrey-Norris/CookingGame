@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class QuestsManager : MonoBehaviour
+public class QuestsManager : MonoBehaviour, IDataPersistance
 {
 
     public List<Quests> allQuests = new List<Quests>();
@@ -13,6 +13,9 @@ public class QuestsManager : MonoBehaviour
     [SerializeField] public GameObject questNPC;
 
     [SerializeField] private RenownManager renownManager;
+
+    public bool isTutorial = false;
+    public bool isEnd = false;
 
     public void SetActiveQuest(Quests quest) {
         activeQuest = quest;
@@ -43,5 +46,28 @@ public class QuestsManager : MonoBehaviour
 
         return questComplete;
     }
+
+    //LOADS COMPLETED QUESTS AND IF TUTORIAL WAS COMPLETED
+    public void LoadData(GameData data) {
+        //Sets All Quests To Completed That Were Completed
+        foreach(Quests quest in data.completedQuests) {
+            allQuests.Find(x => x.questName == quest.questName).isCompleted = true;
+        }
+
+        isTutorial = data.isTutorial;
+    }
+
+    public void SaveData(ref GameData data) {
+        List<Quests> completedQuests = new List<Quests>();
+        foreach(Quests quest in allQuests) {
+            if(quest.isCompleted) {
+                completedQuests.Add(quest);
+            }
+        }
+        data.completedQuests.Clear();
+        data.completedQuests = completedQuests;
+        data.isTutorial = isTutorial;
+    }
+
 
 }
