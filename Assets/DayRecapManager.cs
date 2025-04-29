@@ -8,6 +8,7 @@ public class DayRecapManager : MonoBehaviour
 {
     //Grabbing game object
     [SerializeField] private GameObject saveManager;
+    [SerializeField] private SceneSwap sceneSwap;
 
 
     [SerializeField] private UnlockTracker unlock;
@@ -73,7 +74,11 @@ public class DayRecapManager : MonoBehaviour
     }
 
     public void CheckDirection() {
-
+        if(saveManager.GetComponent<CharStats>().GetTotalDays() >= 2) {
+            sceneSwap.ChangeScene(4);
+        } else {
+            sceneSwap.ChangeScene(2);
+        }
     }
 
 

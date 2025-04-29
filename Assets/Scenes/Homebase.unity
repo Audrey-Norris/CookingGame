@@ -402,6 +402,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 943150305421163428, guid: d3e2f069291c64a4ea3ac6262718ed75, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 943150305421163428, guid: d3e2f069291c64a4ea3ac6262718ed75, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 943150305421163428, guid: d3e2f069291c64a4ea3ac6262718ed75, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 1082841119319375047, guid: d3e2f069291c64a4ea3ac6262718ed75, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -13501,6 +13513,18 @@ PrefabInstance:
     - target: {fileID: 4211906761670433665, guid: 2c98fa2ab600c0244b9fc943a88e3c7c, type: 3}
       propertyPath: m_Name
       value: Quests
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387086171694470746, guid: 2c98fa2ab600c0244b9fc943a88e3c7c, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387086171694470746, guid: 2c98fa2ab600c0244b9fc943a88e3c7c, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 4387086171694470746, guid: 2c98fa2ab600c0244b9fc943a88e3c7c, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 5334650926929360925, guid: 2c98fa2ab600c0244b9fc943a88e3c7c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -29453,6 +29477,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1445239477382445143, guid: 5d1e9491a7b30224ab02265e72bee3f3, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1445239477382445143, guid: 5d1e9491a7b30224ab02265e72bee3f3, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 1445239477382445143, guid: 5d1e9491a7b30224ab02265e72bee3f3, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 4179096466797050702, guid: 5d1e9491a7b30224ab02265e72bee3f3, type: 3}
       propertyPath: m_Name
       value: FadeCanvas
