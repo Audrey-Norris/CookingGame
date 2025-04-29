@@ -37,7 +37,7 @@ public class SliderManager : MonoBehaviour {
         slider.flavor.total = total;
         slider.slider.value = slider.flavor.total;
         slider.text.text = slider.flavor.total.ToString();
-        slider.tierText.text = "Tier " + Mathf.FloorToInt(total / 10);
+        slider.tierText.text = "Tier " + Mathf.FloorToInt(total / 20);
 
     }
 

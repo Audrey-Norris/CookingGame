@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4236221072037816596}
   - component: {fileID: 8107762555442488719}
   - component: {fileID: 4766634928306250939}
+  - component: {fileID: 5499954531802944142}
   m_Layer: 0
   m_Name: SaveManager
   m_TagString: Untagged
@@ -81,6 +82,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c73d887e4a112241a473557fc99543e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  allItems:
+  - {fileID: 11400000, guid: 8350a18f500dbd843b5b7487afcdbc08, type: 2}
+  - {fileID: 11400000, guid: 3a8815a6683bf8f4d91919a16a41dc0c, type: 2}
+  - {fileID: 11400000, guid: 13d732dc7900bde4da858ca160fdd9a8, type: 2}
   totalItems:
   - item: {fileID: 11400000, guid: 8350a18f500dbd843b5b7487afcdbc08, type: 2}
     total: 2
@@ -96,7 +101,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 057b61ac79bc31e44b5e3dc627084490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allQuests: []
+  allQuests:
+  - {fileID: 11400000, guid: c3a9df0ca63ead44ba369746d4e07503, type: 2}
+  - {fileID: 11400000, guid: 8dcfaad2c85cf8440b21991537ac7bd3, type: 2}
+  - {fileID: 11400000, guid: 9aec021b53521014fbd3dc85a0c5b076, type: 2}
+  - {fileID: 11400000, guid: d2ccbd76a7792a940828da829a72be00, type: 2}
+  - {fileID: 11400000, guid: 9581de8a18eae4743b5515663bd0f7b1, type: 2}
+  - {fileID: 11400000, guid: 4d23cd25f4b8ce8439a746929a70e69a, type: 2}
+  - {fileID: 11400000, guid: 318300cd05961904daff3ac166af3219, type: 2}
+  - {fileID: 11400000, guid: d2cfa2429dde47b46bd52419045ee5e4, type: 2}
   currentQuests:
   - {fileID: 11400000, guid: c3a9df0ca63ead44ba369746d4e07503, type: 2}
   activeQuest: {fileID: 0}
@@ -211,3 +224,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba553d8344dd7c4596699f08167ced3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5499954531802944142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7875677592269264799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3c6e41447b766144a7704c5948bddf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalPlaytime: 0
+  locationPlaytime:
+  - 0
+  - 0
+  - 0
+  - 0
+  questCompleted: 
+  itemsCrafted: 0
+  totalDays: 0

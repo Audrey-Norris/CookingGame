@@ -41,9 +41,19 @@ public class RenownManager : MonoBehaviour, IDataPersistance
     public int baseRenown = 1;
 
     public RenownManager() {
+        RenownReset();
+        DayRenownReset();
+    }
+
+    public void RenownReset() {
+        renownList.Clear();
         for (int i = 0; i < Factions.GetNames(typeof(Factions)).Length; i++) {
             renownList.Add(new Renown((Factions)i));
         }
+    }
+
+    public void DayRenownReset() {
+        dayRenownList.Clear();
         for (int i = 0; i < Factions.GetNames(typeof(Factions)).Length; i++) {
             dayRenownList.Add(new Renown((Factions)i));
         }
@@ -87,10 +97,7 @@ public class RenownManager : MonoBehaviour, IDataPersistance
     }
 
     public void NewGame(ref GameData data) {
-        foreach (Renown renown in data.renown) {
-            renownList[(int)renown.faction].currentFavor += renown.currentFavor;
-            renownList[(int)renown.faction].value += renown.value;
-            CalculateLevel(renownList[(int)renown.faction].value);
-        }
+        DayRenownReset();
+        RenownReset();
     }
 }

@@ -64,6 +64,8 @@ public class DayRecapManager : MonoBehaviour
 
         //Allow player to leave
         button.SetActive(true);
+
+        saveManager.GetComponent<CharStats>().IncreaseDays();
     }
 
     public void SaveGame() {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static Unity.Collections.AllocatorManager;
 
-public class InventoryManager : MonoBehaviour
+public class InventoryManager : MonoBehaviour, IDataPersistance 
 {
     [SerializeField] private List<Item> allItems = new List<Item>();
 
@@ -19,6 +19,10 @@ public class InventoryManager : MonoBehaviour
 
     public void AddItem(Item newItem) {
         totalItems.Add(new ItemList(newItem, 1));
+    }
+
+    public void AddItem(Item newItem, int i) {
+        totalItems.Add(new ItemList(newItem, i));
     }
 
     public void ReduceItem(Item removeItem) {
@@ -45,5 +49,18 @@ public class InventoryManager : MonoBehaviour
 
     public void FaciliateUnlocks(Unlock unlock) {
         AddItem(allItems.Find(x => x.Name == unlock.unlockName));
+    }
+
+    public void LoadData(GameData data) {
+    }
+
+    public void SaveData(ref GameData data) {
+
+    }
+
+    public void NewGame(ref GameData data) {
+        totalItems.Clear();
+        string item = data.inventory[0].itemName;
+        AddItem(allItems.Find(x => x.Name == item), 2);
     }
 }

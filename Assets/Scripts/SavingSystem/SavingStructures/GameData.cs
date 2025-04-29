@@ -62,6 +62,7 @@ public class GameData
             inventory.Add(sp);
         }
 
+        renown = new List<Renown>();
         renown = renownList;
 
         completedQuests = new List<Quests>();

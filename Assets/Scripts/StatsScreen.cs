@@ -28,7 +28,6 @@ public class StatsScreen : MonoBehaviour
         CharStats c = GameObject.Find("SaveManager").GetComponent<CharStats>();
         days.text = "Days: " + c.GetTotalDays();
         lastQuest.text = "Last Quest: " + c.GetTotalDays();
-        itemsCrafted.text = "Total Items Crafted: " + c.GetItemsCrafted();
     }
 
 }
