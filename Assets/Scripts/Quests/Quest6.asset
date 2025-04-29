@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c52852f9b43cf545ba7df2365c65d21, type: 3}
   m_Name: Quest6
   m_EditorClassIdentifier: 
-  questName: Guard
-  questDescription: 
-  questHint: 
+  questName: Guards Pick Me Up
+  questDescription: The guards have a late watch and want to have something to keep
+    them up.
+  questHint: Make something sweet and spicy (tier 1)
   itemNeeded: {fileID: 0}
   foodPerks: 
   flavorList:

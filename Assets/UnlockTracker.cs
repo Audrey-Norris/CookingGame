@@ -60,7 +60,7 @@ public class UnlockTracker : MonoBehaviour
     public void FacilitateUnlocks(Unlock unlock) {
         switch(unlock.type) {
             case UnlockType.Spice:
-                //this.GetComponent<InventoryManager>().FaciliateUnlocks();
+                this.GetComponent<InventoryManager>().FaciliateUnlocks(unlock);
                 break;
             case UnlockType.Recipe:
                 this.GetComponent<RecipeManager>().FacilitateUnlocks(unlock);

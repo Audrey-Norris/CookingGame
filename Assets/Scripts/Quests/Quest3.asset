@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Quest3
   m_EditorClassIdentifier: 
   questName: Lumberjacks Order
-  questDescription: 
+  questDescription: They need to wake up early to go out into the woods, so they
+    want something that will give them a pep in their step!
   questHint: Create something with a lot of spice (tier 2)
   itemNeeded: {fileID: 0}
   foodPerks: 
@@ -21,7 +22,7 @@ MonoBehaviour:
   - name: Spicy
     total: 40
   - name: Sweet
-    total: 20
+    total: 0
   - name: Bitter
     total: 0
   - name: Sour
@@ -30,4 +31,4 @@ MonoBehaviour:
     total: 0
   isCompleted: 0
   isActive: 0
-  faction: 0
+  faction: 1

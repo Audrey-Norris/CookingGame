@@ -57,6 +57,8 @@ public class DayRecapManager : MonoBehaviour
             GameObject newText = Instantiate(textPrefab, gridArea.transform);
             newText.GetComponent<TMP_Text>().text = "Nothing unlocked today";
         }
+
+
         //Announce unlocks
         unlocks.SetActive(true);
 
@@ -68,6 +70,9 @@ public class DayRecapManager : MonoBehaviour
         saveManager.GetComponent<SavingSystem>().SaveGame();
     }
 
+    public void CheckDirection() {
+
+    }
 
 
     /* 

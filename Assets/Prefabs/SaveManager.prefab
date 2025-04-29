@@ -177,14 +177,26 @@ MonoBehaviour:
   - unlockName: Chupacabra Roast
     type: 0
     description: You've unlocked the Chupacabra Roast
-    faction: 2
-    value: 5
+    faction: 1
+    value: 3
     completed: 0
   - unlockName: Lavamander Bake
     type: 0
     description: You've unlocked the Lavamander Bake
     faction: 0
-    value: 5
+    value: 3
+    completed: 0
+  - unlockName: Icinger
+    type: 1
+    description: You've unlocked Icinger a bitter spice
+    faction: 2
+    value: 1
+    completed: 0
+  - unlockName: Spookimamin
+    type: 1
+    description: You've unlocked Spookimamin a sweet spice
+    faction: 2
+    value: 1
     completed: 0
   renownManager: {fileID: 4236221072037816596}
 --- !u!114 &4766634928306250939

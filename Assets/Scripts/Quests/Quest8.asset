@@ -10,21 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c52852f9b43cf545ba7df2365c65d21, type: 3}
-  m_Name: Quest4
+  m_Name: Quest8
   m_EditorClassIdentifier: 
-  questName: Lumberjacks Request
-  questDescription: Another early morning, they want to mix it up with a bit of spice
-    and bitterness to get the blood pumping.
-  questHint: Create something bitter and spicy (tier 1)
+  questName: Lumberjacks Brunch
+  questDescription: To celebrate a hard week the lumberjacks want a super sweet surprise!
+  questHint: Make something sweet (Tier 2)
   itemNeeded: {fileID: 0}
   foodPerks: 
   flavorList:
   - name: Spicy
-    total: 10
-  - name: Sweet
     total: 0
+  - name: Sweet
+    total: 40
   - name: Bitter
-    total: 10
+    total: 0
   - name: Sour
     total: 0
   - name: Umami

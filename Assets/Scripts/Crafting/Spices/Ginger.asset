@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c5302c90f1220843b2179af35936eb1, type: 3}
   m_Name: Ginger
   m_EditorClassIdentifier: 
-  Name: Ginger
+  Name: Icinger
   Description: 
   Cost: 0
   Rarity: 0

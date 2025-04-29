@@ -23,6 +23,8 @@ public class SaveCheck : MonoBehaviour
 
     public void NewGame() {
         saveSystem.NewGame();
+
+
     }
 
 }

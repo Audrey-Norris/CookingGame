@@ -73,4 +73,9 @@ public class CharStats : MonoBehaviour, IDataPersistance
         data.totalPlaytime = totalPlaytime;
         data.totalDays = totalDays;
     }
+
+    public void NewGame(ref GameData data) {
+        totalPlaytime = data.totalPlaytime;
+        totalDays = data.totalDays;
+    }
 }

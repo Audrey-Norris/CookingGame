@@ -38,7 +38,6 @@ public class RenownManager : MonoBehaviour, IDataPersistance
     public List<Renown> renownList = new List<Renown>();
     public List<Renown> dayRenownList = new List<Renown>();
 
-
     public int baseRenown = 1;
 
     public RenownManager() {
@@ -76,12 +75,21 @@ public class RenownManager : MonoBehaviour, IDataPersistance
             renownList[(int)renown.faction].value += renown.value;
             CalculateLevel(renownList[(int)renown.faction].value);
         }
+        this.GetComponent<UnlockTracker>().CheckUnlocks();
     }
 
     public void SaveData(ref GameData data) {
         foreach (Renown renown in renownList) {
             data.renown[(int)renown.faction].currentFavor = renown.currentFavor;
             data.renown[(int)renown.faction].value = renown.value;
+            CalculateLevel(renownList[(int)renown.faction].value);
+        }
+    }
+
+    public void NewGame(ref GameData data) {
+        foreach (Renown renown in data.renown) {
+            renownList[(int)renown.faction].currentFavor += renown.currentFavor;
+            renownList[(int)renown.faction].value += renown.value;
             CalculateLevel(renownList[(int)renown.faction].value);
         }
     }

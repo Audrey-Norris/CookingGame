@@ -61,7 +61,7 @@ public class SavingSystem : MonoBehaviour
             Debug.Log("No data was found, making new Save.");
             NewGame();
         } else {
-            Debug.Log("Loadding Data From... " + Application.persistentDataPath);
+            Debug.Log("Loading Data From... " + Application.persistentDataPath);
         }
 
         foreach (IDataPersistance obj in dataPersistanceObjects) {
@@ -72,6 +72,9 @@ public class SavingSystem : MonoBehaviour
     public void NewGame()
     {
         gameData = new GameData(spices, quest, recipe, renown);
+        foreach (IDataPersistance obj in dataPersistanceObjects) {
+            obj.NewGame(ref gameData);
+        }
         SaveGame();
     }
 

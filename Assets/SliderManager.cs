@@ -9,6 +9,7 @@ public class FoodSlider {
     public Slider slider;
     public TMP_Text text;
     public Flavor flavor;
+    public TMP_Text tierText;
 }
 
 public class SliderManager : MonoBehaviour {
@@ -36,6 +37,8 @@ public class SliderManager : MonoBehaviour {
         slider.flavor.total = total;
         slider.slider.value = slider.flavor.total;
         slider.text.text = slider.flavor.total.ToString();
+        slider.tierText.text = "Tier " + Mathf.FloorToInt(total / 10);
+
     }
 
 }

@@ -64,7 +64,7 @@ public class GameData
 
         renown = renownList;
 
-        completedQuests = new List<Quests> ();
+        completedQuests = new List<Quests>();
         completedQuests.Add(quest);
 
     }

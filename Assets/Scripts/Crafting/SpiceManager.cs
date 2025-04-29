@@ -20,7 +20,7 @@ public class SpiceManager : MonoBehaviour
     [SerializeField] private GameObject RecipeMenu;
 
 
-    [SerializeField] private int spicy = 0, sweet = 0, bitter = 0, sour = 0, savory = 0;
+    [SerializeField] private int spicy = 0, sweet = 0, bitter = 0, sour = 0, savory = 0, total = 0;
 
     [SerializeField] private SoundEffectStorage soundEffect;
     [SerializeField] private SoundEffectManager soundManager;
@@ -104,10 +104,12 @@ public class SpiceManager : MonoBehaviour
         bitter = 0;
         savory = 0;
         sour = 0;
+        total = 0;
         if(activeSpiceObjects.Count != 0) {
             foreach (GameObject x in activeSpiceObjects) {
                 Spices spice = (Spices)x.GetComponent<ItemInfo>().itemInfo.item;
                 foreach (Flavor flavor in spice.flavorList) {
+                    total += flavor.total;
                     switch (flavor.name) {
                         case "Spicy": //Spicy reduces sweetness
                             spicy += flavor.total;

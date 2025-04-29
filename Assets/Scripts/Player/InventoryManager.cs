@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Unity.Collections.AllocatorManager;
 
 public class InventoryManager : MonoBehaviour
 {
+    [SerializeField] private List<Item> allItems = new List<Item>();
+
     [SerializeField] private List<ItemList> totalItems = new List<ItemList>();
 
     public ItemList[] GetAllItems() {
@@ -15,7 +18,7 @@ public class InventoryManager : MonoBehaviour
     }
 
     public void AddItem(Item newItem) {
-        
+        totalItems.Add(new ItemList(newItem, 1));
     }
 
     public void ReduceItem(Item removeItem) {
@@ -38,5 +41,9 @@ public class InventoryManager : MonoBehaviour
 
     public bool DoesItemExist(ItemList item) {
         return totalItems.Exists(obj => obj.item == item.item);
+    }
+
+    public void FaciliateUnlocks(Unlock unlock) {
+        AddItem(allItems.Find(x => x.Name == unlock.unlockName));
     }
 }

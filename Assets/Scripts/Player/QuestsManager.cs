@@ -73,5 +73,14 @@ public class QuestsManager : MonoBehaviour, IDataPersistance
         data.isTutorial = isTutorial;
     }
 
+    public void NewGame(ref GameData data) {
+        //Sets All Quests To Completed That Were Completed
+        foreach (Quests quest in allQuests) {
+            quest.isCompleted = false;
+        }
+
+        isTutorial = data.isTutorial;
+    }
+
 
 }

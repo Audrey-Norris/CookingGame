@@ -12,20 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c52852f9b43cf545ba7df2365c65d21, type: 3}
   m_Name: Quest5
   m_EditorClassIdentifier: 
-  questName: 
-  questDescription: 
-  questHint: Create something very bitter (tier 2)
+  questName: Smithy Lunch Break
+  questDescription: The smiths want something sweet with a little kick to get them
+    going today.
+  questHint: Create something bitter and sweet (tier 1)
   itemNeeded: {fileID: 0}
   foodPerks: 
   flavorList:
   - name: Spicy
     total: 0
   - name: Sweet
-    total: 20
+    total: 10
   - name: Bitter
-    total: 40
+    total: 10
   - name: Sour
-    total: 20
+    total: 0
   - name: Umami
     total: 0
   isCompleted: 0

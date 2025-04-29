@@ -35,4 +35,4 @@ MonoBehaviour:
     total: 0
   isCompleted: 0
   isActive: 0
-  faction: 1
+  faction: 0
