@@ -48,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         rb.transform.Translate(Vector3.forward * moveInput.y * (speed*Time.deltaTime));
         rb.transform.Rotate(Vector3.up * moveInput.x * (rotationSpeed * Time.deltaTime));
 
-        if(moveInput.x != 0 || moveInput.z != 0) {
+        if(moveInput.x != 0 || moveInput.z != 0 || moveInput.y != 0) {
             footsteps.walking = true;
         } else {
             footsteps.walking = false;

@@ -15,4 +15,9 @@ public class SoundEffectStorage : MonoBehaviour
         return clips.Find(x => x.name == name);
     }
 
+    public void PlayAudio(int song) {
+        GameObject.Find("SoundEffectsControl").GetComponent<SoundEffectManager>().PlayEffectPitch(GetAudio(song));
+    }
+
+
 }

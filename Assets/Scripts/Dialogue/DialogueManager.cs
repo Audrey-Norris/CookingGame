@@ -63,7 +63,6 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator ContinueDialogue() {
         dialogue.ContinueStory();
-
         // Wait until the dialogue has finished advancing
         yield return new WaitForSeconds(0.25f);
 

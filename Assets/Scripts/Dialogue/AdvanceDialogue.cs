@@ -14,6 +14,10 @@ public class AdvanceDialogue : MonoBehaviour {
     [SerializeField] private DialogueManager dialogueManager;
     [SerializeField] private DialogueUIManager dialogueUI;
 
+
+    public SoundEffectManager soundManager;
+    public SoundEffectStorage storage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +48,8 @@ public class AdvanceDialogue : MonoBehaviour {
                 List<string> tags = currentStory.currentTags; // Collect tags attached to line
                 string currentSpeaker = sceneScript.GetSpeaker(tags);
                 dialogueUI.SetSpeaker(currentSpeaker);
+                int rand = Random.Range(0, 8);
+                soundManager.PlayEffect(storage.GetAudio(rand));
             } else { // If there is no following standard line of dialogue
                 dialogueManager.EndKnot(); // Hide dialogue UI
             }

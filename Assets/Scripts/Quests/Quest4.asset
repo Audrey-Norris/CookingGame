@@ -12,17 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c52852f9b43cf545ba7df2365c65d21, type: 3}
   m_Name: Quest4
   m_EditorClassIdentifier: 
-  questName: 
+  questName: Guards Brigade
   questDescription: 
+  questHint: Create something bitter and spicy (tier 1)
   itemNeeded: {fileID: 0}
   foodPerks: 
   flavorList:
   - name: Spicy
-    total: 0
+    total: 10
   - name: Sweet
     total: 0
   - name: Bitter
-    total: 0
+    total: 10
   - name: Sour
     total: 0
   - name: Umami

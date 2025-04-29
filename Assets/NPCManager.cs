@@ -62,10 +62,15 @@ public class NPCManager : MonoBehaviour
         if (result) {
             goodEffect.Play();
             animator.Play("GoodResult");
-            soundmanager.PlayEffect(storage.GetAudio(0));
+            int audio = Random.Range(0,3);
+            soundmanager.PlayEffect(storage.GetAudio(audio));
+            soundmanager.PlayEffect(storage.GetAudio(7));
         } else {
+            int audio = Random.Range(3, 7);
             badEffect.Play();
             animator.Play("BadResult");
+            soundmanager.PlayEffect(storage.GetAudio(audio));
+            soundmanager.PlayEffect(storage.GetAudio(8));
         }
         state += 1;
         this.transform.LookAt(moveLocation2);

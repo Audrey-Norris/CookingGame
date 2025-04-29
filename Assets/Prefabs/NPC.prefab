@@ -366,12 +366,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   moveLocation: {fileID: 0}
+  moveLocation2: {fileID: 0}
   goodEffect: {fileID: 4329721495336268451}
   badEffect: {fileID: 3305569107072136617}
   animator: {fileID: 5344243533547908532}
   npcanimator: {fileID: 6331546598021926322}
   soundmanager: {fileID: 0}
   storage: {fileID: 1967737900822577158}
+  tutorial: {fileID: 0}
 --- !u!114 &7789704635184615664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,7 +423,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clips:
+  - {fileID: 8300000, guid: 5b1885752741be44882a46ed89efe867, type: 3}
+  - {fileID: 8300000, guid: 94af61751aac8e54c80823d21fed89e8, type: 3}
+  - {fileID: 8300000, guid: 3a0656516b29816468999334e8ca184a, type: 3}
+  - {fileID: 8300000, guid: 8757fa3afde248343b722eb445e27020, type: 3}
+  - {fileID: 8300000, guid: 7fbe1ec3a83bdcc479254e7634f82359, type: 3}
+  - {fileID: 8300000, guid: 6334bd3ca029a8340b435f6acfc9de8f, type: 3}
   - {fileID: 8300000, guid: 13bd554afa4080b41bd010476c7cfff0, type: 3}
+  - {fileID: 8300000, guid: 7b9b9951e6dbbcb418ba28901c82d00d, type: 3}
 --- !u!1 &3366427437590319557
 GameObject:
   m_ObjectHideFlags: 0

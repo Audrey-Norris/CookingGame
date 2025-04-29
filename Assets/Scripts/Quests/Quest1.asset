@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c52852f9b43cf545ba7df2365c65d21, type: 3}
   m_Name: Quest1
   m_EditorClassIdentifier: 
-  questName: Lumberjacks Request
+  questName: Citizens Request
   questDescription: 'The guards need something that will help them stay awake during
     the watch.
 

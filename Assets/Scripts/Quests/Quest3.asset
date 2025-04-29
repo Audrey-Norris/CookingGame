@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c52852f9b43cf545ba7df2365c65d21, type: 3}
   m_Name: Quest3
   m_EditorClassIdentifier: 
-  questName: 
+  questName: Lumberjacks Order
   questDescription: 
+  questHint: Create something with a lot of spice (tier 2)
   itemNeeded: {fileID: 0}
   foodPerks: 
   flavorList:
   - name: Spicy
-    total: 0
+    total: 40
   - name: Sweet
     total: 20
   - name: Bitter

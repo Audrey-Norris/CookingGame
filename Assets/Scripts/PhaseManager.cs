@@ -21,6 +21,9 @@ public class PhaseManager : MonoBehaviour
 
     [SerializeField] private AudioSetup audio;
 
+    [SerializeField] private GameObject trigger1;
+    [SerializeField] private GameObject trigger2;
+
     public void Start() {
         if (!GameObject.Find("SaveManager").GetComponent<QuestsManager>().GetTutorialCompletion()) {
             UpdateTime(6);
@@ -46,8 +49,10 @@ public class PhaseManager : MonoBehaviour
     }
 
     public void CheckDayTime() {
-        if(timer == 2) {
+        if(timer == 0) {
             audio.ChangeAudioSnapShot(4);
+            trigger1.SetActive(false);
+            trigger2.SetActive(false);
         }
     }
 
