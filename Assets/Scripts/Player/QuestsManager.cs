@@ -31,10 +31,11 @@ public class QuestsManager : MonoBehaviour, IDataPersistance
     public void QuestChecker(Food item) {
         if(ConfirmQuest(activeQuest, item)) {
             questNPC.GetComponent<NPCManager>().NPCReaction(true);
-            renownManager.UpdateRenown(activeQuest.faction); 
+            renownManager.UpdateRenown(activeQuest.faction);
         } else {
             questNPC.GetComponent<NPCManager>().NPCReaction(false);
         }
+        this.GetComponent<InventoryManager>().ReduceItem(item);
         currentQuests.Remove(activeQuest);
         isQuesting = false;
     }

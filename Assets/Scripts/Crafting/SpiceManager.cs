@@ -200,6 +200,7 @@ public class SpiceManager : MonoBehaviour
         int random = Random.Range(0,4);
         soundManager.PlayEffect(soundEffect.GetAudio(random));
 
+
         inventory.AddItem(newFoodItem);
 
         CloseMenu();
