@@ -25,7 +25,9 @@ public class ToolTipInfo : MonoBehaviour
             }
         } else {
             itemAmount.text = item.GetTotal().ToString();
-            this.transform.position = new Vector3(itemObject.transform.position.x + 400, itemObject.transform.position.y - 150, itemObject.transform.position.z);
+            int screenWidth = Screen.width;
+            int screenHeight = Screen.height;
+            this.transform.position = new Vector3(itemObject.transform.position.x + (screenWidth*0.3f), itemObject.transform.position.y - (screenHeight * 0.15f), itemObject.transform.position.z);
         }
     }
 
