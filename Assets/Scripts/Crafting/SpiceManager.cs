@@ -221,7 +221,7 @@ public class SpiceManager : MonoBehaviour
 
     public void CloseMenu() {
         RemoveSpice();
-        this.GetComponent<Canvas>().enabled = false;
+        this.gameObject.transform.parent.GetComponent<OpenCookingMenu>().EndInteraction();
     }
 
 }

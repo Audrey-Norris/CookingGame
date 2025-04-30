@@ -42,6 +42,7 @@ public class QuestsManager : MonoBehaviour, IDataPersistance
         currentQuests.Remove(activeQuest);
         isQuesting = false;
         GameObject.Find("MainUI").GetComponent<MainUIManager>().SetQuest(false);
+        GameObject.Find("MainCamera").GetComponent<CameraMovement>().LockMouse(true);
     }
 
     public bool ConfirmQuest(Quests quest, Food item) {
