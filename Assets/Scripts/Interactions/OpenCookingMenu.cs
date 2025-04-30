@@ -16,8 +16,11 @@ public class OpenCookingMenu : MonoBehaviour, IInteractable
     }
 
     public void StartInteraction() {
-        cookingCanvas.transform.gameObject.GetComponent<RecipeListManager>().PopulateRecipes();
-        cookingCanvas.enabled = true;
-        audio.ChangeAudioSnapShot(3);
+        if(GameObject.Find("PhaseManager").GetComponent<PhaseManager>().GetTime() > 0) {
+            cookingCanvas.transform.gameObject.GetComponent<RecipeListManager>().PopulateRecipes();
+            cookingCanvas.enabled = true;
+            audio.ChangeAudioSnapShot(3);
+        }
+
     }
 }
