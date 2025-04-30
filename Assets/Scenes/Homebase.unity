@@ -16607,6 +16607,7 @@ MonoBehaviour:
   movePosition: {fileID: 1704639002}
   soundEffectManager: {fileID: 61458782}
   tutorial: {fileID: 1298573126}
+  quests: {fileID: 0}
 --- !u!1 &1365173501
 GameObject:
   m_ObjectHideFlags: 0
@@ -30426,7 +30427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 826382283184696126, guid: 4b7fddd311d6ef94eb161b678253c85c, type: 3}
       propertyPath: m_CellSize.x
-      value: 900
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 846371766907052827, guid: 4b7fddd311d6ef94eb161b678253c85c, type: 3}
       propertyPath: m_Name
