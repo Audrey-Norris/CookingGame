@@ -64,13 +64,13 @@ public class NPCManager : MonoBehaviour
             animator.Play("GoodResult");
             int audio = Random.Range(0,3);
             soundmanager.PlayEffect(storage.GetAudio(audio));
-            soundmanager.PlayEffect(storage.GetAudio(7));
+            soundmanager.PlayEffect(storage.GetAudio(6));
         } else {
             int audio = Random.Range(3, 7);
             badEffect.Play();
             animator.Play("BadResult");
             soundmanager.PlayEffect(storage.GetAudio(audio));
-            soundmanager.PlayEffect(storage.GetAudio(8));
+            soundmanager.PlayEffect(storage.GetAudio(7));
         }
         state += 1;
         this.transform.LookAt(moveLocation2);
