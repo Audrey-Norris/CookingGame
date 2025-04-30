@@ -17,8 +17,11 @@ public class QuestsManager : MonoBehaviour, IDataPersistance
     public bool isTutorial = false;
     public bool isEnd = false;
 
+    public bool isQuesting = false;
+
     public void SetActiveQuest(Quests quest) {
         activeQuest = quest;
+        isQuesting = true;
     }
 
     public Quests GetActiveQuest() {
@@ -28,10 +31,12 @@ public class QuestsManager : MonoBehaviour, IDataPersistance
     public void QuestChecker(Food item) {
         if(ConfirmQuest(activeQuest, item)) {
             questNPC.GetComponent<NPCManager>().NPCReaction(true);
-            renownManager.UpdateRenown(activeQuest.faction);
+            renownManager.UpdateRenown(activeQuest.faction); 
         } else {
             questNPC.GetComponent<NPCManager>().NPCReaction(false);
         }
+        currentQuests.Remove(activeQuest);
+        isQuesting = false;
     }
 
     public bool ConfirmQuest(Quests quest, Food item) {

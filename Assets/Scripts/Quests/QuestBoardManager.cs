@@ -52,4 +52,13 @@ public class QuestBoardManager : MonoBehaviour
             Destroy(quest);
         }
     }
+
+    public bool GetCurrentQuest() {
+        if(currentQuest == null) {
+            return false;
+        } else {
+            return !currentQuest.isCompleted;
+        }
+    }
+
 }

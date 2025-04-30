@@ -13,7 +13,9 @@ public class OpenQuestMenu : MonoBehaviour, IInteractable
     }
 
     public void StartInteraction() {
-        questCanvas.enabled = true;
-        manager.PopulateQuests();
+        if(!GameObject.Find("SaveManager").GetComponent<QuestsManager>().isQuesting) {
+            questCanvas.enabled = true;
+            manager.PopulateQuests();
+        }
     }
 }

@@ -12,7 +12,8 @@ public class QuestNpcInteract : MonoBehaviour, IInteractable {
     [SerializeField] private QuestsManager quests;
 
     public void EndInteraction() {
-        
+        GameObject inventory = GameObject.Find("InventoryCanvas");
+        inventory.GetComponent<Canvas>().enabled = false;
     }
 
     public void StartInteraction() { // Change this to open special inventory UI to select a meal to give to client

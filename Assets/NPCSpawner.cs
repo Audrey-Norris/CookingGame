@@ -13,6 +13,11 @@ public class NPCSpawner : MonoBehaviour
 
     [SerializeField] TutorialManager tutorial;
 
+    [SerializeField] QuestsManager quests;
+
+    public void Start() {
+        quests = GameObject.Find("SaveManager").GetComponent<QuestsManager>();
+    }
 
     public void SpawnNPC() {
         if (NPCPrefab != null) {
