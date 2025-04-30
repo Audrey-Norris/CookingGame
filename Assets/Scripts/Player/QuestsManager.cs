@@ -33,6 +33,9 @@ public class QuestsManager : MonoBehaviour, IDataPersistance
             questNPC.GetComponent<NPCManager>().NPCReaction(true);
             renownManager.UpdateRenown(activeQuest.faction);
         } else {
+            if(!isTutorial) {
+                renownManager.UpdateRenown(activeQuest.faction);
+            }
             questNPC.GetComponent<NPCManager>().NPCReaction(false);
         }
         this.GetComponent<InventoryManager>().ReduceItem(item);
