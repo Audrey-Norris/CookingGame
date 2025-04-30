@@ -10,12 +10,18 @@ public class OpenQuestMenu : MonoBehaviour, IInteractable
     public void EndInteraction() {
         manager.ClearQuests();
         questCanvas.enabled = false;
+
+        GameObject.Find("MainCamera").GetComponent<CameraMovement>().LockMouse(true);
+
     }
 
     public void StartInteraction() {
         if(!GameObject.Find("SaveManager").GetComponent<QuestsManager>().isQuesting && GameObject.Find("PhaseManager").GetComponent<PhaseManager>().GetTime() > 0) {
             questCanvas.enabled = true;
             manager.PopulateQuests();
+
+            GameObject.Find("MainCamera").GetComponent<CameraMovement>().LockMouse(false);
+
         }
     }
 }

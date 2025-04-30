@@ -41,6 +41,7 @@ public class QuestsManager : MonoBehaviour, IDataPersistance
         this.GetComponent<InventoryManager>().ReduceItem(item);
         currentQuests.Remove(activeQuest);
         isQuesting = false;
+        GameObject.Find("MainUI").GetComponent<MainUIManager>().SetQuest(false);
     }
 
     public bool ConfirmQuest(Quests quest, Food item) {

@@ -64,10 +64,12 @@ public class PlayerInteract : MonoBehaviour {
     public void CheckInventory() {
         bool actionPressed = playerActions.Actions.Inventory.WasReleasedThisFrame();
         if(actionPressed && inventory.isActiveAndEnabled) {
+            GameObject.Find("MainCamera").GetComponent<CameraMovement>().LockMouse(true);
             inventory.GetComponent<InventoryCanvas>().RemoveAllItems();
             inventory.enabled = false;
             return;
         } else if (actionPressed && !inventory.isActiveAndEnabled){
+            GameObject.Find("MainCamera").GetComponent<CameraMovement>().LockMouse(false);
             inventory.GetComponent<InventoryCanvas>().PopulateItems();
             inventory.enabled = true;
             return;
@@ -77,10 +79,12 @@ public class PlayerInteract : MonoBehaviour {
     public void CheckMenu() {
         bool actionPressed = playerActions.Actions.Menu.WasReleasedThisFrame();
         if (actionPressed && menu.isActiveAndEnabled) {
+            GameObject.Find("MainCamera").GetComponent<CameraMovement>().LockMouse(true);
             inMenu = false;
             menu.enabled = false;
             return;
         } else if (actionPressed && !menu.isActiveAndEnabled) {
+            GameObject.Find("MainCamera").GetComponent<CameraMovement>().LockMouse(false);
             inMenu = true;
             menu.enabled = true;
             return;
