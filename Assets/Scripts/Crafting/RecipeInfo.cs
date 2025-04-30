@@ -32,6 +32,7 @@ public class RecipeInfo : MonoBehaviour
     public void LoadRecipeInfo(Recipe recipe, GameObject menu) {
         this.recipe = recipe;
         recipeName.GetComponent<TMP_Text>().text = recipe.Name.ToString();
+        sprite = recipe.craftedItem.sprite;
         if (menu.GetComponent<RecipeListManager>()) {
             this.menu = menu.GetComponent<RecipeListManager>();
         } else {

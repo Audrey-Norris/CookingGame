@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ginger
   m_EditorClassIdentifier: 
   Name: Icinger
-  Description: 
+  Description: Increase Bitter by 10
   Cost: 0
   Rarity: 0
   sprite: {fileID: 21300000, guid: 903672e4922905342bfaca059e195850, type: 3}
