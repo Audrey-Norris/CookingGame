@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class SpiceManager : MonoBehaviour
@@ -19,6 +20,7 @@ public class SpiceManager : MonoBehaviour
 
     [SerializeField] private GameObject RecipeMenu;
 
+    [SerializeField] private TMP_Text title;
 
     [SerializeField] private int spicy = 0, sweet = 0, bitter = 0, sour = 0, savory = 0, total = 0;
 
@@ -45,6 +47,20 @@ public class SpiceManager : MonoBehaviour
                 CreateSpiceObject(spice, spiceArea, spiceObjects);
             }
         }
+
+        title.text = currentRecipe.Name;
+        spicy = 0;
+        sweet = 0;
+        bitter = 0;
+        sour = 0;
+        savory = 0;
+
+        sliders.AddFlavor("Spicy", spicy);
+        sliders.AddFlavor("Sweet", sweet);
+        sliders.AddFlavor("Umami", savory);
+        sliders.AddFlavor("Sour", sour);
+        sliders.AddFlavor("Bitter", bitter);
+
     }
 
     public void CreateSpiceObject(ItemList info, GameObject parent , List<GameObject> location) {

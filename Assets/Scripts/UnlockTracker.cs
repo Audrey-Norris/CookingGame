@@ -47,7 +47,7 @@ public class UnlockTracker : MonoBehaviour
         List<Unlock> newUnlocks = new List<Unlock>();
         foreach(Renown faction in renownManager.renownList) {
             foreach(Unlock unlock in unlocks) {
-                if(faction.value >= unlock.value && faction.faction == unlock.faction) {
+                if(faction.value >= unlock.value && faction.faction == unlock.faction && !unlock.completed) {
                     unlock.completed = true;
                     newUnlocks.Add(unlock);
                     FacilitateUnlocks(unlock);
