@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2a3e00f7afda7344e813706b5e7fcaa7
+guid: 240acadfe2a4bf542a9df62fabee2761
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,13 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: WoodSecondary
-    second: {fileID: 2100000, guid: bd8c695efe88fef43a4e6f20b4475b08, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: standardSurface1
-    second: {fileID: 2100000, guid: 1b9b2ec8920cec541bc40cf19a2695bd, type: 2}
+      name: lambert3
+    second: {fileID: 2100000, guid: 260e1dac43820d24785118cbb6ca280e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -47,7 +42,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importPhysicalCameras: 1

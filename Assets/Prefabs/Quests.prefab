@@ -30,6 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2913562793199936964}
+  - {fileID: 2620769527191453570}
   - {fileID: 1559831290847617475}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -157,10 +158,10 @@ MonoBehaviour:
       - m_Target: {fileID: 2522811799632845220}
         m_TargetAssemblyTypeName: QuestBoardManager, Assembly-CSharp
         m_MethodName: AddQuest
-        m_Mode: 2
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: Quests, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -219,7 +220,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5649317162417936293}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -295,7 +296,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1.1, y: 1.1, z: 4}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: -2}
 --- !u!114 &7424464707142946036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,15 +324,11 @@ MonoBehaviour:
   questPrefab: {fileID: 2395651425123329348, guid: 28a62880aef1155498aa6cc966bb013f, type: 3}
   questArea: {fileID: 3105036613048888392}
   playerQuests: {fileID: 0}
-  questBoardList:
-  - {fileID: 11400000, guid: c3a9df0ca63ead44ba369746d4e07503, type: 2}
-  - {fileID: 11400000, guid: 8dcfaad2c85cf8440b21991537ac7bd3, type: 2}
-  - {fileID: 11400000, guid: 9aec021b53521014fbd3dc85a0c5b076, type: 2}
-  - {fileID: 11400000, guid: d2ccbd76a7792a940828da829a72be00, type: 2}
-  - {fileID: 11400000, guid: 9581de8a18eae4743b5515663bd0f7b1, type: 2}
+  questBoardList: []
   questObjects: []
   currentQuest: {fileID: 0}
   tooltip: {fileID: 7690130422957665322}
+  tutorial: {fileID: 0}
 --- !u!114 &4226215712831973568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -882,6 +879,84 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1001 &2581809993646299241
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6600357698285011231}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 3565c5a79c0993441b544dc342d25a8a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3565c5a79c0993441b544dc342d25a8a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3565c5a79c0993441b544dc342d25a8a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3565c5a79c0993441b544dc342d25a8a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.67
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3565c5a79c0993441b544dc342d25a8a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.9
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3565c5a79c0993441b544dc342d25a8a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3565c5a79c0993441b544dc342d25a8a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3565c5a79c0993441b544dc342d25a8a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3565c5a79c0993441b544dc342d25a8a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3565c5a79c0993441b544dc342d25a8a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3565c5a79c0993441b544dc342d25a8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3565c5a79c0993441b544dc342d25a8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3565c5a79c0993441b544dc342d25a8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3565c5a79c0993441b544dc342d25a8a, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3565c5a79c0993441b544dc342d25a8a, type: 3}
+      propertyPath: m_Name
+      value: QuestBoard
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3565c5a79c0993441b544dc342d25a8a, type: 3}
+--- !u!4 &2620769527191453570 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3565c5a79c0993441b544dc342d25a8a, type: 3}
+  m_PrefabInstance: {fileID: 2581809993646299241}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9076467961488148108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -890,6 +965,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6600357698285011231}
     m_Modifications:
+    - target: {fileID: 4689399657268744406, guid: 9384a0a5d7f5dbf45acc3582f6deec0a, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4689399657268744406, guid: 9384a0a5d7f5dbf45acc3582f6deec0a, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 4689399657268744406, guid: 9384a0a5d7f5dbf45acc3582f6deec0a, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 5864631146757130694, guid: 9384a0a5d7f5dbf45acc3582f6deec0a, type: 3}
       propertyPath: m_CellSize.x
       value: 350

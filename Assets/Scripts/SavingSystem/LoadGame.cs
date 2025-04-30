@@ -24,7 +24,7 @@ public class LoadGame : MonoBehaviour
     }
 
     IEnumerator FadeLogo() {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(3f);
         isLogo = true;
     }
 }

@@ -10,8 +10,11 @@ public class PlayerInteract : MonoBehaviour {
 
     [SerializeField] private GameObject interactObject = null;
     [SerializeField] private bool isInteracting = false;
+    [SerializeField] private bool inMenu = false;
+
 
     [SerializeField] private Canvas inventory;
+    [SerializeField] private Canvas menu;
 
     public bool isDialogue = false;
     public bool isAdvancing = false;
@@ -34,8 +37,11 @@ public class PlayerInteract : MonoBehaviour {
 
     private void Update() {
         if (!isDialogue) {
-            CheckInteract();
-            CheckInventory();
+            if(!inMenu) {
+                CheckInteract();
+                CheckInventory();
+            }
+            CheckMenu();
         } else {
             CheckDialogue();
         }
@@ -64,6 +70,19 @@ public class PlayerInteract : MonoBehaviour {
         } else if (actionPressed && !inventory.isActiveAndEnabled){
             inventory.GetComponent<InventoryCanvas>().PopulateItems();
             inventory.enabled = true;
+            return;
+        }
+    }
+
+    public void CheckMenu() {
+        bool actionPressed = playerActions.Actions.Menu.WasReleasedThisFrame();
+        if (actionPressed && inventory.isActiveAndEnabled) {
+            inMenu = false;
+            menu.enabled = false;
+            return;
+        } else if (actionPressed && !inventory.isActiveAndEnabled) {
+            inMenu = true;
+            menu.enabled = true;
             return;
         }
     }
