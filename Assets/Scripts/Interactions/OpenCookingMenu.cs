@@ -7,11 +7,14 @@ public class OpenCookingMenu : MonoBehaviour, IInteractable
 {
 
     [SerializeField] Canvas cookingCanvas;
+    [SerializeField] Canvas flavorCanvas;
+
 
     [SerializeField] AudioSetup audio;
 
     public void EndInteraction() {
         cookingCanvas.enabled = false;
+        flavorCanvas.enabled = false;
         audio.ChangeAudioSnapShot(1);
 
         GameObject.Find("MainCamera").GetComponent<CameraMovement>().LockMouse(true);

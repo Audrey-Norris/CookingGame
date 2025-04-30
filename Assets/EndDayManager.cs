@@ -12,10 +12,12 @@ public class EndDayManager : MonoBehaviour
     }
 
     public void ActivateCanvas() {
+        GameObject.Find("MainCamera").GetComponent<CameraMovement>().LockMouse(false);
         endCanvas.enabled = true;
     }
 
     public void DeactivateCanvas() {
+        GameObject.Find("MainCamera").GetComponent<CameraMovement>().LockMouse(true);
         endCanvas.enabled = false;
     }
 
