@@ -76,11 +76,11 @@ public class PlayerInteract : MonoBehaviour {
 
     public void CheckMenu() {
         bool actionPressed = playerActions.Actions.Menu.WasReleasedThisFrame();
-        if (actionPressed && inventory.isActiveAndEnabled) {
+        if (actionPressed && menu.isActiveAndEnabled) {
             inMenu = false;
             menu.enabled = false;
             return;
-        } else if (actionPressed && !inventory.isActiveAndEnabled) {
+        } else if (actionPressed && !menu.isActiveAndEnabled) {
             inMenu = true;
             menu.enabled = true;
             return;
